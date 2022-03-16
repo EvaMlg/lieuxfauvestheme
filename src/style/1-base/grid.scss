@@ -1,0 +1,200 @@
+// ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+//  -   GRID VARIABLES
+// ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+
+// screen break points
+$phone-max: 767;
+$tablet-max: 1024;
+$laptop-max: 1340;
+// screen break points
+$phoneMax: 767px;
+$tabletMax: 1024px;
+$laptopMax: 1340px;
+
+$d-col-count:30;
+$l-col-count:23;
+$t-col-count:17;
+$m-col-count:11;
+
+$d-col:47px;
+$l-col:40;
+$t-col: 56;
+$t-col: 3617/45;
+$t-col: 36 ;
+$m-col: 6.875;
+
+$dCol:45px;
+$lCol:18px; 
+$tCol: 36px ;
+$mCol: 6.875vw;
+
+$colD:51px;
+$colL:40px; 
+$colT: 36px ;
+$colM: 6.875vw;
+
+$d-grid-size: #{$d-col*$d-col-count}px;
+$l-grid-size: #{$l-col*$l-col-count}px;
+$t-grid-size: #{$t-col*$t-col-count}px;
+$m-grid-size: #{$m-col*$m-col-count}vw;
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/*  -   GRID BUILDER
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+.grid, .d-grid, .l-grid, .t-grid, .m-grid {
+    position: relative;
+}
+
+.center {
+    position: relative;
+    margin: 0 auto;
+}
+.right {
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media (min-width: #{$laptop-max + 1}px) {
+    .grid, .d-grid {
+        width: $d-grid-size;
+        margin: 0 auto;
+    }
+    .d-center {
+        position: relative;
+        margin: 0 auto;
+    }
+    .d-right {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @for $i from 1 through $d-col-count - 1 {
+        .d-col-#{$i} {
+            width: #{$i*$d-col}px;
+        }
+    }
+}
+
+@media (max-width: #{$laptop-max}px) and (min-width: #{$tablet-max + 1}px) {
+    .grid, .l-grid {
+        width: $l-grid-size;
+        margin: 0 auto;
+    }
+    .l-center {
+        position: relative;
+        margin: 0 auto;
+    }
+    .l-right {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @for $i from 1 through $l-col-count - 1 {
+        .l-col-#{$i} {
+            width: #{$i*$l-col}px;
+        }
+    }
+}
+
+@media (max-width: #{$tablet-max}px) and (min-width: #{$phone-max + 1}px) {
+    .grid, .t-grid {
+        width: $t-grid-size;
+        margin: 0 auto;
+    }
+    .t-center {
+        position: relative;
+        margin: 0 auto;
+    }
+    .t-right {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @for $i from 1 through $t-col-count - 1 {
+        .t-col-#{$i} {
+            width: #{$i*$t-col}px;
+        }
+    }
+}
+
+
+@media (max-width: #{$phone-max}px) {
+    .grid, .m-grid {
+        width: $m-grid-size;
+        margin: 0 auto;
+    }
+    .m-center {
+        position: relative;
+        margin: 0 auto;
+    }
+    .m-right {
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @for $i from 1 through $m-col-count - 1 {
+        .m-col-#{$i} {
+            width: #{$i*$m-col}vw;  
+        }
+    }
+}
+
+@mixin extrude($i, $dir:left, $type:d, $grid: true) {
+    @if ($type == d) {
+        width: calc( #{$i*$d-col}px + ((100vw - #{$d-grid-size})/2) );
+        @if ($grid == true) {
+            @if ($dir == left) {
+                margin-left: calc((100vw - #{$d-grid-size})/-2);
+            }
+            @else {
+                margin-left: auto;
+                margin-right: calc((100vw - #{$d-grid-size})/-2);
+            }
+        }
+        @else {
+            @if ($dir == right) {
+                margin-left: auto;
+                margin-right: 0;
+            }        
+        }
+    }
+    @else if ($type == l){
+        width: calc( #{($i*$l-col)}px + ((100vw - #{$l-grid-size})/2) ); 
+        @if ($grid == true) {
+            @if ($dir == left) {
+                margin-left: calc( ((100vw - #{$l-grid-size})/-2) );
+            }
+            @else {
+                margin-left: auto;
+                margin-right: calc( ((100vw - #{$l-grid-size})/-2) );
+            }
+        }
+        @else if ($dir == right) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+    @else if ($type == t){
+        width: calc( #{($i*$t-col)}px + ((100vw - #{$t-grid-size})/2) ); 
+        @if ($grid == true) {
+            @if ($dir == left) {
+                margin-left: calc( ((100vw - #{$t-grid-size})/-2) );
+            }
+            @else {
+                margin-left: auto;
+                margin-right: calc( ((100vw - #{$t-grid-size})/-2) );
+            }
+        }
+        @else if ($dir == right) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}

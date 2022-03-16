@@ -1,0 +1,589 @@
+.logoFrontpageCloned {
+    display: none;
+}
+
+
+
+.fauveUnderline {
+    @include fauveUnderline;
+}
+
+.fauveUnderline:hover {
+    @include fauveUnderlineHover;
+
+}
+
+.transition {
+    transition: font-family 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+
+.haiku-map {
+    background-image: url("/wp-content/themes/lieuxfauves/src/assets/img/mapmonde.svg");
+    background-size: cover;
+}
+
+
+
+.front-image {
+    display: none;
+    
+}
+
+.link-bloc {
+
+    background-color: $grey-new-col-50;
+    height: 235px - $dCol;
+    padding-top: $dCol;
+}
+
+.link-bloc-2 {
+    background-color: $jungle-col-10;
+    height: 235px - $dCol;
+    height: 100%;
+}
+
+
+.logoFrontpage {
+
+    display :none;
+    @include laptopS {
+        display: block
+    }
+    position : fixed;
+    height: 100px;
+    margin-left: $margin;
+    margin-top : $dCol;
+}
+
+.pictoNav {
+    height: 20px;
+    width: 20px;
+}
+
+
+.container-front-page {
+    display: block;
+ 
+
+
+    @include laptopS {
+        display: flex;
+    }
+
+}
+
+
+
+.split-left {
+    z-index: 1 !important;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+
+    @include laptopS {
+        width: 43.4%;
+    }
+
+}
+
+
+.list-chapter {
+    display: block;
+
+    position: fixed;
+    bottom: $m-margin-small;
+    left: $m-margin-small;
+    @include laptopS {
+        position: fixed;
+        bottom: 37px;
+        left: $margin;}
+
+
+
+    .catSpan:hover {
+        font-family: "Fira Bold";
+ 
+     }
+
+    @include laptopS {
+        display: block;
+    }
+
+    @include chapter;
+    color : $grey-col;
+
+
+
+
+    a {
+        text-decoration: none;
+        color: $grey-col;
+    }
+
+}
+
+.scroll {
+    @include chapter-bold;
+    color: $fauve-col;
+}
+
+
+
+.scroll-off {
+    display: none;
+}
+
+
+.deviseOn {
+    display: block;
+}
+
+.devise {
+    display: none;
+}
+
+
+
+
+.split-right {
+    width: 100vw;
+
+
+    @include laptopS {
+        width: 56.6%;
+    }
+
+
+}
+
+.image-wrapper {
+    height: 60vh;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -o-object-fit: cover;
+        object-fit: cover;
+
+    }
+}
+
+.tagline {
+    @include p-intro;
+    color: $grey-col;
+
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small;
+    padding-top: $dCol;
+    padding-bottom : $dCol;
+
+    @include laptopS {
+        padding: $dCol;
+    }
+   
+
+}
+
+.list-link {
+    height: 100%;
+    @include menu-link;
+    color: $jungle-col;
+    padding-left: $m-margin-small;
+    padding-right: 50% !important;
+    @include laptopS {
+    padding-right: $dCol;
+    padding-left: $dCol;
+    }
+    padding-bottom: $dCol;
+
+    .titleListLink {
+        letter-spacing: 1px;
+    }
+
+    img {
+        margin-right: 20px;
+        height: 11px;
+
+    }
+
+    span {
+        margin-right: 20px;
+        color: $jungle-col;
+    }
+
+    a {
+        margin-right: 20px;
+        color: $jungle-col;
+    }
+
+}
+
+
+.bloc-haiku {
+    height: 235px;
+    @include haiku;
+    color: #658d8c;
+    background-color: $jungle-col;
+
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small;
+    padding-top: $dCol;
+    padding-bottom : $dCol;
+    @include mobile-tab {
+        padding-top: 30px;
+
+    }
+
+    @include laptopS {
+        padding: $dCol;
+    }
+    
+}
+
+.blocLoop {
+    display: flex;
+
+    img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.sec-lieux {
+    position: relative;
+    z-index: 1;
+    @include mobile-tab {
+        margin-bottom: 420px;
+    }
+
+}
+
+
+.sec-faire {
+    position: relative;
+    z-index: 1;
+    @include mobile-tab {
+        margin-bottom: 420px;
+    }
+
+    .actu-bloc {
+        @include laptopS {
+        display: flex;
+    }
+        min-height: 100%;
+        background: $black-col-5;
+
+        .actu-wrapper {
+            padding: $m-margin-big;
+            @include laptopS {
+
+            padding: $dCol;}
+            width: 100%;
+            @include laptopS {
+            width: 50%;}
+            height: 100%;
+
+
+            .article-thumbnail {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+               
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                    opacity: 0.5;
+                 
+
+                }
+            }
+
+            .article-thumbnail::after {
+                content: '';
+                background-color: $jungle-col;
+                display: block;
+                padding-bottom: 100%;
+              
+            }
+
+
+            .article-date {
+                padding-top: 20px;
+                @include p-very-small;
+                color: $grey-col;
+
+            }
+
+            .article-title {
+                @include p-intro-bold;
+                color: $grey-col;
+                padding-right: 1 * $dCol;
+            }
+
+        }
+    }
+}
+
+
+
+
+.sec-archiurba {
+    position: relative;
+    z-index: 1;
+    @include mobile-tab {
+        margin-bottom: 420px;
+    }
+    .projet-bloc {
+        height: 400px;
+
+        @include laptopS {
+        display: flex;}
+
+        @include mobile-tab {
+            display: grid;
+        }
+
+        .projet-popup-wrapper {
+
+            .projet-popup .logo-wrapper .logo-close { display: none; }
+
+
+            @include laptopS {
+                width: 50%;}
+
+            position: relative;
+         
+            height: 100%;
+
+
+            .projet-thumbnail {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+               
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                }
+            }
+
+            .projet-thumbnail::after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+              
+            }
+
+            .logo-open {
+                cursor : pointer;
+                height: 25px;
+                width: 25px;
+                position : absolute;
+                bottom : $dCol;
+                right : $dCol;
+              
+                z-index : 1;
+               
+            }
+
+            .projet-popup {
+                display: block;
+                @include laptopS {
+                    display: none;}
+           
+
+                display: none;
+                position: absolute;
+                z-index: 200;
+                background-color: $fauve-col-40;
+                bottom: 0;
+                height: fit-content;
+                width: 100%;
+
+                padding: $dCol;
+                background-color: white;
+
+                a {
+                    @include p-intro-bold;
+                    color: $grey-col;
+                }
+
+                .projet-date {
+                    @include p-localisation;
+                    color: $grey-col;
+                }
+
+
+                p {
+                    @include p-very-small;
+                    color: $grey-col;
+                }
+
+                .logo-wrapper {
+                    padding-top: 5%;
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+
+                    .logo-readmore {
+                        height: 14px;
+                    }
+
+                    .logo-close {
+                        height: 22px;
+                    }
+
+                }
+
+
+
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+}
+
+
+.sec-ves {
+    position: relative;
+    z-index: 1;
+    
+
+    .bloc-exploration {
+        .thumbnailExplo {
+            overflow: hidden;
+            height: 550px;
+            width: 100%;
+            margin-bottom: $dCol;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+            }
+        }
+
+
+        .preExplorationWrapper {
+            background-color: $black-col-5;
+            padding: $dCol;
+
+        }
+
+        .explorationWrapper {
+
+            .exploWrapper {
+                display: flex;
+            }
+
+            padding-top: $dCol;
+            padding-bottom: 25px;
+            padding-left: $dCol;
+            padding-right: $dCol;
+
+            background-color: white;
+
+            // a {
+            //     display: flex;
+
+            // }
+
+            .boutonWrapperExploration {
+                display: flex;
+                justify-content:space-between;
+                @include small-button;
+                border-top: 1px $black-col-5 solid;
+                margin-top: 35px;
+                padding-top: 25px;
+
+                button {
+                    @include small-button;
+                    color: $grey-col-50;
+                }
+
+            }
+
+            .titleExplo {
+                @include p-intro-bold;
+                line-height: 24px;
+                color: $grey-col;
+                padding-right: 2 * $dCol;
+                @include mobile-tab {
+                    padding-right: 60px;
+
+                }
+
+           
+            }
+
+            .excerptExplo {
+                @include p-very-small;
+                color: $grey-col;
+                padding-bottom: 10px;
+                @include mobile-tab {
+                    padding-top: 10px;
+                }
+                
+
+                a {
+                    color: $grey-col;
+
+                }
+            }
+        }
+
+    }
+}
+
+
+    .sec-footer {
+        .bloc-image {
+            img {
+                overflow: hidden;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+
+    .logo-explo {
+        height: 11px;
+    }

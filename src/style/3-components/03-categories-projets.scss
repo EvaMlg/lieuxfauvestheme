@@ -1,0 +1,42 @@
+.categoryHeader {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right : $margin;
+    display: flex;
+    background-color: rgba(255, 255, 255, .9);
+    padding-bottom: $dCol;
+    .catName {
+        @include p-bold;
+        @include fauveUnderlineSmall;
+        color: $jungle-col;
+        
+    }
+    .catName:hover {
+        @include fauveUnderlineHover;
+      
+
+    }
+
+}
+.catWrapper {
+    margin-right: 0;
+    text-align: center;
+    
+        width: fit-content;
+        min-width: 130px;
+    
+  
+}
+
+
+
+
+.subCatName {
+    display: flex;
+    flex-direction: column;
+    @include p-very-small;
+    color : $grey-col;
+   
+}

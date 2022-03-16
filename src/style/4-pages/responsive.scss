@@ -1,0 +1,2681 @@
+$m-margin-small : 18px;
+$m-margin-big : 20px;
+
+
+
+
+
+
+
+// RESPONSIVE MENU 
+
+
+
+
+
+@include tablet {
+    .responsive-menu {
+        z-index: 200;
+        position: fixed;
+        top: $m-margin-small;
+        right: $m-margin-small;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .pictoResponsive {
+            height: 25px;
+            width: 25px;
+        }
+
+        .responsiveBurger {
+            z-index: 100;
+
+        }
+    }
+
+
+
+
+
+
+}
+
+
+
+@include mobile-tab {
+
+
+
+    .responsive-menu {
+        z-index: 200;
+        position: fixed;
+        top: $m-margin-small;
+        right: $m-margin-small;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .pictoResponsive {
+            height: 25px;
+            width: 25px;
+        }
+
+        .responsiveBurger {
+            z-index: 100;
+
+        }
+    }
+
+}
+
+@include laptopS {
+
+    .responsive-menu {
+        display: none;
+        z-index: 200;
+
+
+        .pictoResponsive {
+            display: none;
+            height: 25px;
+            width: 25px;
+        }
+
+        .responsiveBurger {
+            z-index: 100;
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// FOOTER 
+
+@include mobile-tab {
+
+    .adress-container {
+        margin-left: $m-margin-small;
+    }
+
+}
+
+// FULL MENU
+
+@include mobile-tab {
+
+    .barMenuFull {
+        display: none;
+    }
+
+
+    .full-menu .leftColumnMenu {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        align-items: start;
+    }
+
+    .full-menu .rightColumnMenu {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .full-menu .leftColumnMenu .menuItemFP {
+        width: 90vw;
+    }
+
+ 
+
+
+
+    .full-menu {
+        overflow-y: scroll;
+        max-height: 100%;
+        height: fit-content;
+        position: fixed;
+        bottom: 0%;
+        top: 0%;
+        width: 100%;
+        background-color: $jungle-col;
+        z-index: 100;
+        padding-right: $m-margin-small;
+        padding-left: $m-margin-small;
+        padding-bottom: $m-margin-small;
+        display: grid;
+    }
+
+
+
+
+    .rightColumnMenu {
+        border-top: 1px solid white;
+        padding-top: 20px;
+        margin-top: 20px;
+        width: 100vw;
+
+
+
+        @include mobile {
+            grid-row: 2;
+        }
+
+
+
+        .headerFullMenuWrapper {
+            @include mobile {
+                display: flex;
+            }
+
+            .tagline-white {
+                @include mobile {
+                    height: 3 * $dCol;
+
+                    opacity: 0.5;
+                    position: absolute;
+                    top: $m-margin-small;
+                    left: $m-margin-small
+                }
+            }
+
+            .logo-white {
+                @include mobile {
+                    height: 2 * $dCol;
+                    padding-right: 30px;
+                }
+            }
+
+        }
+
+
+
+        .logo-socials {
+            @include mobile {
+                height: 50px;
+            }
+
+        }
+
+        .contactWrapper {
+            @include mobile {
+                color: $jungle-col-10;
+                @include footer-p-bold;
+
+                padding-bottom: $m-margin-small;
+                padding-top: $m-margin-small;
+                text-transform: uppercase;
+
+            }
+
+        }
+
+        .adressesWrapper {
+            @include mobile {
+                @include footer-p;
+                color: $jungle-col-10;
+            }
+
+            .adressWrapper {
+                @include mobile {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+
+
+    }
+
+
+    .leftColumnMenu {
+
+        @include mobile {
+            padding-top: 20vh;
+            grid-row: 1;
+
+            flex-direction: column;
+        }
+
+
+        .menuItemFP {
+            padding-top: 25px;
+
+            h1 {
+                @include fullmenu-h1;
+                @include menuOoutline;
+                text-transform: uppercase;
+                border-top: 1px solid white;
+                padding-top: 20px;
+                width: 100%;
+
+                a {
+                    color: $jungle-col;
+                }
+
+
+            }
+
+
+        }
+
+        .subMenuFP {
+            @include mobile-tab {
+                display: flex;
+                flex-direction: column;
+                @include fullmenu-submenu;
+                font-size : 16px !important;
+                font-family: "Fira Sans Black";
+                line-height: 31px;
+                color: white;
+                padding: 0;
+                padding-top: 8px;
+                padding-left: 0px;
+            }
+
+
+            a {
+                @include mobile-tab {
+                    color: white;
+                    padding-top: 11px !important;
+                    padding-left: 0px;
+                    padding-left: 0px !important;
+
+                }
+            }
+        }
+
+
+    }
+
+
+
+}
+
+
+// PROJETS ARCHIVE
+
+
+@include mobile-tab {
+
+
+
+    .categoryHeader .div-to-toggle .subCatName span.active {
+        margin: 0;
+    }
+
+    .catHeaderOff {
+        transform: translateX(-100%);
+    }
+
+    .catHeaderOn {
+        transform: translateX(0%);
+    }
+
+
+    .categoryHeader {
+
+      
+        overflow-y: scroll;
+        max-height: 100%;
+        height: fit-content;
+        width: 100vw;
+        display: block;
+
+        height: 100vh;
+        position: fixed;
+
+
+        background-color: $jungle-col-10;
+
+        top: 0;
+        left: 0;
+
+
+
+        padding: $m-margin-small;
+        padding-top: 2 * $dCol;
+
+        .catWrapper {
+            margin: 0;
+            margin-bottom: 20px;
+
+        }
+
+        .subCatName {
+            color: $jungle-col;
+        }
+
+        .catName {
+            margin-bottom: 4px;
+        }
+
+        .catName:hover {
+            @include fauveUnderlineHover
+        }
+
+        .div-to-toggle {
+            display: block;
+
+        }
+
+        .div-to-toggle:hover {
+            display: block;
+        }
+
+
+
+
+    }
+
+    .catWrapper {
+        margin-right: $m-margin-small;
+        margin-left: $m-margin-small;
+        text-align: left;
+    }
+
+    .projetsContainer {
+        background-color: white;
+        padding: 0;
+
+
+
+
+        .headerProjets {
+            padding: $m-margin-small;
+            display: flex;
+            justify-content: space-between;
+
+
+            .logoHeader {
+                display: flex;
+                z-index: 1;
+
+                .logoArchiveExplo {
+                    display: none;
+
+                    @include laptopS {
+                        display: block;
+                    }
+
+                    height: 45px;
+                    margin-right: 20px;
+                    margin-bottom : $dCol;
+                }
+
+                .projPageName {
+                    @include title_h1;
+                    color: $jungle-col;
+
+
+                }
+
+                .projPageNameResponsive {
+                    display: block;
+                    @include title_h1;
+                    @include projetOoutline;
+                    letter-spacing: 2px;
+                    display: none;
+                
+
+
+                }
+            }
+
+
+        }
+
+    }
+
+    .projetsGrid {
+
+        .lfLogo {
+            display: none;
+        }
+
+        @include laptopS {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: $dCol;
+            margin-right: -45px;
+
+
+            .cardProjet {
+                width: calc(25% - 45px);
+
+                img {
+                    height: 400px;
+                }
+
+            }
+
+        }
+
+        .titleProjet {
+            padding-left: $m-margin-small;
+            padding-right: 30%;
+
+            //padding-top: $m-margin-small;
+
+        }
+
+        .projectLoopLieu {
+            padding-left: $m-margin-small;
+            ;
+            padding-right: 30%;
+            padding-bottom: 1 * $dCol;
+            padding-top: 0px;
+
+        }
+
+
+        a {
+            @include p-intro-bold;
+            text-decoration: none;
+            color: $grey-col
+        }
+
+
+        .cardProjet:nth-child(3n+2) {
+            img {
+                height: 480px;
+            }
+
+
+        }
+
+        .thumbnailProjet {
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+                height: 360px;
+            }
+        }
+
+
+
+    }
+
+}
+
+
+
+
+
+// PROJET SINGLE => AJOUTER BLOC autour du header pour responsive
+
+@include mobile-tab {
+
+    .mobileNone {
+        display: none !important;
+    }
+
+
+    .boutonWrapperProjetCloned {
+        margin-bottom: $dCol;
+        @include p-link;
+        color: $grey-col-50;
+        display: flex;
+        flex-direction: column;
+
+        .shareLinks {
+            @include p-link;
+            color: $grey-col-50;
+            background-color: $black-col-5;
+            padding-left: $m-margin-small;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            margin-top: 10px;
+            
+
+        }
+      
+    }
+
+
+    .ficheTechniqueMobile {
+
+        .ficheTechnique {
+            padding-right: $m-margin-small;
+            padding-left: $m-margin-small;
+        }
+        display: block;
+        
+
+        .cardLinkJungle {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $jungle-col;
+            color: $grey-col;
+            padding-top: 25px;
+            padding-right: $m-margin-small;
+            padding-left: $m-margin-small;
+
+            padding-bottom: 25Px;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                color: white;
+                text-transform: uppercase;
+
+                font-family: "Fira Bold";
+                font-size: 12px;
+                line-height: 25px;
+
+                @include laptopS {
+                    font-size: 12px;
+                    line-height: 25px;
+                }
+
+            }
+
+
+
+        }
+
+        h3 {
+            color: white;
+            text-transform: uppercase;
+            font-family: "Fira Bold";
+            font-size: 12px;
+            line-height: 25px;
+
+            @include laptopS {
+                font-size: 12px;
+                line-height: 25px;
+            }
+        }
+
+        @include p-very-small;
+        color : white;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        background-color: $jungle-col;
+        gap : $dCol;
+
+        .columnFT {
+            width: 50%;
+        }
+
+        .wrapperItems {
+            margin-bottom: 15px;
+        }
+       
+
+    }
+
+    .titleWrapperResponsive {
+        display: block;
+        padding: $m-margin-small;
+        padding-right: 4 * $m-margin-small;
+    }
+
+    .titleWrapper {
+        display: none;
+    }
+
+    .mobileImgWhiteLayout {
+        position : absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+
+    }
+
+    .laptopImgWhiteLayout {
+        display: none;
+    }
+
+
+
+    .mainSingleProjet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerProjetWrapper {
+
+        .imageWrapper {
+            display: flex;
+            height: 600px !important;
+
+        }
+
+        .imageThumbnailWrapper img {
+            height: 600px !important;
+        }
+
+
+        .imageWrapper {
+            height: 100%;
+            display: flex;
+
+            img {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+                position: absolute;
+            }
+
+        }
+
+        .whiteLayout {
+
+
+
+            width: 100%;
+            height: 600px;
+            //position: absolute;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nomenclature-wrapper {
+                display: none;
+                padding-top: $dCol;
+
+
+            }
+
+            .nomenclature {
+                @include small-button;
+                color: $grey-col;
+                margin-left: $m-margin-small;
+                margin-right: $m-margin-small;
+                text-align: center;
+                position: absolute;
+                top: 530px;
+                margin-left: 0px; 
+                padding-right: 0;
+                position: absolute;
+
+                a {
+                    @include small-button;
+                    color: $grey-col;
+                    line-height: 30px;
+                }
+            }
+
+            
+
+
+
+
+        }
+
+
+    }
+
+
+    .singleProjetTitle {
+        font-family: "Fira Bold";
+        font-size: 28px;
+        line-height: 35px;
+        color: #828787;
+
+
+
+    }
+
+    .singleProjetSubTitle {
+        font-family: "Fira Light";
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 35px;
+        color: #828787;
+        padding-top: 0;
+
+
+
+    }
+
+
+    .contentWrapperProjet {
+        position: relative;
+        width: 100vw;
+        padding-top: 0;
+
+        padding-top: 0;
+        padding-left: 0;
+
+
+        .titleWrapper {
+            padding-bottom: $dCol;
+        }
+
+
+
+        .galleryWrapper {
+            overflow: hidden;
+            width: 100vw;
+
+            height: 400px;
+            padding-bottom: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+            }
+        }
+
+
+
+
+        .projetWrapper {
+            display: block;
+            margin-top : 0;
+
+
+            .rightColumn {
+                width: 100%;
+                padding-left: $m-margin-small;
+                padding-right: $m-margin-small;
+
+                h2 {
+                    @include p-intro-bold-lh;
+                    ;
+                    color: $grey-col;
+
+                }
+
+                h3 {
+                    @include p-intro-bold-capitalize;
+                    text-transform: uppercase;
+                    color: $jungle-col;
+                    padding-top: $dCol;
+                    padding-bottom: 15px;
+                }
+
+
+                p {
+                    @include p-very-small;
+                    color: $grey-col;
+
+                }
+
+                a {
+                    @include fauveUnderline;
+                    color: $grey-col;
+                }
+
+                a:hover {
+                    @include fauveUnderlineHover;
+                    color: $grey-col;
+                }
+
+            }
+
+            .leftColumn {
+                width: 100%;
+                padding-right: 0;
+
+                p {
+                    @include p-very-small
+                }
+
+                .boutonWrapperExploration {
+                    text-align: left;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    @include small-button;
+                    border-top: 1px $black-col-5 solid;
+                    margin-top: $dCol;
+                    padding-top: $dCol;
+
+                    button {
+                        text-align: left;
+                        @include small-button;
+                        color: $grey-col;
+                    }
+
+                }
+
+
+                .cardLink {
+                    padding-right: $m-margin-small;
+                    padding-left: $m-margin-small;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    margin-top: 10px;
+                }
+
+                .cardLinkJungle {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: $jungle-col;
+                    color: $grey-col;
+                    padding-top: 25px;
+                    padding-right: $m-margin-small;
+
+                    padding-bottom: 25Px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        color: white;
+                        text-transform: uppercase;
+                        font-family: "Fira Bold";
+                        font-size: 12px;
+                        line-height: 25px;
+
+                        @include laptopS {
+                            font-size: 12px;
+                            line-height: 25px;
+                        }
+
+                    }
+
+
+
+                }
+
+                .cardLinkLight {
+                    background-color: $jungle-col-10;
+                    color: $grey-col;
+
+
+                }
+
+                
+
+
+                .boutonWrapperProjet {
+                    margin-bottom: $dCol;
+                    @include p-link;
+                    color: $grey-col-50;
+                    display: flex;
+                    flex-direction: column;
+
+                    .shareLinks {
+                        @include p-link;
+                        color: $grey-col-50;
+                        background-color: $black-col-5;
+                        padding-left: $m-margin-small;
+                        padding-top: 4%;
+                        padding-bottom: 4%;
+
+                    }
+                }
+
+
+
+            }
+
+        }
+
+    }
+
+    .logoOuvrir {
+        background-color: transparent;
+
+        img {
+            height: 20px;
+            width: 20px;
+        }
+
+
+    }
+
+
+    .logoPrevNext {
+        height: 20px;
+        width: 20px;
+    }
+
+
+
+
+
+
+
+
+    .ficheTechnique {
+        display: none;
+
+        h3 {
+            color: white;
+            text-transform: uppercase;
+            font-family: "Fira Bold";
+            font-size: 12px;
+            line-height: 25px;
+
+            @include laptopS {
+                font-size: 12px;
+                line-height: 25px;
+            }
+        }
+
+        @include p-very-small;
+        color : white;
+        padding-left: $dCol;
+        padding-right: $dCol;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        background-color: $jungle-col;
+        display: none;
+        gap : $dCol;
+
+        .columnFT {
+            width: 50%;
+        }
+
+        .wrapperItems {
+            margin-bottom: 15px;
+        }
+    }
+
+
+
+    .navNextPrev {
+        position: fixed;
+        z-index: 50;
+        display: flex;
+        right: 0;
+        top: 5px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 65px;
+        height: 2 * $margin;
+
+
+        .nav-previousMobile {
+            display: block;
+        }
+
+        .nav-nextMobile {
+            display: block;
+        }
+
+        .close-icon {
+            height: 22px;
+            width: 22px;
+        }
+
+
+
+
+        .nav-previous {
+            display: none
+        }
+
+        .nav-next {
+            display: none;
+        }
+
+    }
+}
+
+
+// LOOP
+
+
+@include mobile-tab {
+    .projetsLoopExplo {
+        display: none;
+        width: 100vw;
+        background-color: $black-col-5;
+    }
+
+    .projetsLoop {
+        display: none;
+        width: 100vw;
+
+        padding-top: $margin;
+        padding-left: $margin;
+
+
+        .titleLoop {
+            @include menu-link;
+            color: $jungle-col;
+            padding-top: $dCol;
+            padding-bottom: $dCol;
+        }
+
+        .loopWrapper {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: $dCol;
+
+
+            .projectCard {
+                width: calc(25% - 45px);
+
+
+                a {
+                    @include p-intro-bold;
+                    text-decoration: none;
+                    color: $grey-col
+                }
+
+            }
+
+            .projectCard:nth-child(3n) {
+                img {
+                    height: 500px;
+
+                }
+
+
+            }
+
+            .projectThumbnail {
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                    height: 360px;
+                }
+            }
+
+
+            .projectTitle {
+                padding-top: 8px;
+                width: 300px;
+                @include p-bold;
+                color: $grey-col;
+
+                padding-right: 2 * $dCol;
+
+
+                a {
+                    text-decoration: none;
+                    color: $grey-col;
+                }
+
+
+            }
+
+
+        }
+    }
+
+
+}
+
+
+
+// SINGLE ARTILE 
+
+@include mobile-tab {
+
+    .mobileLayout {
+        display: block;
+    }
+
+    .laptopLayout {
+        display: none;
+    }
+
+    .logoArchiveExplo {
+        display: none;
+    }
+
+
+    .titleArticle {
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: "Fira Bold";
+        font-size: 28px;
+        line-height: 35px;
+
+        color: $grey-col;
+
+    }
+
+    .dateArticle {
+        @include p-very-small;
+        color: $grey-col;
+
+    }
+
+    .headerArticle {
+        background-color: $black-col-5;
+        padding-left: $m-margin-small;
+        padding-top: $dCol;
+        padding-bottom: $dCol;
+
+        img {
+            height: 100px;
+        }
+
+    }
+
+    .mainArticle {
+        background-color: $black-col-5;
+        padding-left: $m-margin-small;
+        display: grid;
+        flex-direction: column;
+
+        .leftColumnArticle {
+            grid-row: 1;
+            width: 100%;
+            padding-right: $m-margin-small;
+
+            .article-thumbnail {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+
+                }
+            }
+
+            .article-thumbnail::after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            .wrapperLinkArticle {
+                padding-top: 2%;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    color: $grey-col-50;
+                    border: 1px solid $grey-col;
+                    padding-left: $m-margin-small;
+                    padding-top: 4%;
+                    padding-bottom: 4%;
+                    margin-bottom: 2%;
+                }
+            }
+
+            .wrapperLinkArticle {
+                margin-top: 3%;
+                margin-bottom: $dCol;
+                @include p-link;
+                color: $grey-col;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+
+        }
+
+        .mainArticle .rightColumnArticle .titleArticle {
+            padding-right: 2 * $dCol;
+        }
+
+
+        .rightColumnArticle {
+            grid-row: 2;
+            width: 100%;
+            padding-left: 0;
+            padding-right: $m-margin-small;
+
+            .titleArticle {
+
+
+
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-family: "Fira Bold";
+                font-size: 28px;
+                line-height: 35px;
+
+                color: $grey-col;
+
+            }
+
+
+
+            .dateArticle {
+                @include p-very-small;
+                color: $grey-col;
+
+            }
+
+            .contentArticle {
+
+                a {
+                    @include fauveUnderline;
+                    color: $grey-col;
+                }
+
+                a:hover {
+                    @include fauveUnderlineHover;
+                    color: $grey-col;
+                }
+
+
+
+
+                .p1 {
+                    @include p-very-small;
+                    color: $grey-col;
+                }
+
+            }
+
+
+
+            .imagesArticle {
+                padding-top: 20px;
+                overflow: hidden;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+
+                }
+            }
+
+
+
+
+        }
+
+
+
+    }
+
+
+    .legendArticle {
+        padding-top: 10px;
+        padding-left: 50%;
+        text-align: right;
+        @include footer-legend;
+        color: $grey-col;
+        padding-bottom: $dCol;
+
+    }
+
+}
+
+
+// ARCHIVE EXPLO 
+
+
+@include mobile-tab {
+
+
+    .headerExploration {
+        display: block;
+        justify-content: space-between;
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+        padding-top: $m-margin-small;
+        padding-bottom: $m-margin-small;
+
+
+
+
+        .logoHeader {
+            display: block;
+            z-index: 1;
+
+            .logoArchiveExplo {
+                display: none;
+
+                @include laptopS {
+                    display: block;
+                }
+
+                height: 45px;
+                margin-right: 20px;
+                margin-bottom: $dCol;
+            }
+
+            .exploPageName {
+                @include title_h1;
+                color: $jungle-col;
+            }
+        }
+
+        .categoryHeader {
+
+          
+
+
+            @include laptopS {
+                display: flex;
+            }
+
+            //@include p-bold;
+
+            .catName {
+                @include p-bold;
+                font-size: 18px !important;
+                color: $jungle-col
+            }
+
+            
+
+
+        }
+
+
+    }
+
+    .explorationsContainer {
+        width: 100vw;
+
+        @include laptopS {
+            width: calc(100vw - 77px)
+        }
+
+        background-color: white;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        .preExplorationWrapper {
+            background-color: $black-col-5;
+            padding: $m-margin-small;
+            margin-bottom: 15px;
+
+        }
+
+        .explorationWrapper {
+            background-color: white;
+            display: block;
+
+            @include laptopS {
+                display: flex;
+                flex-direction: row;
+            }
+
+            height: 100%;
+
+            a {
+                display: flex;
+
+            }
+
+            .taxThumbnailWrapper {
+                overflow: hidden;
+                display: block;
+                width: 100%;
+
+
+
+
+                .taxExplo {
+
+                    .taxnames {
+                        @include fauveUnderline
+                    }
+
+                    .taxnames:hover {
+
+                        @include fauveUnderlineHover
+                    }
+
+
+                    .barre-nobold {
+                        display: inline;
+                        text-decoration: none;
+                        padding-bottom: 0;
+                        padding-right: 0;
+                        padding-left: 0;
+                        box-shadow: inset 0 0 0;
+
+
+                    }
+
+                    display: block;
+                    padding: $m-margin-small;
+
+
+                    width: 100%;
+                    @include p-bold;
+
+                    color : $jungle-col;
+
+
+                    a {
+                        display: inline;
+                        text-decoration: none;
+                        color: $grey-col;
+
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                        @include fauveUnderlineHover;
+                    }
+
+                }
+
+            }
+        }
+
+
+
+
+
+        .titleExplo {
+            @include p-intro-bold;
+            color: $grey-col;
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .excerptExplo {
+            padding-top: 15px;
+            @include p-very-small;
+            color: $grey-col;
+        }
+
+
+
+        .imageExplo {
+            overflow: hidden;
+            width: 390px;
+            max-height: 390px;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+            }
+        }
+
+        .imageExplo::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+    }
+
+
+    .wrapperExplo {
+        width: 100%;
+        padding-left: $m-margin-small;
+        padding-top: $m-margin-small;
+        padding-right: $m-margin-small;
+        padding-bottom: 0;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .boutonWrapperExploration {
+            text-align: left;
+
+            display: flex;
+            //   align-items : baseline;
+            flex-direction: column;
+
+            justify-content: space-between;
+            @include small-button;
+            border-top: 0px $black-col-5 solid;
+            margin-top: 25px;
+            padding-top: 0;
+
+            button {
+                text-align: left;
+                @include small-button;
+                border-top: 1px $black-col-5 solid;
+                color: $grey-col-50;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                width: 100%;
+            }
+
+        }
+
+
+        .contentWrapperExploration {
+            display: block;
+
+            .titleExplo {
+                padding-right: 60px;
+            }
+
+            .excerptExplo {
+                padding-left: 0;
+            }
+
+        }
+
+
+    }
+
+
+    .logo-load {
+        height: 14px;
+        margin-top: 20px;
+
+    }
+
+    .logo-explo {
+        height: 10px;
+    }
+
+
+
+    .archive-article-thumbnail {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            opacity: 0.5;
+
+
+        }
+    }
+
+    .archive-article-thumbnail::after {
+        content: '';
+        background-color: $jungle-col;
+        display: block;
+        padding-bottom: 100%;
+
+    }
+}
+
+
+// SINGLE EXPLO 
+
+
+@include mobile-tab {
+
+    .parentTags {
+        color : $jungle-col !important;
+        font-family: "Fira Bold"  !important;
+        font-size: 15px  !important;
+    }
+    
+
+    .mainExploration .leftColumnExploration .boutonWrapperExploration {
+        margin-bottom: 0 !important;
+    }
+
+
+    .mainExploration {
+        display: block;
+        width: 100vw;
+    }
+
+    .titleWrapperExplorationResponsive {
+        background-color: white;
+        padding: $m-margin-small;
+        @include titre-projet;
+        color: $grey-col;
+        margin-bottom: $m-margin-small;
+        margin-top: $m-margin-small;
+
+    }
+
+
+    .headerExplo {
+        display: none;
+        background-color: $black-col-5;
+        padding-left: $m-margin-small;
+        padding-top: $dCol;
+        padding-bottom: $dCol;
+
+        img {
+            height: 100px;
+        }
+
+    }
+
+    .mainExploration {
+        background-color: $black-col-5;
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+        padding-bottom: $m-margin-small;
+        display: block;
+        width: 100vw;
+
+        .leftColumnExploration {
+            width: 100%;
+            padding-right: 0;
+
+            .tagsWrapperExploration {
+              
+                background-color: white;
+                padding: $m-margin-small;
+            
+            }
+
+            .article-thumbnail {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+
+                }
+            }
+
+            .article-thumbnail::after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+
+
+
+            .boutonWrapperExploration {
+                margin-top: 15px;
+                margin-bottom: $dCol;
+                @include p-link;
+                color: $grey-col;
+                display: flex;
+                flex-direction: column;
+
+                .shareLinks {
+                    background-color: white;
+                    padding-left: $m-margin-small;
+                    padding-top: 4%;
+                    padding-bottom: 4%;
+
+
+
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .rightColumnExploration {
+            width: 100%;
+
+
+            .titleWrapperExploration {
+                display: none;
+                //min-height: 180px;
+                background-color: white;
+                padding: $m-margin-small;
+                @include titre-projet;
+                color: $grey-col;
+                margin-bottom: 1.5%;
+            }
+
+            .contentWrapperExploration {
+                background-color: white;
+                padding: $m-margin-small;
+                margin-bottom: $dCol;
+
+
+            }
+
+            .chapeauWrapperExploration {
+                @include p-intro-bold-lh;
+                color: $grey-col;
+                padding-bottom: $dCol;
+
+            }
+
+            .subtitleWrapperExploration {
+                padding-bottom: 2%;
+
+                h3 {
+                    @include p-intro-bold-capitalize;
+                    text-transform: uppercase;
+                    color: $jungle-col;
+                }
+            }
+
+            .texteWrapperExploration {
+                @include p-very-small;
+                color: $grey-col;
+
+            }
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+
+}
+
+
+// FRONT PAGE 
+
+
+
+
+@include mobile-tab {
+
+    .logoFrontpageCloned {
+        display: block;
+        position: absolute;
+        height: 100px;
+        top: $m-margin-small;
+        left: $m-margin-small;
+    }
+
+
+    .fauveUnderline {
+        @include fauveUnderline;
+    }
+
+    .fauveUnderline:hover {
+        @include fauveUnderlineHover;
+
+    }
+
+    .transition {
+        transition: font-family 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+    }
+
+
+    .haiku-map {
+        background-image: url("/wp-content/themes/lieuxfauves/src/assets/img/mapmonde.svg");
+        background-size: cover;
+    }
+
+
+
+    .front-image {
+        display: none;
+
+    }
+
+    .link-bloc {
+        background-color: $grey-new-col-50;
+        height: fit-content;
+        padding-top: $dCol;
+    }
+
+    .link-bloc-2 {
+        background-color: $jungle-col-10;
+        height: fit-content;
+        height: 100%;
+    }
+
+
+    .logoFrontpage {
+        @include laptopS {
+            display: block
+        }
+
+        position : fixed;
+        height: 100px;
+        margin-left: $margin;
+        margin-top : $dCol;
+    }
+
+    .pictoNav {
+        height: 25px;
+        width: 25px;
+    }
+
+
+    .container-front-page {
+        display: block;
+
+    }
+
+
+
+    .split-left {
+        display: block;
+        z-index: 1;
+
+
+    }
+
+
+    .list-chapter {
+
+        @include chapter;
+        color: $grey-col;
+
+
+        a {
+            text-decoration: none;
+            color: $grey-col;
+        }
+
+    }
+
+    .scroll {
+        @include chapter-bold;
+        color: $fauve-col;
+    }
+
+
+
+    .scroll-off {
+        display: none;
+    }
+
+
+    .deviseOn {
+        display: block;
+    }
+
+    .devise {
+        display: none;
+    }
+
+
+
+
+
+
+    .split-right {
+        width: 100vw;
+
+
+        @include laptopS {
+            width: 56.6%;
+        }
+
+
+    }
+
+    .image-wrapper {
+        height: 60vh;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -o-object-fit: cover;
+            object-fit: cover;
+
+        }
+    }
+
+    .tagline {
+        @include p-intro;
+        color: $grey-col;
+
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+        padding-top: $dCol;
+        padding-bottom: $dCol;
+
+        @include laptopS {
+            padding: $dCol;
+        }
+
+
+    }
+
+    .list-link {
+        height: 100%;
+        @include menu-link;
+        color: $jungle-col;
+        padding-right: 50% !important;
+        padding-left: $m-margin-small;
+
+        @include laptopS {
+            padding-right: $dCol;
+            padding-left: $dCol;
+        }
+
+        padding-bottom: $dCol;
+
+        img {
+            margin-right: 20px;
+            height: 11px;
+
+        }
+
+        a {
+
+            color: $jungle-col;
+        }
+
+    }
+
+
+    .bloc-haiku {
+        height: 235px;
+        @include haiku;
+
+        background-color: $jungle-col;
+
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+        padding-top: 30px;
+        padding-bottom: $dCol;
+
+        @include laptopS {
+            padding: $dCol;
+        }
+
+    }
+
+    .blocLoop {
+        display: flex;
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+
+    .sec-faire {
+
+        .actu-bloc {
+            @include laptopS {
+                display: flex;
+            }
+
+            min-height: 100%;
+            background: white;
+
+            .actu-wrapper {
+                background-color: $black-col-5;
+                padding: $m-margin-big;
+
+                @include laptopS {
+
+                    padding: $dCol;
+                }
+
+                width: 100%;
+
+                @include laptopS {
+                    width: 50%;
+                }
+
+                height: 100%;
+
+
+                .article-thumbnail {
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        object-fit: cover;
+                        opacity: 0.5;
+
+
+                    }
+                }
+
+                .article-thumbnail::after {
+                    content: '';
+                    background-color: $jungle-col;
+                    display: block;
+                    padding-bottom: 100%;
+
+                }
+
+
+                .article-date {
+                    padding-top: 20px;
+                    @include p-very-small;
+                    color: $grey-col;
+
+                }
+
+                .article-title {
+                    @include p-intro-bold;
+                    color: $grey-col;
+                    padding-right: 1 * $dCol;
+                }
+
+            }
+        }
+    }
+
+    .sec-archiurba {
+
+        .logo-open {
+            display: none;
+        }
+
+        .projet-bloc {
+            height: fit-content;
+
+            @include laptopS {
+                display: flex;
+            }
+
+            .projet-popup-wrapper {
+
+                @include laptopS {
+                    width: 50%;
+                }
+
+                position: relative;
+                height: 100%;
+
+                .projet-thumbnail {
+                    //position: absolute;
+                    overflow: hidden;
+                    height: 550px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        object-fit: cover;
+                    }
+
+
+                }
+
+                .projet-popup {
+                    display: block;
+                    position: absolute;
+                    z-index: 200;
+                    background-color: $fauve-col-40;
+                    bottom: 0;
+                    height: auto;
+
+                    padding-left: $m-margin-small;
+                    padding-right: $m-margin-small;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+
+                    @include laptopS {
+
+                        padding: $dCol;
+                    }
+
+                    background-color: white;
+
+                    a {
+                        @include p-intro-bold;
+                        color: $grey-col;
+
+                    }
+
+                    a #text {
+
+                        padding-right: 60px;
+                    }
+
+
+                    .projet-date {
+                        @include p-localisation;
+                        color: $grey-col;
+                    }
+
+
+                    p {
+                        @include p-very-small;
+                        color: $grey-col;
+                    }
+
+                    .logo-wrapper {
+                        padding-top: 5%;
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+
+                        .logo-readmore {
+                            height: 14px;
+                        }
+
+                        .logo-close {
+                            height: 22px;
+
+                        }
+
+                    }
+
+
+
+
+                }
+
+
+
+            }
+
+
+
+        }
+
+    }
+
+
+    .sec-ves {
+
+        .bloc-exploration {
+            .thumbnailExplo {
+                overflow: hidden;
+                height: 550px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                }
+            }
+
+
+            .preExplorationWrapper {
+                height: fit-content;
+                background-color: $black-col-5;
+                padding: $m-margin-small;
+
+            }
+
+            .explorationWrapper {
+
+                .exploWrapper {
+                    display: block;
+                }
+
+                padding-top: $dCol;
+                padding-bottom: 25px;
+                padding-left: $m-margin-small;
+                padding-right: $m-margin-small;
+
+                background-color: white;
+
+                a {
+                    display: flex;
+
+                }
+
+                .boutonWrapperExploration {
+                    text-align: left;
+
+                    display: flex;
+                    //   align-items : baseline;
+                    flex-direction: column;
+
+                    justify-content: space-between;
+                    @include small-button;
+                    border-top: 0px $black-col-5 solid;
+                    margin-top: $dCol;
+                    padding-top: 0;
+
+                    button {
+                        text-align: left;
+                        @include small-button;
+                        border-top: 1px $black-col-5 solid;
+                        color: $grey-col-50;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        width: 100%;
+                    }
+
+                    .titleExplo {
+                        @include p-intro-bold;
+                        line-height: 24px;
+                        color: $grey-col;
+                        padding-right: 60px;
+
+                    }
+
+                    .excerptExplo {
+                        @include p-very-small;
+                        color: $grey-col;
+                        padding-bottom: 10px;
+                        padding-top: 10px;
+
+                        a {
+                            color: $grey-col;
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+        .sec-footer {
+            .bloc-image {
+                img {
+                    overflow: hidden;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+    }
+
+
+    // PAGE AGENCE
+
+    @include mobile-tab {
+
+        .sec-agence {
+            z-index: 500;
+            position: relative;
+            margin-bottom: 420px;
+
+        }
+
+        .sec-valeurs {
+            z-index: 500;
+            position: relative;
+            margin-bottom: 420px;
+        }
+
+        .sec-expertises {
+            z-index: 500;
+            position: relative;
+            margin-bottom: 420px;
+        }
+
+        .sec-equipe {
+            z-index: 500;
+            position: relative;
+
+        }
+
+
+
+        .imageWrapperAgence {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+            }
+        }
+
+        .list-chapter-agence {
+            position: relative;
+            z-index: 90;
+
+
+
+
+            @include chapter;
+            color: $grey-col;
+            position: fixed;
+            bottom: $m-margin-small;
+            left: $m-margin-small;
+
+            a {
+                text-decoration: none;
+                color: $grey-col;
+            }
+
+        }
+
+
+        .spanAgence {
+            @include chapter-bold;
+            text-transform: uppercase;
+            color: $jungle-col;
+        }
+
+
+        .sec-valeurs {
+
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+            padding-top: $dCol;
+            padding-bottom: $dCol;
+
+            @include laptopS {
+                padding: $dCol;
+            }
+
+            background: $black-col-5;
+        }
+
+
+
+        .titleAgence {
+            @include p-intro-bold-capitalize;
+            color: $jungle-col;
+            padding-bottom: 0.5rem;
+            padding-top: 1rem;
+        }
+
+        .contentAgenceLegende {
+
+            display: flex;
+            align-items: center;
+            padding-right: $dCol;
+            padding-top: 10px;
+            margin-left: 50%;
+            width: 50%;
+
+
+            @include footer-legend;
+            color: $grey-col;
+
+
+
+            b {
+                @include p-bold;
+                color: $grey-col;
+
+            }
+
+            button {
+                background-color: transparent;
+            }
+
+        }
+
+        .contentAgence {
+
+            @include p-very-small;
+            color: $grey-col;
+
+
+            p {
+                @include p-very-small;
+            }
+
+            b {
+                @include p-bold;
+                color: $grey-col;
+
+            }
+
+        }
+
+        .jungleBold b {
+            @include p-bold;
+            color: $jungle-col;
+
+        }
+
+
+        .contentAgenceBold {
+            p {
+                @include p-intro-bold-lh;
+                color: $grey-col;
+                padding-bottom: 0.5rem;
+            }
+
+            a {
+                @include fauveUnderline;
+                color: $grey-col;
+
+            }
+
+            padding-bottom: $dCol;
+
+        }
+
+
+        .taglinegrey {
+            @include p-intro-bold;
+            background-color: $black-col-5;
+        }
+
+
+        .subtitleAgence {
+            @include p-bold;
+            text-transform: uppercase;
+            color: $grey-col;
+            padding-bottom: 0.5rem;
+            padding-top: 1rem;
+
+        }
+
+        .columsWrapperAgence {
+            display: block;
+
+            @include laptopS {
+                display: flex;
+
+            }
+
+            ;
+            background-color: $jungle-col-10;
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+            padding-bottom: $dCol;
+            padding-top: 25px;
+
+            @include laptopS {
+
+                padding-top: $dCol;
+            }
+
+            @include laptopS {
+                padding: $dCol;
+            }
+
+
+            .rightColumnAgence {
+                height: 50%;
+                padding-right: $dCol;
+            }
+
+            .leftColumnAgence {
+                height: 50%;
+            }
+        }
+
+        .distinctionsWrapperAgence {
+            background-color: $jungle-col-10;
+
+            @include laptopS {
+                padding-left: $dCol;
+                padding-right: $dCol;
+            }
+
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+
+
+            padding-bottom: $dCol;
+        }
+
+
+        .sec-equipe {
+            background-color: $black-col-5;
+
+            @include laptopS {
+                padding-bottom: $dCol;
+            }
+
+
+            .imageWrapperAgence {
+                overflow: hidden;
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                }
+
+
+            }
+
+
+            .equipeWrapper {
+                background-color: white;
+                padding-left: $m-margin-small;
+                padding-right: $m-margin-small;
+
+
+                @include laptopS {
+                    margin-left: $dCol;
+                    margin-right: $dCol;
+                    margin-top: $dCol;
+                    padding-left: $dCol;
+                    padding-right: $dCol;
+
+                }
+
+                padding-bottom: $dCol;
+
+
+
+
+
+
+
+            }
+        }
+
+        .rejoindreWrapper {
+            background-color: $jungle-col;
+            padding: $m-margin-small;
+
+            @include laptopS {
+                padding: $dCol;
+
+            }
+
+            padding-bottom: $dCol;
+
+            margin-bottom: $dCol;
+
+
+            h3 {
+                @include haiku;
+                color: white;
+
+                @include laptopS {
+                    padding-left: $dCol;
+                }
+            }
+
+            .annonceWrapper {
+                background-color: white;
+                margin-bottom: 0.5em;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 1em;
+                padding-bottom: 1em;
+
+                .titleAnnonce {
+                    @include p-bold;
+                    color: $grey-col;
+                    padding-bottom: 0.5em;
+
+
+
+                }
+
+                p {
+                    @include p-very-small;
+                    color: $grey-col;
+                    padding-bottom: 0.5em;
+                }
+
+                .logo-load {
+                    height: 14px;
+
+                }
+
+            }
+        }
+
+
+
+
+
+    }
+}

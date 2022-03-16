@@ -1,0 +1,320 @@
+// Paragraphs Fonts 
+
+@mixin p-intro {
+  font-family: "Fira Regular";
+  font-size: 17px;
+  line-height: 27px;
+
+  @include laptopS {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+@mixin p-intro-bold {
+  font-family: "Fira Bold";
+  font-size: 17px;
+  line-height: 24px;
+
+  @include laptopS {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+@mixin p-intro-bold-lh {
+  font-family: "Fira Bold";
+  font-size: 17px;
+  line-height: 30px;
+
+  @include laptopS {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+
+
+@mixin p-very-small {
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@mixin p-small {
+  font-family: "Fira Regular";
+  font-size: 28px;
+  line-height: 30px;
+
+  @include laptopS {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+
+@mixin p-big {
+  font-family: "Fira Regular";
+  font-size: 14px;
+  line-height: 35px;
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 35px;
+  }
+}
+
+@mixin p-bold {
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 25px;
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+}
+
+
+
+@mixin menu-link {
+  font-family: "Fira Bold";
+  font-size: 15px;
+  line-height: 14px;
+
+  @include laptopS {
+    font-size: 15px;
+    line-height: 14px;
+  }
+}
+
+
+@mixin haiku {
+  font-family: "Fira Light";
+  font-style: italic;
+  font-size: 19px;
+  line-height: 28px;
+  color: #658d8c;
+
+  @include laptopS {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+
+@mixin title_h1 {
+  font-family: "Fira Black";
+  font-size: 30px;
+  line-height: 50px;
+
+  @include laptopS {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+
+@mixin chapter {
+  font-family: "Fira Light";
+  font-size: 33px;
+  line-height: 41px;
+
+  @include laptopS {
+    font-size: 33px;
+    line-height: 41px;
+  }
+}
+
+@mixin chapter-bold {
+  font-family: "Fira Black";
+  font-size: 33px;
+  line-height: 41px;
+
+  @include laptopS {
+    font-size: 33px;
+    line-height: 41px;
+  }
+}
+
+@mixin titre-projet {
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 35px;
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 35px;
+  }
+}
+
+
+@mixin p-intro-bold-capitalize {
+  font-family: "Fira Bold";
+  font-size: 22px;
+  line-height: 30px;
+
+  @include laptopS {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@mixin p-link {
+  font-family: "Fira Bold";
+  font-size: 11px;
+  line-height: 24px;
+
+  @include laptopS {
+    font-size: 11px;
+    line-height: 24px;
+  }
+}
+
+
+@mixin footer-p {
+  font-family: "Fira Regular";
+  font-size: 13px;
+  line-height: 16px;
+
+  @include laptopS {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+@mixin footer-p-bold {
+  font-family: "Fira Bold";
+  font-size: 13px;
+  line-height: 16px;
+
+  @include laptopS {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+
+
+@mixin p-localisation {
+  font-family: "Fira Light";
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 24px;
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+
+@mixin footer-legend {
+  font-family: "Fira Light";
+  font-size: 10px;
+  line-height: 12px;
+
+  @include laptopS {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+@mixin small-button {
+  font-family: "Fira Medium";
+  font-size: 12px;
+  line-height: 12px;
+
+  @include laptopS {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+
+// FULL-MENU
+
+
+@mixin fullmenu-h1 {
+  font-family: "Fira Black";
+  font-size: 36px;
+  line-height: 50px;
+  letter-spacing: 6px;
+
+  @include laptopS {
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 6px;
+  }
+}
+
+@mixin fullmenu-submenu {
+  font-family: "Fira Bold";
+  font-size: 18px;
+  line-height: 14px;
+
+  @include laptopS {
+    font-size: 18px;
+    line-height: 14px;
+  }
+}
+
+// CAT
+
+
+
+@mixin cat-bold {
+  font-family: "Fira Regular";
+  font-size: 12px;
+  line-height: 20px;
+
+  @include laptopS {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+}
+
+
+@mixin cat {
+  font-family: "Fira Light";
+  font-size: 12px;
+  line-height: 20px;
+
+  @include laptopS {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+}
+
+ // LOOP
+
+
+ @mixin subtitleLoop {
+  font-family: "Fira Light";
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+}
+
+
+
+
+
+
+

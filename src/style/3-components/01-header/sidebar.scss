@@ -1,0 +1,153 @@
+
+.activePage {
+    color : $jungle-col !important;
+}
+
+.inactivePage {
+    color : $black-col-5 !important;
+}
+
+.inactivePage2 {
+    color : $jungle-col-10 !important;
+}
+
+.inactivePage3 {
+    color : transparent !important;
+}
+
+.inactivePage4 {
+    color : white !important;
+}
+
+.flecheBas {
+    display: none;
+}
+
+
+
+
+
+
+.sidebarMenu {
+    display: none;
+
+
+
+    @include laptopS {
+        display: block;
+
+       
+
+    }
+}
+
+
+.sideNav {
+    @include sideBarResponsive {
+        display: none;
+
+    }
+
+}
+
+.sideNavWrapper {
+    transition: transform 0.1s ease-in-out;
+    position: fixed;
+    width: $margin;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    padding-top: $dCol;
+    z-index: 300;
+}
+
+.sideNavWrapper .sideNav {
+    z-index: 500;
+    position: absolute;
+     -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    width: 70vh;
+    top: 85vh;
+    // bottom: 20vh;
+    left: 50%;
+    right: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+
+    } 
+
+}
+
+.sideNavWrapper .sideNav a {
+    padding-left: 30px;
+    @include menu-link;
+    letter-spacing: 1px;
+    color: $grey-col;
+    text-transform: uppercase;
+
+    
+}
+
+
+.sideNavWrapper .sideNav a:hover {
+    padding-left: 30px;
+    @include menu-link;
+    letter-spacing: 1px;
+    color: $jungle-col;
+    text-transform: uppercase;
+
+    
+}
+
+
+.menuButtonWrapper {
+    position: relative;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.burgerButton {
+    display: flex;
+    flex-direction: column;
+
+    .closeIcon {
+        display: none;
+    }
+}
+
+
+.lfLogo {
+    height: 15px;
+    width: 15px;
+}
+
+.pictoBurguer {
+    margin-bottom: 4px;
+}
+
+.pictoLogo {
+    position: fixed;
+    bottom: $dCol;
+}
+
+
+
+
+.logoLFWrapper {
+position: absolute;
+top: 500px;
+right: 500px;
+z-index: 1000;
+
+}
+

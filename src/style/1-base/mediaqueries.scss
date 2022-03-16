@@ -1,0 +1,40 @@
+@mixin mobile-tab {
+    @media (max-width: 1025px) { @content; }
+
+}
+
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+}
+@mixin laptopS {
+    @media (min-width: 1025px) { @content; }
+}
+@mixin laptopL {
+    @media (min-width: 1340px) { @content; }
+}
+
+@mixin laptopVL {
+    @media (min-width: 1800px) { @content; }
+}
+
+
+@mixin sideBarResponsive {
+
+@media (max-height: 730px) {
+    @content; }
+}
+
+
+
+    @mixin catHeader {
+
+        @media (min-width: 980px) {
+            @content; }}

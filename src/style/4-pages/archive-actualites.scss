@@ -1,0 +1,216 @@
+.projetsContainer {
+    background-color: white;
+
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small;
+    padding-bottom: $dCol;
+    padding-top: $m-margin-small;
+
+    @include laptopS {
+        padding-left: 77px;
+        padding-bottom: 45px;
+        padding-right: 0;
+        padding-top: 45px;
+    }
+}
+
+.projetsContainer .headerProjets {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentActualites .archive-actu-bloc {
+
+    min-height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 45px 1fr;
+    grid-template-columns: 1fr;
+
+
+
+    @include laptopS {
+        grid-template-columns: 1fr 1fr;
+        margin-right: 0;
+
+    }
+
+    grid-column-gap: 45px;
+    -webkit-column-gap: 45px;
+    -moz-column-gap: 45px;
+    column-gap: 45px;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container {
+    -ms-grid-row: 45;
+    grid-row: 45px;
+    height: 100%;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper {
+    color: $grey-col;
+
+    a {
+        color: $grey-col;
+
+    }
+
+    padding: 45px;
+    background: #f4f4f4;
+
+    @include laptopS {
+        display: flex;
+    }
+}
+
+.contentActualites .archive-actu-bloc .boutonWrapperArchiveActu {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 45px;
+    background-color: #f4f4f4;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper {
+    padding: $m-margin-small;
+
+    background: #f4f4f4;
+
+    @include laptopS {
+        padding: $dCol;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-thumbnail {
+    position: relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-thumbnail img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-thumbnail::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-content-wrapper {
+    @include laptopS {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+.contentActualites .archive-actu-bloc .boutonWrapperArchiveActu {
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small;
+    margin-top: 0;
+    margin-bottom: 20px;
+    height: 45px;
+
+    @include laptopS {
+        padding-left: 45px;
+        padding-right: 45px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 45px;
+    }
+
+    background-color: #f4f4f4;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-content-wrapper .archive-article-date {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-content-wrapper .archive-article-title {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-content-wrapper .archive-article-excerpt {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.boutonWrapperArchiveActu {
+    margin-bottom: $dCol;
+}
+
+.archive-article-date {
+    padding-top: $m-margin-small;
+    padding-bottom: $m-margin-small;
+
+    @include laptopS {
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
+
+    @include p-very-small;
+    color : $grey-col;
+}
+
+.archive-article-title {
+    @include p-bold;
+    color: $grey-col;
+}
+
+.archive-article-excerpt {
+    @include p-very-small;
+    color: $grey-col;
+}
+
+.boutonWrapperArchiveActu {
+   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+
+    @include small-button;
+    border-top: 1px $black-col-5 solid;
+
+    button {
+
+        @include laptopS {
+            border: none;
+
+        }
+
+        @include small-button;
+        color: $grey-col-50;
+        background-color: transparent;
+    }
+
+}

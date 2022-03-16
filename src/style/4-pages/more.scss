@@ -1,0 +1,307 @@
+.leftColumnContent, #search_result_ajax, .leftColumnContent .searchForm {
+    height: auto !important;
+}
+.pictoSlider {
+    height: 20px !important;
+}
+
+.flecheSlider {
+    height: 24px;
+  }
+
+
+.projetsLoopExplo {
+    background-color: #f4f4f4;
+  }
+  
+  .projetsLoop {
+    padding-top: 77px;
+    padding-left: 77px;
+  }
+  .projetsLoop .titleLoop {
+    font-family: "Fira Black";
+    font-size: 15px;
+    line-height: 14px;
+    color: #00534e;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @media (min-width: 1025px) {
+    .projetsLoop .titleLoop {
+      font-size: 15px;
+      line-height: 14px;
+    }
+  }
+  .projetsLoop .loopWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 45px;
+  }
+  .projetsLoop .loopWrapper .projectCard {
+    width: calc(25% - 45px);
+  }
+  .projetsLoop .loopWrapper .projectCard a {
+    font-family: "Fira Bold";
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #828787;
+  }
+  
+  .slick-prev{
+    position: absolute;
+    height: 756px;
+    width: 400px;
+      z-index: 9;
+      background: none;
+  }
+
+  .slick-prev:before {
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-02_gauche.svg");
+    position: absolute;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    
+   
+}
+  .slick-next{
+      top: 0;
+      position: absolute;
+      height: 756px;
+      width: 400px;
+      right: 0;
+      z-index: 9;
+      background: none;
+    
+  }
+  
+  
+  .slick-next:before {
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-01_droite.svg");
+    position: absolute;
+    right: 18px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    
+  }
+
+
+/* 
+.titleSearch {
+    color: white;
+    font-family: "Fira Light";
+    font-size : 24Px;
+
+}
+
+
+
+form#searchform div{
+	display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+  
+}
+
+form#searchform div input{
+    height: 1*$margin;
+	outline-style: none;
+	box-shadow: none;
+	border-color: transparent;
+    background-color: #00534e;
+    color : white;
+    font-family: "Fira Bold";
+  
+    font-size: 35px;
+    color : white;
+   
+}
+
+form#searchform div input #text {
+   
+    font-family: "Fira Bold";
+    margin-top: 1rem;
+    font-size: 35px;
+    color : white;
+}
+
+form#searchform div button{
+	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.searchForm.active{
+	display:flex;
+    flex-direction: column;
+} */
+
+.projets-template-default .galleryWrapper.mainExploration .slick-list{
+	height: 756px;
+}
+
+.explorations-template-default .galleryWrapper.mainExploration .slick-list{
+	height: 756px;
+}
+
+.explorations-template-default .galleryWrapper.mainExploration .slick-prev{
+	left: calc(5px + 77px);
+}
+
+.explorations-template-default .galleryWrapper.mainExploration .slick-track{
+	height: 756px;
+}
+
+.projets-template-default .galleryWrapper.mainExploration .slick-track{
+	height: 756px;
+}
+
+
+/* 
+#search_result_ajax #all_results{
+	display:flex !important;
+	grid-gap: .5rem;
+}
+
+#search_result_ajax,
+#search_result_ajax a{
+	color: white;
+	font-family: "Fira Light";
+   
+}
+
+#search_result_ajax #total_result{
+	font-family: "Fira Bold";
+	margin-top: 1rem;
+    font-size: 35px;
+}
+
+#search_result_ajax #total_result span{
+	font-family: "Fira Light"
+}
+
+#search_result_ajax h3{
+	font-size: 20px;
+    font-family: 'Fira Bold';
+    margin-top: 2rem;
+}
+
+#search_result_ajax ul li {
+    margin: .5rem 0;
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
+}
+
+#search_result_ajax ul li:last{
+	border-bottom: 0;
+}
+ 
+.leftColumnContent,
+#search_result_ajax,
+.leftColumnContent .searchForm{
+	height: 100%;
+}
+
+#search_result_ajax{
+	overflow-y: auto;
+    padding-top: 5px;
+}
+
+*/
+
+
+.contentWrapperProjet {
+    padding-top: 50px;
+    padding-left: 77px;
+  }
+  .contentWrapperProjet .titleWrapper {
+    padding-bottom: 45px;
+  }
+  .contentWrapperProjet .galleryWrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    padding-bottom: 45px;
+  }
+  
+  .contentWrapperProjet .galleryWrapper .slick-list,
+  .contentWrapperProjet .galleryWrapper .slick-list .slick-track{
+      height: 100%;
+  }
+  
+  .galleryWrapper .single-slide-image{
+      position:relative;
+  }
+  
+  .galleryWrapper .single-slide-image .zoom-image{
+      position: absolute;
+      right: 22px;
+      top: 60%;
+      cursor: pointer;
+  }
+  
+  .galleryWrapper .single-slide-image .zoom-image i{
+      color:#fff;
+  }
+  
+  .zoom-image-slider{
+      display: none;
+      position: fixed;
+       left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: #fff;
+      z-index: 9999999999;
+  }
+  
+  .zoom-image-slider img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .zoom-image-slider .div-zoom{
+      position:relative;
+  }
+  
+  .zoom-image-slider .div-zoom span.close{
+      position: absolute;
+      right: 0;
+      top: 1%;
+      right: 1%;
+      font-size: 30px;
+      cursor: pointer;
+  }
+  
+  .galleryWrapper img {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .contentWrapperProjet .projetWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }

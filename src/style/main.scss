@@ -1,0 +1,49 @@
+// 1- BASE
+@import "./1-base/reset.scss";
+@import "./1-base/colors.scss";
+@import "./1-base/grid.scss";
+@import "./1-base/mixins.scss";
+@import "./1-base/mediaqueries.scss";
+@import "./1-base/fonts.scss";
+@import "./1-base/typography.scss";
+@import "./1-base/background.scss";
+@import "./1-base/margin.scss";
+@import "./1-base/logo.scss";
+
+// 2- MOLECULES
+
+@import "./2-molecules/slider.scss";
+
+
+// 3- COMPONENTS 
+    // 01-header
+@import "./3-components/01-header/fullmenu.scss";
+@import "./3-components/01-header/sidebar.scss";
+@import "./3-components/01-header/intro.scss";
+@import "./3-components/01-header/search.scss";
+
+
+    // 02-loops
+    @import "./3-components/02-loops.scss";
+    @import "./3-components/03-categories-projets.scss";
+    // 07-footer
+@import "./3-components/07-footer/footer.scss";
+
+
+// 4- PAGES
+@import "./4-pages/front-page.scss";
+@import "./4-pages/single-projets.scss";
+@import "./4-pages/single-exploration.scss";
+@import "./4-pages/archive-explorations.scss";
+@import "./4-pages/archive-projets.scss";
+@import "./4-pages/archive-actualites.scss";
+
+@import "./4-pages/page-agence.scss";
+@import "./4-pages/single.scss";
+@import "./4-pages/more.scss";
+
+@import "./4-pages/responsive.scss";
+
+
+
+

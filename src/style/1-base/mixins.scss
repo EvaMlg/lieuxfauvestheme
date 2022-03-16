@@ -1,0 +1,94 @@
+@mixin fauveUnderline {
+    cursor: pointer;
+    padding-bottom: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    box-shadow: inset 0 -10px 0 $fauve-col-40;
+    color : $jungle-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
+
+
+
+@mixin fauveUnderlineHover {
+    transition: all 0.2s ease-in-out;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    box-shadow: inset 0 -60px 0 $fauve-col-40;
+    transition: ease-in-out;
+}
+
+@mixin fauveUnderlineSmall {
+    cursor: pointer;
+    padding-bottom: 0px;
+    padding-right: 3px;
+    padding-left: 3px;
+    box-shadow: inset 0 -6px 0 $fauve-col-40;
+    color : $grey-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
+@mixin fauveUnderlineVerySmall {
+    cursor: pointer;
+    padding-bottom:0px;
+    padding-right: 1px;
+    padding-left: 1px;
+    box-shadow: inset 0 -5px 0 $fauve-col-40;
+    color : $grey-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
+@mixin fauveUnderlineVerySmallHover {
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
+    box-shadow: inset 0 -20px 0 $fauve-col-40;
+    color : $grey-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
+@mixin fauveUnderlineSmallHover {
+    padding-bottom: 2px;
+    padding-right: 3px;
+    padding-left: 3px;
+    box-shadow: inset 0 -30px 0 $fauve-col-40;
+    color :  $grey-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.fauveUnderlineSmall {
+    @include fauveUnderlineSmall;
+}
+
+.fauveUnderlineSmall:hover {
+    @include fauveUnderlineSmallHover;
+}
+
+
+
+
+
+
+
+@mixin menuOoutline {
+color: $jungle-col;
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+}
+
+@mixin projetOoutline {
+    color: $jungle-col-10;
+    text-shadow: -1px -1px 0 $jungle-col, 1px -1px 0 $jungle-col, -1px 1px 0 $jungle-col, 1px 1px 0 $jungle-col;
+    
+    }
+    
+
+

@@ -1,0 +1,22 @@
+.logo-categorie {
+    height: 15px;
+}
+
+.flecheSlider {
+    height: 24px;
+}
+
+
+.introImg {
+    width: 100%;
+    position: absolute;
+    height: 99.5vh;
+    z-index: 2000;
+    object-fit: cover;
+
+    @include mobile-tab {
+       
+    }
+
+
+}

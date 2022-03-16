@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Fira Sans";
+  src: url("   /wp-content/themes/lieuxfauves/src/assets/fonts/FiraSans-Regular.woff2") format("woff2"), url("   /wp-content/themes/lieuxfauves/src/assets/fonts/FiraSans-Regular.woff") format("woff"); }
+@font-face {
+  font-family: "Fira Sans Bold";
+  src: url("   /wp-content/themes/lieuxfauves/src/assets/fonts/FiraSans-Bold.woff2") format("woff2"), url("   /wp-content/themes/lieuxfauves/src/assets/fonts/FiraSans-Bold.woff") format("woff"); }
+
+/*# sourceMappingURL=typography.css.map */

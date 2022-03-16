@@ -1,0 +1,526 @@
+.search-menu {
+    transition: transform 0.2s ease-in-out;
+
+    padding-left: $margin;
+    padding-right: $margin;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+
+    .rightColumnMenuSearch {
+        overflow-y: scroll;
+       
+        width: 43.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+       
+    }
+
+    .loupeFooterWrapper {
+        @include mobile-tab {
+            display: none;
+        }
+    }
+
+    .loupeFooterWrapper {
+        width: 45%;
+        position: absolute;
+        bottom : $m-margin-small;
+
+        .contactWrapper {
+            @include footer-p-bold;
+            color : white;
+          
+            
+            padding-bottom: 15px;
+            padding-top : 15px;
+            text-transform: uppercase;
+
+           
+    
+        }
+        
+
+        .adressesWrapper {
+            display: flex;
+            justify-content: space-between;
+            @include footer-p;
+            color : white;
+
+            .adressWrapper {
+                padding-bottom: 10px;
+            }
+            .loupeBold {
+                @include footer-p-bold;
+
+            }
+
+
+        }
+
+        
+    }
+
+    .socialsButtonsWrapperLoupe {
+
+        .logo-whiteSearch {
+            margin-right: 15px;
+        }
+       
+      
+        .logo-socials {
+            height: 30px;
+            width: 30px;
+        }
+
+       
+    }
+
+    .logo-whiteSearch {
+        height: 100px;
+    }
+
+    .logoDeviseSearch {
+        padding-top: $dCol;
+        height: fit-content;
+        overflow: hidden;
+
+        .logo-whiteSearch {
+            height: 100px;
+        }
+
+        .tagline-search {
+            height: 100px;
+            padding-left: $dCol;
+        }
+    }
+
+
+    .leftColumnMenuSearch {
+        background-color: $jungle-col;
+        display: flex;
+      
+        padding-top: calc(100px + 45px + 50px);
+        padding-left : $dCol;
+       
+        width: 57%;
+
+
+        .leftColumnContentSearch {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+#search_result_ajax {
+    margin-top: 45px;
+}
+
+
+.titleSearch {
+    font-family: "Fira Light";
+    color : white;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#all_results {
+    padding-right: $m-margin-small;
+    @include laptopS {
+    padding-right: 3 * $dCol;
+    }
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap : wrap;
+    font-family: "Fira Light";
+    color : $jungle-col;
+    font-size: 18px;
+    line-height: 24px;
+    justify-content: space-between;
+    text-transform: capitalize;
+
+}
+
+
+
+
+
+#total_result {
+    color : $grey-col;
+    font-family: 'Fira Black';
+    font-size: 38px;
+    padding-top: 20px
+    
+
+}
+
+
+#total_result span {
+    color : $grey-col;
+    font-family: 'Fira Light';
+    
+
+}
+
+.jungleNumber {
+    color : $jungle-col !important;
+}
+
+
+
+.socialsButtonsWrapperSearch {
+    .logo-socials {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.logoWrapper {
+    margin-right: $dCol;
+}
+
+
+#search_result_ajax {
+    margin-right: $dCol;
+    height: 100%;
+}
+
+
+/* #search_result_ajax #all_results{
+    display: flex;
+    flex-wrap : wrap;
+}
+
+#search_result_ajax #all_results{
+   @include p-very-small;
+   font-size: 18px;
+ } */
+
+
+#search_result_ajax,
+#search_result_ajax a{
+    color: $grey-col;
+    font-size: 16px;
+    
+   
+}
+
+
+#search_result_ajax h3{
+    padding-top : $dCol;
+    font-size: 16px;
+    font-family: 'Fira Bold';
+    color : $jungle-col;
+    padding-bottom: 15px;
+    border-bottom: 0.5px solid $grey-col;
+   
+}
+
+#search_result_ajax ul li {
+    @include p-bold;
+    color : $grey-col;
+    font-size: 12px;
+    border-bottom: 0.5px solid $grey-col;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+}
+
+
+ 
+
+#search_result_ajax{
+    overflow-y: scroll;
+  
+}
+
+
+
+form#searchform div{
+	display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+  
+}
+
+form#searchform div input{
+    height: 1*$margin;
+	outline-style: none;
+	box-shadow: none;
+	border-color: transparent;
+    background-color: #00534e;
+    color : white;
+    font-family: "Fira Bold";
+  
+    font-size: 38px;
+    color : white;
+   
+}
+
+form#searchform div input #text {
+   
+    font-family: "Fira Bold";
+    margin-top: 1rem;
+    font-size: 35px;
+    color : white;
+}
+
+form#searchform div button{
+	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.searchForm.active{
+	display:flex;
+    flex-direction: column;
+}
+
+
+
+@include mobile-tab {
+
+    // #all_results div:first-child {
+    //     display: none;
+    // }
+
+
+    .headerSearchGreen {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+
+
+
+    .search-menu {
+        padding-left: 0;
+        padding-right: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        z-index: 100;
+        position: fixed;
+        display: flex;
+        flex-direction: column-reverse;
+    
+        .rightColumnMenuSearch {
+            height: 80%;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin : 0;
+            margin-right: 0;
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+           
+        }
+    
+        .logo-whiteSearch {
+            height: 100px;
+            display: none;
+        }
+    
+        .logoDeviseSearch {
+            display: none;
+            padding-top: $dCol;
+            height: fit-content;
+            overflow: hidden;
+    
+            .logo-whiteSearch {
+                height: 100px;
+                display: none;
+            }
+    
+            .tagline-search {
+                display: none;
+                height: 100px;
+                padding-left: $dCol;
+            }
+        }
+    
+    
+        .leftColumnMenuSearch {
+    
+            height: 20%;
+            background-color: $jungle-col;
+            display: flex;
+          
+            padding-top: $m-margin-small;
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+           
+            width: 100vw;
+    
+    
+            .leftColumnContentSearch {
+                padding-bottom: 10px;
+            }
+        }
+    }
+    
+    #search_result_ajax {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin : 0 !important;
+        padding: $m-margin-small;
+    }
+    
+    
+    .titleSearch {
+        display: none;
+        font-family: "Fira Light";
+        color : white;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    #all_results {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap : wrap;
+        font-family: "Fira Light";
+        color : $jungle-col;
+        font-size: 14px;
+        line-height: 18px;
+        justify-content: space-between;
+        text-transform: capitalize;
+    
+    }
+    
+    
+    
+    
+    #total_result {
+        color : $grey-col;
+        font-family: 'Fira Black';
+        font-size: 38px;
+        padding-top: 20px
+        
+    
+    }
+    
+    
+    #total_result span {
+        color : $grey-col;
+        font-family: 'Fira Light';
+        
+    
+    }
+    
+    .jungleNumber {
+        color : $jungle-col !important;
+    }
+    
+    
+    
+    .socialsButtonsWrapperSearch {
+        .logo-socials {
+            height: 45px;
+            width: 45px;
+        }
+    }
+    
+    .logoWrapper {
+        margin-right: $dCol;
+    }
+    
+    
+    #search_result_ajax {
+        height: 100%;
+    }
+    
+
+    
+    
+    #search_result_ajax,
+    #search_result_ajax a{
+        color: $grey-col;
+        font-size: 16px;
+        
+       
+    }
+    
+    
+    #search_result_ajax h3{
+        padding-top : $dCol;
+        font-size: 16px;
+        font-family: 'Fira Bold';
+        color : $jungle-col;
+        padding-bottom: 15px;
+        border-bottom: 0.5px solid $grey-col;
+       
+    }
+    
+    #search_result_ajax ul li {
+        @include p-bold;
+        color : $grey-col;
+        font-size: 12px;
+        border-bottom: 0.5px solid $grey-col;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+    }
+    
+    
+     
+    
+    #search_result_ajax{
+        overflow-y: scroll;
+      
+    }
+    
+    
+    
+    form#searchform div{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+    
+      
+    }
+    
+    form#searchform div input{
+        width: 70vw;
+        height: 1*$margin;
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent;
+        background-color: #00534e;
+        color : white;
+        font-family: "Fira Bold";
+      
+        font-size: 38px;
+        color : white;
+       
+    }
+    
+    form#searchform div input #text {
+       
+        font-family: "Fira Bold";
+        margin-top: 1rem;
+        font-size: 35px;
+        color : white;
+    }
+    
+    form#searchform div button{
+        background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .searchForm.active{
+        display:flex;
+        flex-direction: column;
+    }
+}

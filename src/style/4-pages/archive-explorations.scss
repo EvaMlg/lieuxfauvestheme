@@ -1,0 +1,254 @@
+
+
+.headerExploration {
+    display: flex;
+    justify-content: space-between;
+
+    .catArchi:first-child {
+        display: none;
+    }
+
+    .logoHeader {
+        display: flex;
+        z-index: 1;
+
+        .logoArchiveExplo {
+            display: none;
+
+            @include laptopS {
+                display: block;
+            }
+
+            height: 45px;
+            margin-right: 20px;
+            margin-bottom: $dCol;
+        }
+
+        .exploPageName {
+            @include title_h1;
+            color: $jungle-col;
+        }
+    }
+
+    .categoryHeader {
+        @include laptopS {
+            display: flex;
+        }
+
+        @include p-bold;
+
+        .catName {
+            @include p-bold;
+            color: $jungle-col;
+        }
+
+        .catName:hover {
+            @include fauveUnderlineSmallHover;
+        }
+        .catName.active {
+            @include fauveUnderlineSmallHover;
+        }
+        .subCatName > .unclickable {
+            opacity: 0.5;
+            //text-decoration: line-through;
+            pointer-events: none;
+        }
+    }
+}
+
+.explorationsContainer {
+    width: 100vw;
+
+    @include laptopS {
+        width: calc(100vw - 77px);
+    }
+
+    background-color: white;
+    padding-left: $dCol;
+    padding-bottom: $dCol;
+    padding-top: $dCol;
+
+    .preExplorationWrapper {
+        background-color: $black-col-5;
+        padding: $dCol;
+        margin-bottom: $dCol;
+    }
+
+    .explorationWrapper {
+        background-color: white;
+        flex-direction: column;
+
+        @include laptopS {
+            display: flex;
+            flex-direction: row;
+        }
+
+        height: 390px;
+
+        a {
+            display: flex;
+        }
+
+        .taxThumbnailWrapper {
+            overflow: hidden;
+            display: flex;
+            width: 50%;
+
+         
+
+            .taxExplo a {
+                font-family: "Fira Medium" !important;
+                font-size: 12px !important;
+                line-height: 12px !important;
+
+                @include laptopS {
+                    font-size: 12px !important;
+                    line-height: 12px !important;
+                }
+            }
+
+            .taxExplo {
+
+
+                .taxname {
+                    @include fauveUnderlineSmall;
+                    margin-bottom: 3px;
+                    font-family: "Fira Medium";
+                    
+    
+                }
+
+                .taxname:hover {
+                    @include fauveUnderlineSmallHover;
+
+                    
+                }
+
+                .barre-nobold {
+                    text-decoration: none;
+                    color : $grey-col;
+                    font-family: "Fira Light";
+                  
+                }
+             
+
+
+               
+
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: $dCol;
+
+                width: 50%;
+                @include p-bold;
+
+                color: $jungle-col;
+
+                
+            }
+        }
+    }
+
+    .titleExplo {
+        @include p-intro-bold;
+        color: $grey-col;
+        width: 60%;
+        margin-right: $dCol;
+    }
+
+    .excerptExplo {
+        @include p-very-small;
+        color: $grey-col;
+    }
+
+    .imageExplo {
+        overflow: hidden;
+        width: 390px;
+        max-height: 390px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+    }
+
+    .imageExplo::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.wrapperExplo {
+    width: 60%;
+    padding: $dCol;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .boutonWrapperExploration {
+        display: flex;
+        justify-content: space-between;
+        @include small-button;
+        border-top: 1px $black-col-5 solid;
+        margin-top: 35px;
+        padding-top: 25px;
+
+        button {
+            @include small-button;
+            color: $grey-col-50;
+        }
+    }
+
+    .contentWrapperExploration {
+        display: flex;
+
+        .titleExplo {
+            padding-right: $dCol;
+        }
+
+        .excerptExplo {
+            //padding-left: $dCol;
+        }
+    }
+}
+
+.logo-load {
+    height: 14px;
+    margin-top: 20px;
+}
+
+.logo-explo {
+    height: 10px;
+}
+
+.archive-article-thumbnail {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+}
+
+.archive-article-thumbnail::after {
+    content: "";
+    background-color: $jungle-col;
+    display: block;
+    padding-bottom: 100%;
+}

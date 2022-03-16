@@ -1,0 +1,180 @@
+
+
+
+.fullMenuOn {
+    transform: translateX(0%); 
+    transition: transform 0.2s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+}
+
+
+.fullMenuOff {
+    transform: translateX(400%); 
+    transition: transform 0.2s ease-in-out;
+
+}
+
+
+
+
+.deviseOn {
+    display:block;
+
+}
+
+
+
+.deviseOff {
+    display:none;
+
+}
+
+
+
+
+.menuIcon {
+ 
+    width: 100%;
+    justify-content: center;
+    
+}
+
+
+
+.full-menu {
+    transition: transform 0.2s ease-in-out;
+    padding-top: $dCol;
+    padding-bottom: $dCol;
+    padding-left: $margin;
+    padding-right: $margin;
+    height: 100vh;
+    width: 100vw;
+    background-color: $jungle-col;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+
+
+
+    .rightColumnMenu {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+
+        .headerFullMenuWrapper {
+            display: flex;
+
+            .tagline-white {
+                height: 2 * $dCol;
+            }
+
+            .logo-white {
+                height: 2 * $dCol;
+                padding-right: 30px;
+            }
+
+        }
+
+
+
+        .logo-socials {
+            height: 40px;
+            
+        }
+
+        .contactWrapper {
+            @include footer-p-bold;
+            @include mobile-tab {
+                color : #8aa8a6;
+            }
+
+            color : white;
+          
+
+
+            padding-bottom: $dCol;
+            padding-top :1;
+            text-transform: uppercase;
+    
+        }
+
+        .adressesWrapper {
+            @include footer-p;
+
+            @include mobile-tab {
+                color : #8aa8a6;
+            }
+
+            color : white;
+
+            .adressWrapper {
+                padding-bottom: 10px;
+            }
+
+        }
+    
+
+    }
+
+
+    .leftColumnMenu {
+        display: flex;
+        align-items: end;
+       
+        width: 65%;
+        padding-left : $dCol;
+        padding-right : $dCol;
+
+
+       .menuItemFP {
+          padding-top: 25px;
+
+        h1 {
+            @include fullmenu-h1;
+            @include menuOoutline;
+            text-transform : uppercase;
+          
+
+            a { color : $jungle-col;}
+           
+
+        }
+            
+           
+        }
+
+        .subMenuFP { 
+            padding-top: 8px;
+            @include fullmenu-submenu;
+            color : white;
+    
+
+             a {
+             padding: 4px;
+             padding-left: 10px;
+             padding-right: 10px;
+             color : white;
+             }
+        }
+
+        .barMenuFull {
+           font-family: 'Fira Light';
+        }
+
+
+
+
+      
+   
+
+       
+    }
+
+    
+
+
+}

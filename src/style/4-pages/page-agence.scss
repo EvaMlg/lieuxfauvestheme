@@ -1,0 +1,410 @@
+.galleryWrapperAgence {
+    overflow: hidden;
+
+    .slick-track {
+        height: 600px;
+    }
+    
+
+    .single-slide-image {
+        height: 100%;
+    }
+}
+
+.logoDistinctions {
+    height: 20px;
+    width: 20px;
+}
+
+.distinctionsToggleWrapper {
+    display: block;
+    @include laptopS {
+    display: none; }
+    padding-bottom: $dCol;
+    @include laptopS {
+        padding-left: $dCol;
+        padding-right: $dCol;
+    }
+
+}
+
+
+
+.distinctionsTitleWrapper {
+    border-top : 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include laptopS {
+        padding-left: $dCol;
+        padding-right: $dCol;
+    }
+
+}
+
+.imageWrapperAgence {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
+}
+
+.list-chapter-agence {
+    z-index: 50;
+    position: fixed;
+
+   
+
+    .list-chapter-agence-title{
+       
+        padding-bottom: 20px;
+    }
+
+
+
+
+display: block;
+
+    @include laptopS {
+        display: block
+    }
+
+
+
+    @include chapter;
+    color: $grey-col;
+    position: fixed;
+    bottom: 37px;
+    left: $margin;
+
+    a {
+        text-decoration: none;
+        color: $grey-col;
+    
+    }
+
+    a:hover {
+        text-decoration: none;
+        font-family: "Fira Bold";
+    
+    }
+
+}
+
+
+.spanAgence {
+    @include chapter-bold;
+    text-transform: uppercase;
+    color: $jungle-col;
+    margin-bottom: $dCol;
+}
+
+
+.sec-valeurs {
+
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small;
+    padding-top: $dCol;
+    padding-bottom: $dCol;
+
+    @include laptopS {
+        padding: $dCol;
+    }
+
+    background: $black-col-5;
+}
+
+
+
+.titleAgence {
+    @include p-intro-bold-capitalize;
+    color: $jungle-col;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.contentAgenceLegende {
+
+    display: flex;
+    align-items: center;
+    padding-right: $dCol;
+    padding-top: 10px;
+    margin-left: 50%;
+    width: 50%;
+
+
+    @include footer-legend;
+    color: $grey-col;
+
+
+
+    b {
+        @include p-bold;
+        color: $grey-col;
+
+    }
+
+    button {
+        background-color: transparent;
+    }
+
+}
+
+.contentAgence {
+
+    @include p-very-small;
+    color: $grey-col;
+
+
+    p {
+        @include p-very-small;
+    }
+
+    b {
+        @include p-bold;
+        color: $grey-col;
+
+    }
+
+}
+
+.jungleBold b {
+    @include p-bold;
+    color: $jungle-col;
+
+}
+
+
+.contentAgenceBold {
+    p {
+        @include p-intro-bold-lh;
+        color: $grey-col;
+        padding-bottom: 0.5rem;
+    }
+
+    a {
+        @include fauveUnderline;
+        color: $grey-col;
+
+    }
+
+    a:hover {
+        @include fauveUnderlineHover;
+        color: $grey-col;
+
+    }
+    padding-bottom: $dCol;
+
+}
+
+
+.taglinegrey {
+    @include p-intro-bold;
+    background-color: $black-col-5;
+    line-height: 30px !important;
+}
+
+
+.subtitleAgence {
+    @include p-bold;
+    text-transform: uppercase;
+    color: $grey-col;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+
+}
+
+.columsWrapperAgence {
+    display: block;
+
+    @include laptopS {
+        display: flex;
+
+    }
+
+    ;
+    background-color: $grey-new-col-50;
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small;
+    padding-top: $dCol;
+    padding-bottom : $dCol;
+
+    @include laptopS {
+        padding: $dCol;
+    }
+
+
+    .rightColumnAgence {
+        height: 50%;
+        padding-right: $dCol;
+    }
+
+    .leftColumnAgence {
+        height: 50%;
+    }
+}
+
+.distinctionsWrapperAgence {
+    .titleAgence {
+        @include laptopS {
+        padding-left: $dCol;
+        padding-right: $dCol
+        }
+    }
+        @include p-very-small;
+        color: $grey-col;
+    
+         b {
+        @include p-bold;
+        color: $grey-col;
+
+    }
+
+    a {
+        @include fauveUnderline;
+        color: $grey-col;
+
+    }
+
+    a:hover {
+        @include fauveUnderlineHover;
+        color: $grey-col;
+
+    }
+
+    background-color: $grey-new-col-50;
+
+    @include laptopS { padding-left: 0;
+    padding-right:0;
+    padding-bottom: 10px;
+}
+    padding-left: $m-margin-small;
+    padding-right:  $m-margin-small;
+    padding-bottom: $dCol;
+}
+
+
+.sec-equipe {
+    background-color: $black-col-5;
+
+    @include laptopS {
+        padding-bottom: $dCol;
+    }
+
+
+    .imageWrapperAgence {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+
+
+    }
+
+
+    .equipeWrapper {
+        background-color: white;
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+
+
+        @include laptopS {
+            margin-left: $dCol;
+            margin-right: $dCol;
+            margin-top: $dCol;
+            padding-left: $dCol;
+            padding-right: $dCol;
+          
+        }
+        padding-bottom: $dCol;
+
+
+
+
+
+
+
+    }
+}
+
+.rejoindreWrapper {
+    background-color: $jungle-col;
+    padding: $m-margin-small;
+
+@include laptopS {
+    padding: $dCol;
+  
+}
+padding-bottom: $dCol;
+
+    margin-bottom: $dCol;
+
+
+    h3 {
+        @include p-intro-bold-capitalize;
+        text-transform: uppercase;
+        color: white;
+        @include laptopS {   padding-left: $dCol;}
+    }
+
+    .annonceWrapper {
+        background-color: white;
+        margin-bottom: 0.5em;
+        padding-left: $dCol;
+        padding-right: $dCol;
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        .titleAnnonce {
+
+            @include p-bold;
+            color: $grey-col;
+            padding-bottom: 0.5em;
+
+
+
+        }
+
+        p {
+            @include p-very-small;
+            color: $grey-col;
+            padding-bottom: 0.5em;
+        }
+
+        .logo-load {
+            height: 14px;
+
+        }
+
+    }
+}
+
+
+acf-gallery {
+    list-style-type: none; /* Retirer le style de liste */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Autoriser le retour à la ligne */
+  }
+  
+  .acf-gallery li {
+    flex: 33.333%; /* 3 images par ligne maximum, mettez 25% pour en avoir 4 */
+    padding: 10px;
+  }

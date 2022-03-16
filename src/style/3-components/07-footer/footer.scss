@@ -1,0 +1,222 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.footerArrowWrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.footerArrow {
+    height: 25px;
+    width: 25px;
+    right: 18px;
+}
+
+.footerArrow {
+    @include laptopS {
+        display: none;
+    }
+}
+
+
+footer {
+    @include laptopS {
+        display: flex;
+    }
+
+    padding-top : $dCol;
+    padding-bottom : $dCol;
+
+    width: 100vw;
+
+    @include laptopS {
+        width: calc(100vw - 77px);
+    }
+
+}
+
+
+.credits-mobile {
+    @include laptopS { 
+        display: none;}
+
+}
+
+.devise {
+    display: none;
+    height: 110px;
+    position: relative;
+    margin-left: $m-margin-small;
+
+    @include laptopS {
+        position: fixed;
+        top: $margin;
+        left: $margin;
+    }
+
+}
+
+
+.deviseOff {
+    display: none;
+
+    @include laptopS {
+        display: none;
+    }
+
+}
+
+.deviseOn {
+    display: none;
+
+    @include laptopS {
+        display: block;
+    }
+
+}
+
+
+.left-container {
+    padding-left: $m-margin-small;
+
+    @include laptopS {
+
+        padding-left: $margin;
+        width: 43.4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .credits {
+        display: none;
+
+        a {
+            color : $grey-col;
+            font-family : "Fira Bold";
+
+            
+        }
+
+        @include laptopS {
+            display: block;
+        }
+
+        @include footer-legend;
+        color : $grey-col
+
+        
+    }
+
+    .logoWrapper {
+        display: flex;
+        align-items: flex-end;
+
+        .logo-categorie {
+            margin-top: $dCol;
+
+            @include laptopS {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            height: 100px;
+        }
+
+        .socialsButtonsWrapper {
+            padding-left: 20px;
+
+            .logo-ig {
+
+                height: 30px;
+            }
+
+            .logo-in {
+                height: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+.right-container {
+    @include laptopS {
+        width: 56.6%;
+    }
+
+    @include footer-p;
+    color : $jungle-col;
+
+    .contact-container {
+        @include footer-p-bold;
+        padding-left: $m-margin-small;
+        margin-top: $dCol;
+
+        @include laptopS {
+            padding-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    .adress-container {
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+
+        .footerArrowWrapper {
+            @include laptopS {
+            display: none}
+        }
+    
+
+        @include laptopS {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: $dCol;
+            padding-bottom: 15px;
+        }
+
+        padding-top: 15px;
+        padding-bottom: 0;
+        padding-left: 0;
+
+
+        .adresse-bold {
+            @include footer-p-bold
+        }
+    }
+
+    .legal {
+        padding-top: $m-margin-small;
+        padding-left: $m-margin-small;
+        padding-right: $m-margin-small;
+
+        @include laptopS {
+            padding-left: 0;
+            padding-top: 0;
+        }
+
+        @include footer-legend;
+        color : $grey-col
+    }
+}
+
+.credits-mobile {
+    @include footer-legend;
+    color : $grey-col;
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small; 
+    padding-top: $m-margin-small; 
+
+    a {
+        font-family: 'Fira Bold';
+        color : $grey-col;
+    }
+}

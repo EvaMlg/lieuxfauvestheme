@@ -1,0 +1,98 @@
+#loaderMobile {
+    display: block;
+    @include laptopS {
+        display: none;
+    }
+
+}
+
+#loader {
+    @include mobile-tab {
+        display: none;
+    }
+
+}
+
+
+
+.introImgMobile {
+    @include laptopS {
+    display: none;
+}
+
+}
+
+.svgMobile {
+    @include laptopS {
+    display: none;
+}
+}
+
+
+
+.progressionBar {
+    background-color : white;
+    height: 0.5vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    z-index: 400;
+   
+}
+
+
+.progressionBarInner {
+    background-color : $jungle-col;
+    height: 0.5vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    z-index: 400;
+
+}
+
+
+@keyframes progressionBar {
+    from {
+    transform: translateX(-100%);
+    }
+    
+    to {
+        transform: translateX(0%);
+    }
+    }
+
+
+@keyframes loaderOut {
+    from {
+    transform: translate(0)
+    }
+    
+    to {
+    transform: translate(0, -100vh)
+    }
+    }
+
+
+    
+
+ 
+    @keyframes  windowDown {from {
+        transform: translateY(-10%)
+        }
+        
+        to {
+        transform: translate(0)
+        }
+        }
+
+
+
+        @keyframes  windowUp {from {
+            transform: translateY(10%)
+            }
+            
+            to {
+            transform: translate(0)
+            }
+            }

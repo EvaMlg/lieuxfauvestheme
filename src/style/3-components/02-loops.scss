@@ -1,0 +1,273 @@
+.list-link-loop {
+    height: 100%;
+    @include menu-link;
+    color: $jungle-col;
+    padding-right: $m-margin-small;
+    padding-left: 0;
+    @include laptopS {
+    padding-right: $dCol;
+    padding-left: 0;
+    }
+    padding-bottom: $dCol;
+
+
+    img {
+        margin-right: 20px;
+        height: 11px;
+
+    }
+
+    span {
+        margin-right: 20px;
+        color: $jungle-col;
+    }
+
+    a {
+        margin-right: 20px;
+        color: $jungle-col;
+    }
+
+}
+
+
+
+
+.projectLoopLieu {
+    @include subtitleLoop;
+    padding-right: 2 * $dCol;
+
+
+}
+
+
+
+.projetsLoop {
+    padding : 0;
+}
+
+
+
+.projetsLoopExplo {
+    background-color: $black-col-5;
+}
+
+.projetsLoopActu {
+
+    padding-top: $margin;
+    padding-left: 0;
+
+    .titleLoop {
+        @include menu-link;
+        color: $jungle-col;
+        padding-top: $dCol;
+        padding-bottom: $dCol;
+    }
+
+
+    .loopWrapperActu {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: $dCol;
+      
+
+        .projectCardActu {
+            width: calc(25% - 45px);
+
+
+        a {
+            @include p-intro-bold;
+            text-decoration: none;
+            color: $grey-col
+        }
+
+    }
+    
+        .projectCardActu{
+            img {
+                height: 500px;
+
+            }
+    
+      
+        }
+
+
+    
+        .projectThumbnail {
+            position: relative;
+            width: 100%;
+
+         
+            img {
+                position: absolute;
+                width: 100%;
+                height: 360px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+                opacity: 0.5;
+            }
+        }
+
+        .projectThumbnail::after {
+            content: '';
+            width: 100%;
+            height: 360px;
+            background-color: $jungle-col;
+            display: block;
+            padding-bottom: 100%;
+            
+        }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+            .projectTitle {
+                padding-top: 8px;
+                width: 300px;
+                @include p-bold;
+                color: $grey-col;
+           
+               
+                padding-right: 2 * $dCol;
+              
+
+                a {
+                    text-decoration: none;
+                    color: $grey-col;
+                }
+
+
+            }
+
+
+        } 
+
+}
+
+.projetsLoop {
+
+    
+
+    padding-top: $margin;
+    padding-left: 0;
+
+
+    .titleLoop {
+        @include menu-link;
+        color: $jungle-col;
+        padding-top: $dCol;
+        padding-bottom: $dCol;
+    }
+
+
+    .loopWrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: $dCol;
+      
+
+        .projectCard {
+            width: calc(25% - 45px);
+
+
+        a {
+            @include p-intro-bold;
+            text-decoration: none;
+            color: $grey-col
+        }
+
+    }
+    
+        .projectCard:nth-child(3n) {
+            img {
+                height: 500px;
+
+            }
+    
+      
+        }
+    
+        .projectThumbnail {
+         
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+                height: 360px;
+            }
+        }
+
+
+            .projectTitle {
+                padding-top: 8px;
+                width: 300px;
+                @include p-bold;
+                color: $grey-col;
+           
+               
+                padding-right: 2 * $dCol;
+              
+
+                a {
+                    text-decoration: none;
+                    color: $grey-col;
+                }
+
+
+            }
+
+
+        } 
+    }
+
+        
+
+    
+
+    .list-link {
+        height: 100%;
+        @include menu-link;
+        color: $jungle-col;
+        padding-right: $m-margin-small;
+        padding-left: $m-margin-small;
+        @include laptopS {
+        padding-right: $dCol;
+        padding-left: $dCol;
+        }
+        padding-bottom: $dCol;
+    
+        .titleListLink {
+            letter-spacing: 1px;
+        }
+    
+        img {
+            margin-right: 20px;
+            height: 11px;
+    
+        }
+    
+        span {
+            margin-right: 20px;
+            color: $jungle-col;
+        }
+    
+        a {
+            margin-right: 20px;
+            color: $jungle-col;
+        }
+    
+    }

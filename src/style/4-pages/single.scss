@@ -1,0 +1,215 @@
+.mainArticle .rightColumnArticle .titleArticle {
+    padding-right: 4 * $dCol;
+}
+
+.mobileLayout {
+    display: none;
+}
+
+.boutonWrapperArchiveActu {
+    display: none;
+    @include laptopS {
+    display: flex;}
+
+}
+
+
+
+
+ .archive .wrapperLinkArticle {
+     display: flex;
+    @include laptopS {
+    display: none;}
+}
+
+
+.wrapperLinkArticle {
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        color: $grey-col-50;
+        border: 1px solid $grey-col;
+        padding-left: $m-margin-small;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin-bottom: 2%;
+    }
+}
+
+.wrapperLinkArticle {
+    margin-top: 3%;
+    margin-bottom: $dCol;
+    @include p-link;
+    color: $grey-col;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.headerArticle {
+    background-color: $black-col-5;
+    padding-left: $margin;
+    padding-top: $dCol;
+    padding-bottom: $dCol;
+    img {
+        height: 100px;
+    }
+
+}
+
+.mainArticle {
+    background-color: $black-col-5;
+    padding-left: $margin;
+    display: flex;
+
+
+    .leftColumnArticle {
+        width: 43.4%;
+        padding-right: $dCol;
+
+        .article-thumbnail {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+
+            }
+        }
+
+        .article-thumbnail::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        .wrapperLinkArticle {
+            padding-top: 2%;
+            display: flex;
+            flex-direction: column;
+           
+            span {
+                color: $grey-col-50;
+                border : 1px solid $grey-col;
+                padding-left: $dCol;
+                padding-top: 4%;
+                padding-bottom :4%;
+                margin-bottom: 2%;
+            }
+        }
+
+        .wrapperLinkArticle {
+            margin-top: 3%;
+            margin-bottom: $dCol;
+            @include p-link;
+            color: $grey-col;
+            display: flex;
+            flex-direction: column;
+
+        }
+    
+     
+    }
+
+ 
+
+    .rightColumnArticle {
+        width: 56.6%;
+        padding-left: $dCol;
+        padding-right:$dCol ;
+
+        .titleArticle {
+         
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-family: "Fira Bold";
+    font-size: 28px;
+    line-height: 35px;
+  
+            color : $grey-col;
+
+        }
+
+        .dateArticle {  
+            @include p-very-small;
+            color : $grey-col;
+
+        }
+
+        .contentArticle {
+
+            a {
+                @include fauveUnderline;
+                color : $grey-col;
+                font-family: "Fira Bold";
+                }
+
+                a:hover {
+                    @include fauveUnderlineHover;
+                    color : $grey-col;
+                    }
+                    
+                
+            
+
+            .p1 {
+            @include p-very-small;
+            color : $grey-col;
+            }
+
+        }
+
+    
+
+        .imagesArticle {
+            padding-top: $margin;
+            overflow: hidden;
+        
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -o-object-fit: cover;
+                object-fit: cover;
+        
+            }
+        }
+    
+
+     
+
+    }
+
+
+
+}
+
+
+.legendArticle {
+    padding-top: 10px;
+    padding-left: 50%;
+    text-align: right;
+    @include footer-legend;
+    color : $grey-col;
+    padding-bottom: $dCol;
+
+}

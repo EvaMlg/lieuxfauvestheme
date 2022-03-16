@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0; }
+
+html {
+  position: relative;
+  font-size: 24px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed; }
+
+body {
+  position: relative;
+  overflow-x: hidden; }
+  body canvas {
+    display: block; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal; }
+
+button {
+  cursor: pointer; }
+
+/*# sourceMappingURL=reset.css.map */

@@ -1,0 +1,26 @@
+
+
+
+
+$margin : 77px;
+
+
+$m-margin-small : 18px;
+$m-margin-big : 20px;
+
+
+
+
+
+
+.main {
+    @include laptopS {
+    width: calc(100vw - 77px);}
+    
+}
+
+
+
+
+
+

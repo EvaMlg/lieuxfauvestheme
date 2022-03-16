@@ -1,0 +1,516 @@
+.ficheTechniqueMobile {
+    display: none;
+}
+
+
+.logoHeader {
+    z-index: 100;
+}
+
+.docDownload {
+    color : $grey-col-50;
+    text-decoration : none;
+}
+
+@include mobile-tab {
+
+.boutonWrapperProjet {
+        display: none !important;
+    }
+}
+
+.boutonWrapperProjetMobile {
+    @include laptopS {
+        display: none !important;
+    }
+}
+
+
+
+
+
+.boutonWrapperProjetMobile {
+    margin-top: 15px;
+    margin-bottom: $dCol;
+    @include p-link;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    .shareLinks {
+        @include p-link;
+        color: $grey-col-50;
+        background-color: $black-col-5;
+        padding-left: $dCol;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin-top : 8px;
+
+    }
+}
+
+
+
+@include mobile-tab {
+
+    .projets-template-default .responsiveBurger {
+    display: none !important;
+}
+}
+
+.mobilePicto {
+    display: none;
+
+    @include mobile-tab {
+        display: block;
+
+
+    }
+}
+
+.laptopPicto {
+    display: block;
+
+    @include mobile-tab {
+
+        display: none;
+
+    }
+}
+
+
+
+
+
+.projets-template-default .menuButtonWrapper {
+    display: none;
+
+
+
+    .loupe {
+        display: none;
+    }
+
+    .flecheBas {
+        display: none;
+    }
+
+
+}
+
+
+.mobileImgWhiteLayout {
+    display: none;
+}
+
+.titleWrapperResponsive {
+    display: none;
+}
+
+
+.mobileImgWhiteLayout {
+    display: none;
+}
+
+
+.laptopImgWhiteLayout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.headerProjetWrapper {
+    width: 100%;
+    height: 764px;
+
+    @include mobile-tab {
+        height: 600px;
+
+    }
+
+    .imageWrapper {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 764px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+
+    }
+
+    .whiteLayout {
+        position: absolute;
+        z-index: 1;
+        height: 764px;
+
+        @include mobile-tab {
+            height: 600px;
+
+        }
+
+
+
+        .nomenclature-wrapper {
+            padding-top: $dCol;
+
+        }
+
+        .nomenclature {
+            @include small-button;
+            line-height: 20px !important;
+            color: $grey-col;
+            margin-left: $margin;
+            padding-right: 180px;
+            position: absolute;
+            top: 600px;
+
+            a {
+                @include small-button;
+                line-height: 20px !important;
+
+                color: $grey-col;
+                line-height: 30px;
+            }
+        }
+
+
+
+
+    }
+
+
+}
+
+
+.singleProjetTitle {
+    font-family: "Fira Bold";
+    font-size: 28px;
+    line-height: 35px;
+    color: #828787;
+
+
+
+}
+
+.singleProjetSubTitle {
+
+    font-family: "Fira Light";
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 35px;
+    color: #828787;
+    //padding-top: 10px;
+
+
+
+}
+
+.zone-cliquable {
+    position: absolute;
+    top: 20px;
+    left: $margin;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+
+    @include mobile-tab {
+        display: none;
+    }
+}
+
+
+.contentWrapperProjet {
+
+    padding-top: 50px;
+    padding-left: $margin;
+
+
+    .titleWrapper {
+        padding-bottom: $dCol;
+    }
+
+
+
+    .galleryWrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 800px;
+        padding-bottom: $dCol;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+    }
+
+
+
+
+    .projetWrapper {
+        margin-top: $dCol;
+        display: flex;
+
+
+        .rightColumn {
+
+            @include mobile-tab {
+                padding-top: $m-margin-small;
+            }
+
+
+            width: 60%;
+            padding-left: $dCol;
+            padding-right: $dCol;
+
+            h2 {
+                @include p-intro-bold-lh;
+                ;
+                color: $grey-col;
+
+            }
+
+            h3 {
+                @include p-intro-bold-capitalize;
+                text-transform: uppercase;
+                color: $jungle-col;
+                padding-top: $dCol;
+                padding-bottom: 15px;
+            }
+
+
+            p {
+                @include p-very-small;
+                color: $grey-col;
+
+            }
+
+            a {
+                @include fauveUnderline;
+                color: $grey-col;
+            }
+
+            a:hover {
+                @include fauveUnderlineHover;
+                color: $grey-col;
+            }
+
+        }
+
+        .leftColumn {
+            width: 40%;
+            padding-right: $dCol;
+
+            p {
+                @include p-very-small
+            }
+
+            .boutonWrapperExploration {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                @include small-button;
+                border-top: 1px $black-col-5 solid;
+                margin-top: $dCol;
+                padding-top: $dCol;
+
+                button {
+                    @include small-button;
+                    color: $grey-col;
+                }
+
+            }
+
+
+            .cardLink {
+                padding-right: $dCol;
+                padding-left: $dCol;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-top: 10px;
+            }
+
+            .cardLinkJungle {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $jungle-col;
+                color: $grey-col;
+                padding-top: 25px;
+                padding-right: $dCol;
+
+                padding-bottom: 25Px;
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    color: white;
+                    text-transform: uppercase;
+
+                    font-family: "Fira Bold";
+                    font-size: 12px;
+                    line-height: 25px;
+
+                    @include laptopS {
+                        font-size: 12px;
+                        line-height: 25px;
+                    }
+
+                }
+
+
+
+            }
+
+            .cardLinkLight {
+                background-color: $jungle-col-10;
+                color: $grey-col;
+
+
+            }
+
+
+            .boutonWrapperProjet {
+                margin-bottom: $dCol;
+                @include p-link;
+                color: $grey-col-50;
+                display: flex;
+                flex-direction: column;
+
+                .shareLinks {
+                    @include p-link;
+                    color: $grey-col-50;
+                    background-color: $black-col-5;
+                    padding-left: $dCol;
+                    padding-top: 4%;
+                    padding-bottom: 4%;
+
+                }
+            }
+
+
+
+        }
+
+    }
+
+}
+
+.logoOuvrir {
+    background-color: transparent;
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+
+
+}
+
+
+.logoPrevNext {
+    height: 20px;
+    width: 20px;
+}
+
+
+
+
+
+.ficheTechnique {
+
+    h3 {
+        color: white;
+        text-transform: uppercase;
+        font-family: "Fira Bold";
+        font-size: 12px;
+        line-height: 25px;
+
+        @include laptopS {
+            font-size: 12px;
+            line-height: 25px;
+        }
+    }
+
+    @include p-very-small;
+    color : white;
+    padding-left: $dCol;
+    padding-right: $dCol;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: $jungle-col;
+    display: none;
+    gap : $dCol;
+
+    .columnFT {
+        width: 50%;
+    }
+
+    .wrapperItems {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+.navNextPrev {
+    position: fixed;
+    z-index: 3000;
+    display: flex;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: $margin;
+    height: 2 * $margin;
+
+    .close-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    span {
+        margin-bottom: 3px;
+    }
+
+    .nav-previousMobile {
+        display: none;
+    }
+
+    .nav-nextMobile {
+        display: none;
+    }
+
+
+
+    .nav-previous {
+        height: 25px;
+        width: 25px;
+    }
+
+    .nav-next {
+        height: 25px;
+        width: 25px;
+    }
+
+  
+
+}
