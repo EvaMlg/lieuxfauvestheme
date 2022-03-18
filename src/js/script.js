@@ -202,9 +202,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
  // CHANGER LA COULEUR DES ICONES PAGE PROJET
 const imageWrapper = document.querySelector('.projets-template-default .imageThumbnailWrapper img');
 let heightImageWrapper = imageWrapper.clientHeight;

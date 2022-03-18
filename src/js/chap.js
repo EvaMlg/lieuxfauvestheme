@@ -47,13 +47,15 @@ console.log(sectionCinq);
 console.log(sectionSplit);
 
 
+// Flèche qui s'affiche à la moitié du main
 const arrow = document.querySelector('.flecheBas')
+const mainHeight = (document.querySelector('.main').clientHeight / 2)
 window.addEventListener('scroll', function () {
-    if (window.scrollY > sectionTrois) {
+    if (window.scrollY > mainHeight) {
         arrow.style.display = "block";
 
     }
-    else if (window.scrollY < sectionTrois) {
+    else if (window.scrollY < mainHeight) {
         arrow.style.display = "none";
 
     }

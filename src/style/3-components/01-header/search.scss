@@ -234,7 +234,7 @@
  
 
 #search_result_ajax{
-    overflow-y: scroll;
+   // overflow-y: scroll;
   
 }
 
@@ -271,7 +271,7 @@ form#searchform div input #text {
 }
 
 form#searchform div button{
-	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+    background-color: #00534e;
     background-size: contain;
     background-repeat: no-repeat;
     width: 25px;

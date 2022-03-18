@@ -1,3 +1,5 @@
+
+
 .mainArticle .rightColumnArticle .titleArticle {
     padding-right: 4 * $dCol;
 }
@@ -16,7 +18,7 @@
 
 
 
- .archive .wrapperLinkArticle {
+.archive .wrapperLinkArticle {
      display: flex;
     @include laptopS {
     display: none;}
@@ -35,6 +37,11 @@
         padding-top: 4%;
         padding-bottom: 4%;
         margin-bottom: 2%;
+    }
+
+    a {
+        color: $grey-col-50;
+        
     }
 }
 
@@ -148,6 +155,23 @@
 
         .contentArticle {
 
+            strong {
+                @include p-bold;
+
+            }
+
+            li {
+                margin-left: $dCol;
+                @include p-very-small;
+                color : $grey-col;
+                list-style-type: circle;
+                }
+
+            p {
+            @include p-very-small;
+            color : $grey-col;
+            }
+
             a {
                 @include fauveUnderline;
                 color : $grey-col;
@@ -162,10 +186,7 @@
                 
             
 
-            .p1 {
-            @include p-very-small;
-            color : $grey-col;
-            }
+            
 
         }
 

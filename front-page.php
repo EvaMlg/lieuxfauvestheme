@@ -27,13 +27,13 @@ get_header();
 
             <div class="logoHeader">
 
-            <a class="logoFrontPageA" href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+                <a class="logoFrontPageA" href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
 
 
             </div>
 
-            <a href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+            <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
 
 
@@ -66,15 +66,15 @@ get_header();
 
                     <div class="link-bloc-2">
 
-                        <div class="tagline" data-aos="fade-up"s >
+                        <div class="tagline" data-aos="fade-up" s>
                             <p><?php echo $section_lieux['tagline']; ?></p>
                         </div>
 
                         <div class="list-link" data-aos="fade-up">
-                        
+
                             <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
-    
+
                             <span class="titleListLink">AGENCE</span>
 
                             <a href="agence/#sec-agence" class="fauveUnderline">Valeurs</a>
@@ -88,8 +88,8 @@ get_header();
                         <?php $haiku = get_group_field('section_lieux', 'haiku') ?>
                         <!-- <img src="<?php echo esc_url($haiku['image']['url']); ?>" alt="<?php echo esc_attr($haiku['image']['alt']); ?>" /> -->
                         <?php echo '<p data-aos="fade-up">' ?>
-                    <?php echo $haiku['texte']; ?>
-                    <?php echo '</p>' ?>
+                        <?php echo $haiku['texte']; ?>
+                        <?php echo '</p>' ?>
                     </div>
 
                 <?php endif; ?>
@@ -97,7 +97,7 @@ get_header();
             </section>
 
 
-            <section class="sec-faire" id="sec-faire" >
+            <section class="sec-faire" id="sec-faire">
 
                 <div class="actu-bloc">
 
@@ -144,7 +144,26 @@ get_header();
                         <span class="titleListLink">ACTUALITÉS</span>
 
 
-                        <a href="agence/#sec-rejoindre" class="fauveUnderline">Rejoindre Lieux F.AU.VES</a>
+
+                        <?php
+
+                        $args = array(
+                            'post_type' => 'annonces',
+                            'posts_per_page' => 1,
+
+                        );
+                        $my_query = new WP_Query($args);
+                        if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                                <a href="<?php the_permalink(); ?>" class="fauveUnderline">Rejoindre Lieux F.AU.VES</a>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+
+                        ?>
+
+
                     </div>
                 </div>
 
@@ -154,8 +173,8 @@ get_header();
                     if ($section_faire) : ?>
                         <?php $haiku = get_group_field('section_faire', 'haiku') ?>
                         <?php echo '<p data-aos="fade-up">' ?>
-                    <?php echo $haiku['texte']; ?>
-                    <?php echo '</p>' ?>
+                        <?php echo $haiku['texte']; ?>
+                        <?php echo '</p>' ?>
                     <?php endif; ?>
                 </div>
 
@@ -168,20 +187,30 @@ get_header();
                     // 1. Arguments 
                     $args = array(
                         'post_type' => 'projets',
-                        'category_projet' => 'architecture',
+                        'categories-projet' => 'architecture',
                         'posts_per_page' => 1,
 
                     );
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
                             <div class="projet-popup-wrapper">
-                           <img class="logo-open" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
+                                <img class="logo-open" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
                                 <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
                                 <div class="projet-popup transition contentPopup" id="contentPopup">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_title(); ?></a>
-                                        <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
-                                    <?php the_excerpt(); ?>
+                                    <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
+                                    <?php
+
+
+                                    $excerpt = get_the_excerpt();
+
+                                    $excerpt = substr($excerpt, 0, 161); // Only display first 260 characters of excerpt
+                                    $result = substr($excerpt, 0, strrpos($excerpt, ' '));
+
+
+
+                                    echo '<p class="content">' . $result . '</p>'; ?>
                                     <div class="logo-wrapper">
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>
@@ -196,25 +225,35 @@ get_header();
                     wp_reset_postdata();
 
                     ?>
-               
+
                     <?php
                     // 1. Arguments 
                     $args = array(
                         'post_type' => 'projets',
-                        'category_projet' => 'urbanisme',
+                        'categories-projet' => 'urbanisme',
                         'posts_per_page' => 1,
 
                     );
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
                             <div class="projet-popup-wrapper">
-                           <img class="logo-open logo-open-urba" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
+                                <img class="logo-open logo-open-urba" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
                                 <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
                                 <div class="projet-popup projet-popup-urba transition contentPopup" id="contentPopup">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_title(); ?></a>
-                                        <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
-                                    <?php the_excerpt(); ?>
+                                    <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
+                                    <?php
+
+
+                                    $excerpt = get_the_excerpt();
+
+                                    $excerpt = substr($excerpt, 0, 161); // Only display first 260 characters of excerpt
+                                    $result = substr($excerpt, 0, strrpos($excerpt, ' '));
+
+
+
+                                    echo '<p class="content">' . $result . '</p>'; ?>
                                     <div class="logo-wrapper">
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>
@@ -246,11 +285,10 @@ get_header();
 
                 <div class="bloc-haiku">
                     <?php $haiku = get_group_field('section_archiurba', 'haiku') ?>
-                    <img src="<?php echo esc_url($haiku['image']['url']); ?>" alt="<?php echo esc_attr($haiku['image']['alt']); ?>" />
                     <?php echo '<p data-aos="fade-up">' ?>
                     <?php echo $haiku['texte']; ?>
                     <?php echo '</p>' ?>
-                    
+
                 </div>
 
 
@@ -282,14 +320,14 @@ get_header();
                         $my_query = new WP_Query($args);
                         if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
                     ?>
-                          
 
-                                <div class="preExplorationWrapper">
-                                    <div class="explorationWrapper" data-aos="fade-up">
+
+                            <div class="preExplorationWrapper">
+                                <div class="explorationWrapper" data-aos="fade-up">
                                     <a href="<?php the_permalink(); ?>">
-                                <div class="thumbnailExplo"><?php the_post_thumbnail(); ?></div>
+                                        <div class="thumbnailExplo"><?php the_post_thumbnail(); ?></div>
                                         <div class="exploWrapper">
-                                       
+
                                             <div class="titleExplo"><?php the_title(); ?></div>
                                             <div>
                                                 <div class="excerptExplo"><?php the_excerpt(); ?></div>
@@ -299,12 +337,19 @@ get_header();
                                         </div>
 
                                         <div class="boutonWrapperExploration">
-                                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</button>
-                                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
-                                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></button>
+                                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                                                &nbsp; Partager <?php echo my_sharing_buttons($content) ?></button>
+                                            <?php if (get_field('document_a_telecharger')) : ?>
+                                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
+                                            <?php endif; ?>
+                                            <?php if (get_field('lien_externe')) : ?>
+                                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></button>
+                                            <?php endif; ?>
                                         </div>
-                                    </div>
+
+
                                 </div>
+                            </div>
 
                             </a>
                     <?php
@@ -318,10 +363,10 @@ get_header();
 
                 </div>
 
-                <div class="link-bloc" >
+                <div class="link-bloc">
                     <div class="list-link" data-aos="fade-up">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                        <span  class="titleListLink">EXPLORATIONS</span>
+                        <span class="titleListLink">EXPLORATIONS</span>
                         <a href="explorations" class="fauveUnderline">Vivant</a>
                         <a href="explorations" class="fauveUnderline">Éthique</a>
                         <a href="explorations" class="fauveUnderline">Soutenable</a>
@@ -333,7 +378,7 @@ get_header();
             </section>
             <section class="sec-footer" id="sec-footer">
 
-            <div class="bloc-haiku">
+                <div class="bloc-haiku">
                     <?php $haiku = get_group_field('section_ves', 'haiku') ?>
                     <?php echo '<p data-aos="fade-up">' ?>
                     <?php echo $haiku['texte']; ?>

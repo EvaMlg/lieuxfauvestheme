@@ -104,9 +104,15 @@ endforeach;
 
         <div class="boutonWrapperExploration">
 
-            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
+            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+            &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></span>
+            <?php if (get_field('document_a_telecharger')) : ?>
             <span class="shareLinks"data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> <?php the_field('document_a_telecharger'); ?></span>
+            <?php endif; ?>
+            <?php if (get_field('lien_externe')) : ?>
             <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> <?php the_field('lien_externe'); ?></span>
+            <?php endif; ?>
+
 
         </div>
 
@@ -138,29 +144,29 @@ endforeach;
     </div>
 
 </div>
+
+
+
 <div class="galleryWrapper mainExploration">
-
-
     <?php $images = get_field('galerie_exploration');
     if ($images) : ?>
         <?php foreach ($images as $image) : ?>
             <div class="single-slide-image">
-                <img class="logo-categorie" data-aos="zoom-in" data-aos-duration="1000" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
             </div>
 
         <?php endforeach; ?>
     <?php endif; ?>
-
 </div>
 <div class="zoom-image-slider">
     <div class="div-zoom">
         <img src="" />
         <span class="close"><i class="fa-solid fa-xmark"></i></span>
     </div>
+</div>
+</div>
 
-</div>
-</div>
 
 <div class="projetsLoop projetsLoopExplo" data-aos="fade-up">
 

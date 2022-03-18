@@ -181,6 +181,8 @@
         <a href="<?php echo home_url(); ?>" ?><img class="pictoResponsive logoResponsive" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
         <a class="responsiveBurger" href="#" class><img class="pictoResponsive responsiveBurgerImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg"></a>
         <a> <img class="pictoNav loupeMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
+        <a class="pictoCloseSingleMobile" href="/actualites"> <img class="pictoNav pictoCloseActuMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></a>
+
 
 
 
@@ -203,6 +205,8 @@
                     <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
                     <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
                     <a class="pictoLogo" href="<?php echo home_url(); ?>" ?><img class="pictoNav" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
+                    <a class="pictoCloseSingle" href="/actualites"> <img class="pictoNav pictoCloseActu" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></a>
+
 
                     <?php
                     wp_nav_menu(array(

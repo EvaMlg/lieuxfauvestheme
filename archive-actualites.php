@@ -33,7 +33,7 @@ get_header();
             $args = array(
                 'post_type' => 'post',
                 'orderby' => 'date',
-                'posts_per_page' => 4,
+                'posts_per_page' => -1,
 
 
             );
@@ -43,8 +43,6 @@ get_header();
                     <div class="archive-actu-container" data-aos="fade-up">
 
                         <div class="archive-actu-wrapper">
-
-
 
                             <div class="archive-article-thumbnail"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
                             <div class="archive-article-content-wrapper">
@@ -56,20 +54,32 @@ get_header();
                             </div>
 
                             <div class="wrapperLinkArticle">
-                            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
-                            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> Télécharger document divers</span>
-                            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> Liens externes</span>
-                        </div>
+                                <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> 
+                                &nbsp; Partager  <?php echo my_sharing_buttons($content) ?></span>
+                                <?php if (get_field('document_a_telecharger')) : ?>
+                                <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></span>
+                                <?php endif; ?>
+                                <?php if (get_field('lien_externe')) : ?>
+                                <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">&nbsp;<?php the_field('lien_externe'); ?></span>
+                                <?php endif; ?>
+                            </div> 
 
                         </div>
 
                         <div class="boutonWrapperArchiveActu">
-                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</button>
-                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; Lien Interne / externe / site Web<?php the_field('document_a_telecharger'); ?></button>
-                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; Partager <?php the_field('lien_externe'); ?></button>
+                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                            &nbsp; Partager <?php echo my_sharing_buttons($content) ?></button>
+                            <?php if (get_field('document_a_telecharger')) : ?>
+                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
+                            <?php endif; ?>
+                                <?php if (get_field('lien_externe')) : ?>
+                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp;<?php the_field('lien_externe'); ?></button>
+                            <?php endif; ?>
                         </div>
 
-                    
+ 
+
+
 
                     </div>
 

@@ -73,7 +73,6 @@ setTimeout(function once() {
         document.querySelector('#loaderMobile img').style.animation = "loaderOut 2s ease";
         document.querySelector('#loaderMobile .svgMobile').style.animation = "loaderOut 2s ease";
 
-        
         setTimeout(function () {
             element.parentNode.removeChild(element);
             document.querySelector('body').style.overflow = "visible";
@@ -81,7 +80,7 @@ setTimeout(function once() {
     } else {
         window.addEventListener("load", () => {
             // Fully loaded!
-            var element = document.getElementById("loader");
+            var element = document.getElementById("loaderMobile");
             document.querySelector('#loaderMobile img').style.animation = "loaderOut 2s ease";
             document.querySelector('#loaderMobile .svgMobile').style.animation = "loaderOut 2s ease";
             document.querySelector('#loaderMobile div').style.animation = "loaderOut 2s ease";
@@ -91,7 +90,7 @@ setTimeout(function once() {
             }, 1900)
         });
     }
-}, 1000);
+}, 3000);
 
 
 

@@ -14,6 +14,8 @@ $m-margin-big : 20px;
 
 
 @include tablet {
+
+
     .responsive-menu {
         z-index: 200;
         position: fixed;
@@ -134,7 +136,7 @@ $m-margin-big : 20px;
         width: 90vw;
     }
 
- 
+
 
 
 
@@ -271,7 +273,7 @@ $m-margin-big : 20px;
                 display: flex;
                 flex-direction: column;
                 @include fullmenu-submenu;
-                font-size : 16px !important;
+                font-size: 16px !important;
                 font-family: "Fira Sans Black";
                 line-height: 31px;
                 color: white;
@@ -322,7 +324,7 @@ $m-margin-big : 20px;
 
     .categoryHeader {
 
-      
+
         overflow-y: scroll;
         max-height: 100%;
         height: fit-content;
@@ -423,7 +425,7 @@ $m-margin-big : 20px;
                     @include projetOoutline;
                     letter-spacing: 2px;
                     display: none;
-                
+
 
 
                 }
@@ -537,10 +539,14 @@ $m-margin-big : 20px;
             padding-top: 4%;
             padding-bottom: 4%;
             margin-top: 10px;
-            
+
+            a {
+                color: $grey-col-50;
+            }
+
 
         }
-      
+
     }
 
 
@@ -550,8 +556,9 @@ $m-margin-big : 20px;
             padding-right: $m-margin-small;
             padding-left: $m-margin-small;
         }
+
         display: block;
-        
+
 
         .cardLinkJungle {
 
@@ -616,7 +623,7 @@ $m-margin-big : 20px;
         .wrapperItems {
             margin-bottom: 15px;
         }
-       
+
 
     }
 
@@ -631,7 +638,7 @@ $m-margin-big : 20px;
     }
 
     .mobileImgWhiteLayout {
-        position : absolute;
+        position: absolute;
         bottom: 0;
         display: block;
         width: 100%;
@@ -705,9 +712,12 @@ $m-margin-big : 20px;
                 text-align: center;
                 position: absolute;
                 top: 530px;
-                margin-left: 0px; 
+
                 padding-right: 0;
                 position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 a {
                     @include small-button;
@@ -716,7 +726,7 @@ $m-margin-big : 20px;
                 }
             }
 
-            
+
 
 
 
@@ -741,9 +751,9 @@ $m-margin-big : 20px;
         font-family: "Fira Light";
         text-transform: uppercase;
         font-size: 14px;
-        line-height: 35px;
+        line-height: 20px;
         color: #828787;
-        padding-top: 0;
+        padding-top: 10px;
 
 
 
@@ -765,29 +775,14 @@ $m-margin-big : 20px;
 
 
 
-        .galleryWrapper {
-            overflow: hidden;
-            width: 100vw;
-
-            height: 400px;
-            padding-bottom: 0;
-
-            img {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                object-fit: cover;
-            }
+        .mainExploration {
+            padding:0;
         }
-
-
 
 
         .projetWrapper {
             display: block;
-            margin-top : 0;
+            margin-top: 0;
 
 
             .rightColumn {
@@ -902,7 +897,7 @@ $m-margin-big : 20px;
 
                 }
 
-                
+
 
 
                 .boutonWrapperProjet {
@@ -1381,7 +1376,7 @@ $m-margin-big : 20px;
 
         .categoryHeader {
 
-          
+
 
 
             @include laptopS {
@@ -1396,7 +1391,7 @@ $m-margin-big : 20px;
                 color: $jungle-col
             }
 
-            
+
 
 
         }
@@ -1579,6 +1574,7 @@ $m-margin-big : 20px;
 
         .contentWrapperExploration {
             display: block;
+            margin-bottom: 0;
 
             .titleExplo {
                 padding-right: 60px;
@@ -1644,11 +1640,11 @@ $m-margin-big : 20px;
 @include mobile-tab {
 
     .parentTags {
-        color : $jungle-col !important;
-        font-family: "Fira Bold"  !important;
-        font-size: 15px  !important;
+        color: $jungle-col !important;
+        font-family: "Fira Bold" !important;
+        font-size: 15px !important;
     }
-    
+
 
     .mainExploration .leftColumnExploration .boutonWrapperExploration {
         margin-bottom: 0 !important;
@@ -1697,10 +1693,10 @@ $m-margin-big : 20px;
             padding-right: 0;
 
             .tagsWrapperExploration {
-              
+
                 background-color: white;
                 padding: $m-margin-small;
-            
+
             }
 
             .article-thumbnail {
@@ -1745,6 +1741,10 @@ $m-margin-big : 20px;
 
 
                     margin-bottom: 15px;
+
+                    a {
+                        color: $grey-col-50;
+                    }
                 }
             }
         }
@@ -1988,7 +1988,7 @@ $m-margin-big : 20px;
         height: 100%;
         @include menu-link;
         color: $jungle-col;
-        padding-right: 50% !important;
+        padding-right: 60% !important;
         padding-left: $m-margin-small;
 
         @include laptopS {
@@ -1999,7 +1999,7 @@ $m-margin-big : 20px;
         padding-bottom: $dCol;
 
         img {
-            margin-right: 20px;
+            margin-right: 6px;
             height: 11px;
 
         }
@@ -2130,6 +2130,10 @@ $m-margin-big : 20px;
 
             .projet-popup-wrapper {
 
+                .content {
+                    display: none;
+                }
+
                 @include laptopS {
                     width: 50%;
                 }
@@ -2235,7 +2239,8 @@ $m-margin-big : 20px;
         .bloc-exploration {
             .thumbnailExplo {
                 overflow: hidden;
-                height: 550px;
+                height: 350px;
+                margin-bottom: $m-margin-small;
 
                 img {
                     width: 100%;
@@ -2261,8 +2266,8 @@ $m-margin-big : 20px;
                     display: block;
                 }
 
-                padding-top: $dCol;
-                padding-bottom: 25px;
+                padding-top: $m-margin-small;
+                padding-bottom: 0;
                 padding-left: $m-margin-small;
                 padding-right: $m-margin-small;
 
@@ -2525,7 +2530,7 @@ $m-margin-big : 20px;
             }
 
             ;
-            background-color: $jungle-col-10;
+            background-color: $grey-new-col-50;
             padding-left: $m-margin-small;
             padding-right: $m-margin-small;
             padding-bottom: $dCol;
@@ -2552,7 +2557,7 @@ $m-margin-big : 20px;
         }
 
         .distinctionsWrapperAgence {
-            background-color: $jungle-col-10;
+            background-color: $grey-new-col-50;
 
             @include laptopS {
                 padding-left: $dCol;
@@ -2563,7 +2568,7 @@ $m-margin-big : 20px;
             padding-right: $m-margin-small;
 
 
-            padding-bottom: $dCol;
+            padding-bottom: 10px;
         }
 
 

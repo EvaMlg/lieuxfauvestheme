@@ -61,23 +61,23 @@ logoOpenUrba.addEventListener('mouseenter', function() {
 
 
 
-/* logoOpenUrba.addEventListener('click', function() { 
-    if ( document.querySelector('.projet-popup-urba').style.display === "none") {
-        document.querySelector('.projet-popup-urba').style.display = "block"; 
-        document.querySelector('.projet-popup-urba').style.animation = "windowUp 0.2s ease"
-    }
-    else {
-        document.querySelector('.projet-popup-urba').style.display = "none";
-    }
+// logoOpenUrba.addEventListener('click', function() { 
+//     if ( document.querySelector('.projet-popup-urba').style.display === "none") {
+//         document.querySelector('.projet-popup-urba').style.display = "block"; 
+//         document.querySelector('.projet-popup-urba').style.animation = "windowUp 0.2s ease"
+//     }
+//     else {
+//         document.querySelector('.projet-popup-urba').style.display = "none";
+//     }
 
- }, false);
- document.querySelector('.projet-popup-urba').addEventListener('click', function () {
-    document.querySelector('.projet-popup-urba').style.display = "none";
-    document.querySelector('.projet-popup-urba').style.animation = "windowDown 0.2s ease"
+//  }, false);
+//  document.querySelector('.projet-popup-urba').addEventListener('click', function () {
+//     document.querySelector('.projet-popup-urba').style.display = "none";
+//     document.querySelector('.projet-popup-urba').style.animation = "windowDown 0.2s ease"
 
 
- }, false);
+//  }, false);
 
- */
+
 
 

@@ -4,14 +4,7 @@ const secExpertises = document.querySelector(".sec-expertises");
 const secEquipe = document.querySelector(".sec-equipe");
 const secRejoindre = document.querySelector(".sec-rejoindre");
 
-const listChapterAgence =document.querySelector(".list-chapter-agence");
-
-
-console.log(secAgence);
-console.log(secValeurs);
-console.log(secExpertises);
-console.log(secEquipe);
-console.log(secRejoindre);
+const listChapterAgence = document.querySelector(".list-chapter-agence");
 
 const agenceSpan = document.querySelector('.spanAgence');
 const valeursSpan = document.querySelector('.spanValeurs');
@@ -28,7 +21,7 @@ let section1 = heightSecAgence;
 let section2 = heightSecAgence + heightSecValeurs;
 let section3 = heightSecAgence + heightSecValeurs + heightSecExpertises;
 let section4 = heightSecAgence + heightSecValeurs + heightSecExpertises + heightSecEquipe;
-let section5 =  heightSecAgence + heightSecValeurs + heightSecExpertises + heightSecEquipe + heightSecRejoindre ;
+console.log(section3);
 
 window.addEventListener('scroll', function () {
     if (window.scrollY < section1) {
@@ -38,7 +31,7 @@ window.addEventListener('scroll', function () {
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
         listChapterAgence.style.display="block";
-        devise.classList.remove("deviseOn");
+
     } else if (window.scrollY < section2) {
         valeursSpan.classList.add("scroll");
         expertisesSpan.classList.remove("scroll");
@@ -46,7 +39,7 @@ window.addEventListener('scroll', function () {
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
         listChapterAgence.style.display="block";
-        devise.classList.remove("deviseOn");
+       
     } else if (window.scrollY < section3) {
         valeursSpan.classList.remove("scroll");
         expertisesSpan.classList.add("scroll");
@@ -54,23 +47,36 @@ window.addEventListener('scroll', function () {
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
         listChapterAgence.style.display="block";
-        devise.classList.remove("deviseOn");
-    } else if (window.scrollY < section4) {
+       
+    } else if (window.scrollY < section4  ) {
         valeursSpan.classList.remove("scroll");
         expertisesSpan.classList.remove("scroll");
         equipeSpan.classList.add("scroll");
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
         listChapterAgence.style.display="block";
-        devise.classList.remove("deviseOn"); 
-    } else if (window.scrollY < section4) {
-        valeursSpan.classList.remove("scroll");
-        expertisesSpan.classList.remove("scroll");
-        equipeSpan.classList.add("scroll");
-        listChapterAgence.classList.add("scroll-off");
-        listChapterAgence.style.display="none";
-        logoFrontpage.classList.add("scroll-off");
-        devise.classList.add("deviseOn");
     }
     
 }, false); 
+
+
+window.addEventListener('scroll', function () { 
+    if (window.scrollY >  5600) {
+        listChapterAgence.style.display="none";
+        document.querySelector('.page-template-template-agence .logoFrontpage').style.display="none";
+       
+    }
+});
+
+
+// const arrowAgence = document.querySelector('.flecheBas')
+// window.addEventListener('scroll', function () {
+//     if (window.scrollY >  section3) {
+//         arrow.style.display = "block";
+
+//     }
+//     else if (window.scrollY <  section3) {
+//         arrow.style.display = "none";
+
+//     }
+// }, false);

@@ -103,7 +103,8 @@ get_header();
 	$args = array(
 		'post_type' => 'projets',
 		'post_status' => 'publish',
-		'posts_per_page' => -1
+		'posts_per_page' => -1,
+		
 	);
 
 
@@ -121,6 +122,8 @@ get_header();
 	}
 	$args['tax_query'] = $tax_query;
 
+
+
 	$my_query = new WP_Query($args);
 	if ($my_query->have_posts()) : ?>
 		<div id="projets-list" class="projetsGrid">
@@ -130,6 +133,7 @@ get_header();
 					<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 					<p class="projectLoopLieu"><?php the_field('lieu', get_the_ID()); ?></p>
 				</div>
+				
 			<?php endwhile; ?>
 		</div>
 	<?php endif;

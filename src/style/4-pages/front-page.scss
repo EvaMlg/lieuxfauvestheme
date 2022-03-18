@@ -38,7 +38,7 @@
 }
 
 .link-bloc-2 {
-    background-color: $jungle-col-10;
+    background-color: $grey-new-col-50;
     height: 235px - $dCol;
     height: 100%;
 }
@@ -198,9 +198,9 @@
 .list-link {
     height: 100%;
     @include menu-link;
+    line-height: 20px !important;
     color: $jungle-col;
     padding-left: $m-margin-small;
-    padding-right: 50% !important;
     @include laptopS {
     padding-right: $dCol;
     padding-left: $dCol;
@@ -208,7 +208,7 @@
     padding-bottom: $dCol;
 
     .titleListLink {
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
 
     img {
@@ -328,6 +328,8 @@
 
             .article-date {
                 padding-top: 20px;
+                padding-bottom: 15px;
+
                 @include p-very-small;
                 color: $grey-col;
 
@@ -529,6 +531,7 @@
                 display: flex;
                 justify-content:space-between;
                 @include small-button;
+
                 border-top: 1px $black-col-5 solid;
                 margin-top: 35px;
                 padding-top: 25px;
@@ -536,6 +539,12 @@
                 button {
                     @include small-button;
                     color: $grey-col-50;
+                }
+
+                a {
+                    color: $grey-col-50;
+                    text-decoration: none
+
                 }
 
             }

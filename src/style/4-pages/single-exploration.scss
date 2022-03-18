@@ -32,7 +32,7 @@
 .mainExploration {
     background-color: $black-col-5;
     padding-left: $margin;
-    padding-bottom: $dCol;
+    //padding-bottom: $dCol;
     display: flex;
 
     .leftColumnExploration {
@@ -127,6 +127,9 @@
 
 
                 margin-bottom: 15px;
+                a {
+                    color : $grey-col-50;
+                }
             }
         }
     }
@@ -148,7 +151,10 @@
             background-color: white;
             padding: $dCol;
             margin-bottom: $dCol;
-         
+
+            @include mobile-tab {
+            margin-bottom: 0 !important;
+            }
 
         }
 

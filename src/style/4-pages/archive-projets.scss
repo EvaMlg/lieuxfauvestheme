@@ -96,6 +96,7 @@
     }
 }
 .projetsGrid {
+    min-width : 90vw;
    
     .lfLogo {
         display: none;
@@ -109,6 +110,7 @@
 
         .cardProjet {
             width: calc(25% - 45px);
+            min-width: 20%;
 
             img {
                 height: 400px;
@@ -170,13 +172,14 @@
 
 .categoryHeader .div-to-toggle .subCatName span.active {
     @include cat-bold;
-    @include fauveUnderlineVerySmall;
+    line-height: 14px !important;
+    @include fauveUnderlineSmall;
     width: fit-content;
     margin: 0 auto;
 }
 
 .categoryHeader .div-to-toggle .subCatName span.active:hover {
-    @include fauveUnderlineVerySmallHover;
+    @include fauveUnderlineSmallHover;
 
 }
 

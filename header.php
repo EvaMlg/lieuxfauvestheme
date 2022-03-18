@@ -41,6 +41,8 @@
 
 
 
+
+
 <div id="loader">
     <!-- <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image02.jpg" alt="Loader Lieux Fauves" style="
     /* width: 100%;
@@ -50,11 +52,11 @@
     object-fit: cover;}"> -->
 
 
-    <div class="loader" id="video" style="z-index:2000; position: absolute; object-fit: cover;">
+    <div class="loader" id="video" style="z-index:2000; position: absolute; object-fit: cover; width: 100%;">
     <video src="wp-content/themes/lieuxfauves/src/assets/img/16-9fondblanc.mp4" width="100%" height="auto" autoplay="true" muted="" style="height: 100vh; background-color : white;";>
       Cette vidéo ne peut être affichée sur votre navigateur Internet.<br>
     </video>
-    <div class="progressionBar" style="margin-top: 13px"><div class="progressionBarInner"></div></div>
+    <div class="progressionBar"><div class="progressionBarInner"></div></div>
 
 
   </div>
@@ -95,6 +97,8 @@
 
 
 <? } ?>
+
+
 
 <?php get_template_part('template-parts/01-header/header-navigation-hero'); ?>
 

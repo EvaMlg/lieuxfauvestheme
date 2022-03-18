@@ -447,14 +447,15 @@ button {
   padding-bottom: 0px;
   padding-right: 3px;
   padding-left: 3px;
-  -webkit-box-shadow: inset 0 -6px 0 #f1dcad;
-          box-shadow: inset 0 -6px 0 #f1dcad;
+  -webkit-box-shadow: inset 0 -7px 0 #f1dcad;
+          box-shadow: inset 0 -7px 0 #f1dcad;
   color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .fauveUnderlineSmall:hover {
+  padding-top: 3px;
   padding-bottom: 2px;
   padding-right: 3px;
   padding-left: 3px;
@@ -713,6 +714,14 @@ html {
 }
 
 .flecheBas {
+  display: none;
+}
+
+.pictoCloseSingle {
+  display: none;
+}
+
+.pictoCloseSingleMobile {
   display: none;
 }
 
@@ -1206,10 +1215,6 @@ html {
   }
 }
 
-#search_result_ajax {
-  overflow-y: scroll;
-}
-
 form#searchform div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1241,7 +1246,7 @@ form#searchform div input #text {
 }
 
 form#searchform div button {
-  background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+  background-color: #00534e;
   background-size: contain;
   background-repeat: no-repeat;
   width: 25px;
@@ -1790,8 +1795,8 @@ form#searchform div button {
   padding-bottom: 0px;
   padding-right: 3px;
   padding-left: 3px;
-  -webkit-box-shadow: inset 0 -6px 0 #f1dcad;
-          box-shadow: inset 0 -6px 0 #f1dcad;
+  -webkit-box-shadow: inset 0 -7px 0 #f1dcad;
+          box-shadow: inset 0 -7px 0 #f1dcad;
   color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -2169,7 +2174,7 @@ footer {
 }
 
 .link-bloc-2 {
-  background-color: #e5eeed;
+  background-color: #ecececec;
   height: 190px;
   height: 100%;
 }
@@ -2332,9 +2337,9 @@ footer {
   font-family: "Fira Bold";
   font-size: 15px;
   line-height: 14px;
+  line-height: 20px !important;
   color: #00534e;
   padding-left: 18px;
-  padding-right: 50% !important;
   padding-bottom: 45px;
 }
 @media (min-width: 1025px) {
@@ -2350,7 +2355,7 @@ footer {
   }
 }
 .list-link .titleListLink {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 .list-link img {
   margin-right: 20px;
@@ -2487,6 +2492,7 @@ footer {
 }
 .sec-faire .actu-bloc .actu-wrapper .article-date {
   padding-top: 20px;
+  padding-bottom: 15px;
   font-family: "Fira Light";
   font-size: 14px;
   line-height: 24px;
@@ -2736,6 +2742,10 @@ footer {
     line-height: 12px;
   }
 }
+.sec-ves .bloc-exploration .explorationWrapper .boutonWrapperExploration a {
+  color: #b5b8b8;
+  text-decoration: none;
+}
 .sec-ves .bloc-exploration .explorationWrapper .titleExplo {
   font-family: "Fira Bold";
   font-size: 17px;
@@ -2848,6 +2858,9 @@ footer {
     font-size: 11px;
     line-height: 24px;
   }
+}
+.boutonWrapperProjetMobile .shareLinks a {
+  color: #b5b8b8;
 }
 
 @media (max-width: 1025px) {
@@ -2965,6 +2978,9 @@ footer {
   position: absolute;
   top: 600px;
 }
+.headerProjetWrapper .whiteLayout .nomenclature .barre-nobold {
+  font-family: "Fira Regular";
+}
 @media (min-width: 1025px) {
   .headerProjetWrapper .whiteLayout .nomenclature {
     font-size: 12px;
@@ -3022,27 +3038,6 @@ footer {
 .contentWrapperProjet .titleWrapper {
   padding-bottom: 45px;
 }
-.contentWrapperProjet .galleryWrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 800px;
-  padding-bottom: 45px;
-}
-.contentWrapperProjet .galleryWrapper img {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .contentWrapperProjet .projetWrapper {
   margin-top: 45px;
   display: -webkit-box;
@@ -3054,9 +3049,34 @@ footer {
   padding-left: 45px;
   padding-right: 45px;
 }
+.contentWrapperProjet .projetWrapper .rightColumn strong {
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 25px;
+}
+@media (min-width: 1025px) {
+  .contentWrapperProjet .projetWrapper .rightColumn strong {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
 @media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn {
     padding-top: 18px;
+  }
+}
+.contentWrapperProjet .projetWrapper .rightColumn li {
+  margin-left: 45px;
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+  color: #828787;
+  list-style-type: circle;
+}
+@media (min-width: 1025px) {
+  .contentWrapperProjet .projetWrapper .rightColumn li {
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 .contentWrapperProjet .projetWrapper .rightColumn h2 {
@@ -3216,6 +3236,7 @@ footer {
   color: #828787;
 }
 .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperProjet {
+  margin-top: 10px;
   margin-bottom: 45px;
   font-family: "Fira Bold";
   font-size: 11px;
@@ -3250,6 +3271,9 @@ footer {
     font-size: 11px;
     line-height: 24px;
   }
+}
+.contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperProjet .shareLinks a {
+  color: #b5b8b8;
 }
 
 .logoOuvrir {
@@ -3380,7 +3404,6 @@ footer {
 .mainExploration {
   background-color: #f4f4f4;
   padding-left: 77px;
-  padding-bottom: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3435,14 +3458,15 @@ footer {
   padding-bottom: 0px;
   padding-right: 3px;
   padding-left: 3px;
-  -webkit-box-shadow: inset 0 -6px 0 #f1dcad;
-          box-shadow: inset 0 -6px 0 #f1dcad;
+  -webkit-box-shadow: inset 0 -7px 0 #f1dcad;
+          box-shadow: inset 0 -7px 0 #f1dcad;
   color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .mainExploration .leftColumnExploration .tagsWrapperExploration a:hover {
   text-decoration: none;
+  padding-top: 3px;
   padding-bottom: 2px;
   padding-right: 3px;
   padding-left: 3px;
@@ -3511,6 +3535,9 @@ footer {
   padding-bottom: 4%;
   margin-bottom: 15px;
 }
+.mainExploration .leftColumnExploration .boutonWrapperExploration .shareLinks a {
+  color: #b5b8b8;
+}
 .mainExploration .rightColumnExploration {
   width: 56.6%;
 }
@@ -3533,6 +3560,11 @@ footer {
   background-color: white;
   padding: 45px;
   margin-bottom: 45px;
+}
+@media (max-width: 1025px) {
+  .mainExploration .rightColumnExploration .contentWrapperExploration {
+    margin-bottom: 0 !important;
+  }
 }
 .mainExploration .rightColumnExploration .chapeauWrapperExploration {
   font-family: "Fira Bold";
@@ -3647,6 +3679,7 @@ footer {
   }
 }
 .headerExploration .categoryHeader .catName:hover {
+  padding-top: 3px;
   padding-bottom: 2px;
   padding-right: 3px;
   padding-left: 3px;
@@ -3657,6 +3690,7 @@ footer {
   transition: all 0.2s ease-in-out;
 }
 .headerExploration .categoryHeader .catName.active {
+  padding-top: 3px;
   padding-bottom: 2px;
   padding-right: 3px;
   padding-left: 3px;
@@ -3753,15 +3787,16 @@ footer {
   padding-bottom: 0px;
   padding-right: 3px;
   padding-left: 3px;
-  -webkit-box-shadow: inset 0 -6px 0 #f1dcad;
-          box-shadow: inset 0 -6px 0 #f1dcad;
+  -webkit-box-shadow: inset 0 -7px 0 #f1dcad;
+          box-shadow: inset 0 -7px 0 #f1dcad;
   color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   font-family: "Fira Medium";
 }
 .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .taxname:hover {
+  padding-top: 3px;
   padding-bottom: 2px;
   padding-right: 3px;
   padding-left: 3px;
@@ -4050,6 +4085,9 @@ footer {
   }
 }
 
+.projetsGrid {
+  min-width: 90vw;
+}
 .projetsGrid .lfLogo {
   display: none;
 }
@@ -4065,6 +4103,7 @@ footer {
   }
   .projetsGrid .cardProjet {
     width: calc(25% - 45px);
+    min-width: 20%;
   }
   .projetsGrid .cardProjet img {
     height: 400px;
@@ -4137,12 +4176,13 @@ footer {
   font-family: "Fira Regular";
   font-size: 12px;
   line-height: 20px;
+  line-height: 14px !important;
   cursor: pointer;
   padding-bottom: 0px;
-  padding-right: 1px;
-  padding-left: 1px;
-  -webkit-box-shadow: inset 0 -5px 0 #f1dcad;
-          box-shadow: inset 0 -5px 0 #f1dcad;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -7px 0 #f1dcad;
+          box-shadow: inset 0 -7px 0 #f1dcad;
   color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4159,11 +4199,12 @@ footer {
 }
 
 .categoryHeader .div-to-toggle .subCatName span.active:hover {
+  padding-top: 3px;
   padding-bottom: 2px;
-  padding-right: 1px;
-  padding-left: 1px;
-  -webkit-box-shadow: inset 0 -20px 0 #f1dcad;
-          box-shadow: inset 0 -20px 0 #f1dcad;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -30px 0 #f1dcad;
+          box-shadow: inset 0 -30px 0 #f1dcad;
   color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4213,6 +4254,7 @@ footer {
   }
 }
 .categoryHeader .catName.active {
+  padding-top: 3px;
   padding-bottom: 2px;
   padding-right: 3px;
   padding-left: 3px;
@@ -4482,7 +4524,7 @@ footer {
 }
 
 .galleryWrapperAgence {
-  overflow: hidden;
+  margin-bottom: 15px;
 }
 .galleryWrapperAgence .slick-track {
   height: 600px;
@@ -4497,7 +4539,7 @@ footer {
 }
 
 .distinctionsToggleWrapper {
-  display: block;
+  display: none;
   padding-bottom: 45px;
 }
 @media (min-width: 1025px) {
@@ -5064,6 +5106,9 @@ acf-gallery {
   padding-bottom: 4%;
   margin-bottom: 2%;
 }
+.wrapperLinkArticle a {
+  color: #b5b8b8;
+}
 
 .wrapperLinkArticle {
   margin-top: 3%;
@@ -5202,6 +5247,43 @@ acf-gallery {
     line-height: 24px;
   }
 }
+.mainArticle .rightColumnArticle .contentArticle strong {
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 25px;
+}
+@media (min-width: 1025px) {
+  .mainArticle .rightColumnArticle .contentArticle strong {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+.mainArticle .rightColumnArticle .contentArticle li {
+  margin-left: 45px;
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+  color: #828787;
+  list-style-type: circle;
+}
+@media (min-width: 1025px) {
+  .mainArticle .rightColumnArticle .contentArticle li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.mainArticle .rightColumnArticle .contentArticle p {
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+  color: #828787;
+}
+@media (min-width: 1025px) {
+  .mainArticle .rightColumnArticle .contentArticle p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .mainArticle .rightColumnArticle .contentArticle a {
   cursor: pointer;
   padding-bottom: 1px;
@@ -5227,18 +5309,6 @@ acf-gallery {
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   color: #828787;
-}
-.mainArticle .rightColumnArticle .contentArticle .p1 {
-  font-family: "Fira Light";
-  font-size: 14px;
-  line-height: 24px;
-  color: #828787;
-}
-@media (min-width: 1025px) {
-  .mainArticle .rightColumnArticle .contentArticle .p1 {
-    font-size: 14px;
-    line-height: 24px;
-  }
 }
 .mainArticle .rightColumnArticle .imagesArticle {
   padding-top: 77px;
@@ -5275,6 +5345,30 @@ acf-gallery {
     font-size: 10px;
     line-height: 12px;
   }
+}
+
+form#searchform div input::-webkit-input-placeholder {
+  color: #658d8c;
+}
+
+form#searchform div input::-moz-placeholder {
+  color: #658d8c;
+}
+
+form#searchform div input:-ms-input-placeholder {
+  color: #658d8c;
+}
+
+form#searchform div input::-ms-input-placeholder {
+  color: #658d8c;
+}
+
+form#searchform div input::placeholder {
+  color: #658d8c;
+}
+
+#searchsubmit {
+  display: none;
 }
 
 .leftColumnContent, #search_result_ajax, .leftColumnContent .searchForm {
@@ -5335,12 +5429,23 @@ acf-gallery {
   color: #828787;
 }
 
+.galleryWrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .slick-prev {
   position: absolute;
-  height: 756px;
+  height: 100%;
   width: 400px;
   z-index: 9;
   background: none;
+}
+@media (max-width: 1025px) {
+  .slick-prev {
+    display: none;
+  }
 }
 
 .slick-prev:before {
@@ -5351,15 +5456,25 @@ acf-gallery {
   height: 25px;
   color: #fff;
 }
+@media (max-width: 1025px) {
+  .slick-prev:before {
+    display: none;
+  }
+}
 
 .slick-next {
   top: 0;
   position: absolute;
-  height: 756px;
+  height: 100%;
   width: 400px;
   right: 0;
   z-index: 9;
   background: none;
+}
+@media (max-width: 1025px) {
+  .slick-next {
+    display: none;
+  }
 }
 
 .slick-next:before {
@@ -5369,6 +5484,29 @@ acf-gallery {
   width: 25px;
   height: 25px;
   color: #fff;
+}
+@media (max-width: 1025px) {
+  .slick-next:before {
+    display: none;
+  }
+}
+
+.page-template-template-agence .slick-next:before {
+  content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg");
+  position: absolute;
+  top: 628px;
+  z-index: 2;
+  right: 18px;
+  width: 25px;
+  height: 25px;
+}
+
+.page-template-template-agence .slick-prev:before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  width: 25px;
+  height: 25px;
 }
 
 /* 
@@ -5423,26 +5561,6 @@ form#searchform div button{
 	display:flex;
     flex-direction: column;
 } */
-.projets-template-default .galleryWrapper.mainExploration .slick-list {
-  height: 756px;
-}
-
-.explorations-template-default .galleryWrapper.mainExploration .slick-list {
-  height: 756px;
-}
-
-.explorations-template-default .galleryWrapper.mainExploration .slick-prev {
-  left: calc(5px + 77px);
-}
-
-.explorations-template-default .galleryWrapper.mainExploration .slick-track {
-  height: 756px;
-}
-
-.projets-template-default .galleryWrapper.mainExploration .slick-track {
-  height: 756px;
-}
-
 /* 
 #search_result_ajax #all_results{
 	display:flex !important;
@@ -5494,36 +5612,21 @@ form#searchform div button{
 }
 
 */
-.contentWrapperProjet {
-  padding-top: 50px;
-  padding-left: 77px;
-}
-
-.contentWrapperProjet .titleWrapper {
-  padding-bottom: 45px;
-}
-
-.contentWrapperProjet .galleryWrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 800px;
-  padding-bottom: 45px;
-}
-
-.contentWrapperProjet .galleryWrapper .slick-list,
-.contentWrapperProjet .galleryWrapper .slick-list .slick-track {
-  height: 100%;
-}
-
 .galleryWrapper .single-slide-image {
   position: relative;
 }
 
 .galleryWrapper .single-slide-image .zoom-image {
   position: absolute;
+  z-index: inherit;
   right: 22px;
   top: 60%;
   cursor: pointer;
+}
+@media (max-width: 1025px) {
+  .galleryWrapper .single-slide-image .zoom-image {
+    display: none;
+  }
 }
 
 .galleryWrapper .single-slide-image .zoom-image i {
@@ -6096,6 +6199,11 @@ form#searchform div button{
   }
 }
 @media (max-width: 1025px) {
+  .boutonWrapperProjetCloned .shareLinks a {
+    color: #b5b8b8;
+  }
+}
+@media (max-width: 1025px) {
   .ficheTechniqueMobile {
     display: block;
     font-family: "Fira Light";
@@ -6273,9 +6381,17 @@ form#searchform div button{
     text-align: center;
     position: absolute;
     top: 530px;
-    margin-left: 0px;
     padding-right: 0;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
@@ -6312,9 +6428,9 @@ form#searchform div button{
     font-family: "Fira Light";
     text-transform: uppercase;
     font-size: 14px;
-    line-height: 35px;
+    line-height: 20px;
     color: #828787;
-    padding-top: 0;
+    padding-top: 10px;
   }
 }
 @media (max-width: 1025px) {
@@ -6328,26 +6444,8 @@ form#searchform div button{
   .contentWrapperProjet .titleWrapper {
     padding-bottom: 45px;
   }
-  .contentWrapperProjet .galleryWrapper {
-    overflow: hidden;
-    width: 100vw;
-    height: 400px;
-    padding-bottom: 0;
-  }
-  .contentWrapperProjet .galleryWrapper img {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .contentWrapperProjet .mainExploration {
+    padding: 0;
   }
   .contentWrapperProjet .projetWrapper {
     display: block;
@@ -7333,6 +7431,7 @@ form#searchform div button{
 @media (max-width: 1025px) {
   .wrapperExplo .contentWrapperExploration {
     display: block;
+    margin-bottom: 0;
   }
   .wrapperExplo .contentWrapperExploration .titleExplo {
     padding-right: 60px;
@@ -7511,6 +7610,9 @@ form#searchform div button{
     padding-top: 4%;
     padding-bottom: 4%;
     margin-bottom: 15px;
+  }
+  .mainExploration .leftColumnExploration .boutonWrapperExploration .shareLinks a {
+    color: #b5b8b8;
   }
 }
 @media (max-width: 1025px) {
@@ -7791,7 +7893,7 @@ form#searchform div button{
     font-size: 15px;
     line-height: 14px;
     color: #00534e;
-    padding-right: 50% !important;
+    padding-right: 60% !important;
     padding-left: 18px;
     padding-bottom: 45px;
   }
@@ -7810,7 +7912,7 @@ form#searchform div button{
 }
 @media (max-width: 1025px) {
   .list-link img {
-    margin-right: 20px;
+    margin-right: 6px;
     height: 11px;
   }
 }
@@ -7977,6 +8079,9 @@ form#searchform div button{
     position: relative;
     height: 100%;
   }
+  .sec-archiurba .projet-bloc .projet-popup-wrapper .content {
+    display: none;
+  }
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
   .sec-archiurba .projet-bloc .projet-popup-wrapper {
@@ -8091,7 +8196,8 @@ form#searchform div button{
 @media (max-width: 1025px) {
   .sec-ves .bloc-exploration .thumbnailExplo {
     overflow: hidden;
-    height: 550px;
+    height: 350px;
+    margin-bottom: 18px;
   }
   .sec-ves .bloc-exploration .thumbnailExplo img {
     width: 100%;
@@ -8116,8 +8222,8 @@ form#searchform div button{
     padding: 18px;
   }
   .sec-ves .bloc-exploration .explorationWrapper {
-    padding-top: 45px;
-    padding-bottom: 25px;
+    padding-top: 18px;
+    padding-bottom: 0;
     padding-left: 18px;
     padding-right: 18px;
     background-color: white;
@@ -8497,7 +8603,7 @@ form#searchform div button{
 @media (max-width: 1025px) and (max-width: 1025px) {
   .columsWrapperAgence {
     display: block;
-    background-color: #e5eeed;
+    background-color: #ecececec;
     padding-left: 18px;
     padding-right: 18px;
     padding-bottom: 45px;
@@ -8534,10 +8640,10 @@ form#searchform div button{
 }
 @media (max-width: 1025px) and (max-width: 1025px) {
   .distinctionsWrapperAgence {
-    background-color: #e5eeed;
+    background-color: #ecececec;
     padding-left: 18px;
     padding-right: 18px;
-    padding-bottom: 45px;
+    padding-bottom: 10px;
   }
 }
 @media (max-width: 1025px) and (max-width: 1025px) and (min-width: 1025px) {

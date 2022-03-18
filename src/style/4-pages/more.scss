@@ -1,3 +1,12 @@
+form#searchform div input::placeholder {
+  color: #658d8c;
+  }
+
+
+  #searchsubmit {
+    display: none;
+  }
+
 .leftColumnContent, #search_result_ajax, .leftColumnContent .searchForm {
     height: auto !important;
 }
@@ -51,16 +60,32 @@
     text-decoration: none;
     color: #828787;
   }
+
+
+
+
+  // SLIDERS
+
+  .galleryWrapper {
+    height: fit-content;
+
+  }
   
   .slick-prev{
+    @include mobile-tab {
+      display: none;
+    }
     position: absolute;
-    height: 756px;
+    height: 100%;
     width: 400px;
       z-index: 9;
       background: none;
   }
 
   .slick-prev:before {
+    @include mobile-tab {
+      display: none;
+    }
     content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-02_gauche.svg");
     position: absolute;
     left: 18px;
@@ -71,18 +96,26 @@
    
 }
   .slick-next{
+
+    @include mobile-tab {
+      display: none;
+    }
       top: 0;
       position: absolute;
-      height: 756px;
+      height: 100%;
       width: 400px;
       right: 0;
       z-index: 9;
       background: none;
+
     
   }
   
   
   .slick-next:before {
+    @include mobile-tab {
+      display: none;
+    }
     content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-01_droite.svg");
     position: absolute;
     right: 18px;
@@ -91,6 +124,32 @@
     color: #fff;
     
   }
+
+
+
+  .page-template-template-agence .slick-next:before {
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg");
+    position: absolute;
+    top : 628px;
+    z-index: 2;
+   
+    right: 18px;
+    width: 25px;
+    height: 25px;
+    
+  }
+
+
+  .page-template-template-agence  .slick-prev:before {
+    content:"" ;
+    position: absolute;
+    right: 18px;
+    width: 25px;
+    height: 25px;
+    
+  }
+
+
 
 
 /* 
@@ -146,25 +205,25 @@ form#searchform div button{
     flex-direction: column;
 } */
 
-.projets-template-default .galleryWrapper.mainExploration .slick-list{
-	height: 756px;
-}
+// .projets-template-default .galleryWrapper.mainExploration .slick-list{
+// 	height: 756px;
+// }
 
-.explorations-template-default .galleryWrapper.mainExploration .slick-list{
-	height: 756px;
-}
+// .explorations-template-default .galleryWrapper.mainExploration .slick-list{
+// 	height: 756px;
+// }
 
-.explorations-template-default .galleryWrapper.mainExploration .slick-prev{
-	left: calc(5px + 77px);
-}
+// .explorations-template-default .galleryWrapper.mainExploration .slick-prev{
+// 	left: calc(5px + 77px);
+// }
 
-.explorations-template-default .galleryWrapper.mainExploration .slick-track{
-	height: 756px;
-}
+// .explorations-template-default .galleryWrapper.mainExploration .slick-track{
+// 	height: 756px;
+// }
 
-.projets-template-default .galleryWrapper.mainExploration .slick-track{
-	height: 756px;
-}
+// .projets-template-default .galleryWrapper.mainExploration .slick-track{
+// 	height: 756px;
+// }
 
 
 /* 
@@ -219,32 +278,52 @@ form#searchform div button{
 
 */
 
+// .mainExploration .galleryWrapper {
+//   overflow: hidden;
+//   width: 100%;
+//   height: 100%;
+//   padding-bottom: 45px;
 
-.contentWrapperProjet {
-    padding-top: 50px;
-    padding-left: 77px;
-  }
-  .contentWrapperProjet .titleWrapper {
-    padding-bottom: 45px;
-  }
-  .contentWrapperProjet .galleryWrapper {
-    overflow: hidden;
-    width: 100%;
-    height: 800px;
-    padding-bottom: 45px;
-  }
+// }
+
+
+// .contentWrapperProjet {
+//     padding-top: 50px;
+//     padding-left: 77px;
+//   }
+//   .contentWrapperProjet .titleWrapper {
+//     padding-bottom: 45px;
+//   }
+//   .contentWrapperProjet .galleryWrapper {
+//     overflow: hidden;
+//     width: 100%;
+//     height: 100%;
+//     padding-bottom: 45px;
+//   }
   
-  .contentWrapperProjet .galleryWrapper .slick-list,
-  .contentWrapperProjet .galleryWrapper .slick-list .slick-track{
-      height: 100%;
-  }
+//   .contentWrapperProjet .galleryWrapper .slick-list,
+//   .contentWrapperProjet .galleryWrapper .slick-list .slick-track{
+//       height: 100%;
+//   }
   
+
+
+
+
+
   .galleryWrapper .single-slide-image{
       position:relative;
   }
   
   .galleryWrapper .single-slide-image .zoom-image{
+
+    @include mobile-tab {
+      display: none;
+    }
+
+
       position: absolute;
+      z-index: inherit;
       right: 22px;
       top: 60%;
       cursor: pointer;
@@ -267,6 +346,7 @@ form#searchform div button{
   }
   
   .zoom-image-slider img{
+    
       width: 100%;
       height: 100%;
       object-fit: cover;

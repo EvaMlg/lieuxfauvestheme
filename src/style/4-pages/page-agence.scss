@@ -1,10 +1,11 @@
 .galleryWrapperAgence {
-    overflow: hidden;
+    margin-bottom: 15px;
+
 
     .slick-track {
         height: 600px;
     }
-    
+
 
     .single-slide-image {
         height: 100%;
@@ -17,10 +18,14 @@
 }
 
 .distinctionsToggleWrapper {
-    display: block;
+    display: none;
+
     @include laptopS {
-    display: none; }
+        display: none;
+    }
+
     padding-bottom: $dCol;
+
     @include laptopS {
         padding-left: $dCol;
         padding-right: $dCol;
@@ -31,10 +36,11 @@
 
 
 .distinctionsTitleWrapper {
-    border-top : 1px solid white;
+    border-top: 1px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @include laptopS {
         padding-left: $dCol;
         padding-right: $dCol;
@@ -61,17 +67,17 @@
     z-index: 50;
     position: fixed;
 
-   
 
-    .list-chapter-agence-title{
-       
+
+    .list-chapter-agence-title {
+
         padding-bottom: 20px;
     }
 
 
 
 
-display: block;
+    display: block;
 
     @include laptopS {
         display: block
@@ -88,13 +94,13 @@ display: block;
     a {
         text-decoration: none;
         color: $grey-col;
-    
+
     }
 
     a:hover {
         text-decoration: none;
         font-family: "Fira Bold";
-    
+
     }
 
 }
@@ -201,6 +207,7 @@ display: block;
         color: $grey-col;
 
     }
+
     padding-bottom: $dCol;
 
 }
@@ -255,14 +262,15 @@ display: block;
 .distinctionsWrapperAgence {
     .titleAgence {
         @include laptopS {
-        padding-left: $dCol;
-        padding-right: $dCol
+            padding-left: $dCol;
+            padding-right: $dCol
         }
     }
-        @include p-very-small;
-        color: $grey-col;
-    
-         b {
+
+    @include p-very-small;
+    color: $grey-col;
+
+    b {
         @include p-bold;
         color: $grey-col;
 
@@ -282,12 +290,14 @@ display: block;
 
     background-color: $grey-new-col-50;
 
-    @include laptopS { padding-left: 0;
-    padding-right:0;
-    padding-bottom: 10px;
-}
+    @include laptopS {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+
     padding-left: $m-margin-small;
-    padding-right:  $m-margin-small;
+    padding-right: $m-margin-small;
     padding-bottom: $dCol;
 }
 
@@ -330,8 +340,9 @@ display: block;
             margin-top: $dCol;
             padding-left: $dCol;
             padding-right: $dCol;
-          
+
         }
+
         padding-bottom: $dCol;
 
 
@@ -347,11 +358,12 @@ display: block;
     background-color: $jungle-col;
     padding: $m-margin-small;
 
-@include laptopS {
-    padding: $dCol;
-  
-}
-padding-bottom: $dCol;
+    @include laptopS {
+        padding: $dCol;
+
+    }
+
+    padding-bottom: $dCol;
 
     margin-bottom: $dCol;
 
@@ -360,7 +372,10 @@ padding-bottom: $dCol;
         @include p-intro-bold-capitalize;
         text-transform: uppercase;
         color: white;
-        @include laptopS {   padding-left: $dCol;}
+
+        @include laptopS {
+            padding-left: $dCol;
+        }
     }
 
     .annonceWrapper {
@@ -397,14 +412,17 @@ padding-bottom: $dCol;
 
 
 acf-gallery {
-    list-style-type: none; /* Retirer le style de liste */
+    list-style-type: none;
+    /* Retirer le style de liste */
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Autoriser le retour à la ligne */
-  }
-  
-  .acf-gallery li {
-    flex: 33.333%; /* 3 images par ligne maximum, mettez 25% pour en avoir 4 */
+    flex-wrap: wrap;
+    /* Autoriser le retour à la ligne */
+}
+
+.acf-gallery li {
+    flex: 33.333%;
+    /* 3 images par ligne maximum, mettez 25% pour en avoir 4 */
     padding: 10px;
-  }
+}

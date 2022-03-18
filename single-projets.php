@@ -53,7 +53,7 @@ endforeach;
 
         </div>
 
-        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo2.svg">
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
 
     </div>
 
@@ -255,6 +255,9 @@ endforeach;
         </div>
 
     </div>
+
+
+    
     <div class="projetWrapper">
 
 
@@ -305,7 +308,9 @@ endforeach;
             <?php endif; ?>
             </div>
             <div class="boutonWrapperProjet">
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> 
+                &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></p>
+        
                  <?php if (get_field('document_a_telecharger')) : ?>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
                     
@@ -324,9 +329,9 @@ endforeach;
 
         <div class="rightColumn">
 
-            <h2 data-aos="fade-up"><?php the_field('chapeau'); ?></h2>
-            <h3 data-aos="fade-up"> Description </h3>
-            <p data-aos="fade-up"><?php the_field('description_projet'); ?></p>
+            <h2 ><?php the_field('chapeau'); ?></h2>
+            <h3 > Description </h3>
+            <p><?php the_field('description_projet'); ?></p>
 
             
 
@@ -334,12 +339,15 @@ endforeach;
 
         <div class="boutonWrapperProjetMobile">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
+                <?php if (get_field('document_a_telecharger')) : ?>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
-                    <?php if (get_field('document_a_telecharger')) : ?>
-                        <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
+                 <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
                 </p>
             <?php endif; ?>
-            <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
+            <?php if (get_field('lien_externe')) : ?>
+            <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">
+                 &nbsp; <?php the_field('lien_externe'); ?></p>
+            <?php endif; ?>
         </div>
 
     </div>
@@ -427,7 +435,7 @@ endforeach;
 
 
         foreach ($postToDisplay as $post) : ?>
-            <div class="projectCard" data-aos="fade-up">
+            <div class="projectCard">
                 <a href="<?= $post['permalink']; ?>">
                     <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
                     <div class="projectTitle" data-aos="fade-up"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>

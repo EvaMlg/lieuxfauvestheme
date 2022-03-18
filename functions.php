@@ -31,6 +31,7 @@ function lct_register_assets()
 		false
 	);
 
+
 	wp_enqueue_script(
 		'popUp',
 		get_template_directory_uri() . '/src/js/popUp.js',
@@ -71,13 +72,6 @@ function lct_register_assets()
 		true
 	);
 
-	wp_enqueue_script(
-		'wow',
-		get_template_directory_uri() . '/src/js/wow.js',
-		array(),
-		'1.0',
-		true
-	);
 
 	wp_enqueue_script(
 		'popup',
@@ -96,6 +90,19 @@ function lct_register_assets()
 	);
 
 
+	wp_enqueue_script(
+		'headerPicto',
+		get_template_directory_uri() . '/src/js/headerPicto.js',
+		array(),
+		'1.0',
+		true
+	);
+
+
+
+
+
+
 
 
 
@@ -104,6 +111,8 @@ function lct_register_assets()
 	// Charger notre script
 	wp_enqueue_script('ajax', get_template_directory_uri() . '/src/js/script.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('archive', get_template_directory_uri() . '/src/js/archiveAjax.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('loadmore', get_template_directory_uri() . '/src/js/loadMoreAjax.js', array('jquery'), '1.0', true);
+
 
 	// Envoyer une variable de PHP à JS proprement
 	wp_localize_script('ajax', 'ajaxurl', admin_url('admin-ajax.php'));
@@ -277,6 +286,7 @@ function lf_actualites_rpt()
 		'labels' => $labels,
 		'public' => true,
 		'show_in_rest' => true,
+		'show_in_menu' => false,
 		'has_archive' => true,
 		'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes',),
 		'menu_position' => 3,
@@ -766,28 +776,6 @@ function get_search_ajax()
 
 
 
-// Limiter le titre des articles à 50 caractères
-add_action('admin_footer', 'wpm_limit_title_chars_post');
-
-function wpm_limit_title_chars_post()
-{
-
-	// On récupère le type de contenu sur lequel on se trouve dans l'administration
-	$post_type = get_current_screen()->post_type;
-
-	// Si c'est un article on applique la limitation
-	if ($post_type == 'post') { ?>
-
-		<!-- On défini un nombre de caractère maximum pour les titres des articles: ici 50 -->
-		<script>
-			jQuery('input#title').attr('maxlength', 10);
-		</script>
-
-<?php }
-
-
-}
-
 
 // Cacher la barre WP
 
@@ -796,3 +784,45 @@ function wpc_show_admin_bar() {
 }
 add_filter('show_admin_bar' , 'wpc_show_admin_bar');
 
+
+
+
+// Function pour partager les boutons 
+
+function my_sharing_buttons($content) {
+    global $post;
+    if(is_singular() || is_home()){
+ 
+        // Récuperer URL de la page en cours 
+        $myCurrentURL = urlencode(get_permalink());
+ 
+        // Récuperer TITRE de la page en cours
+        $myCurrentTitle = urlencode(get_the_title()); 
+ 
+        // Récuperer MINIATURE si l'image à la une existe
+        if(has_post_thumbnail($post->ID)) {
+            $myCurrentThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full'); 
+        }
+        
+        $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
+   
+        $content .= '<a class="msb-link msb-linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
+        }
+        
+        // si ce n'est pas un article ou une page, ne pas inclure les boutons de partages
+        return $content; // correction du 9 février 2017
+};
+
+add_filter( 'the_content', 'my_sharing_buttons');
+
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 5;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
