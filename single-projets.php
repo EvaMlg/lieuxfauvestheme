@@ -233,7 +233,7 @@ endforeach;
 
 
 
-    <div class="galleryWrapper" data-aos="zoom-in" data-aos-duration="1000" >
+    <div class="galleryWrapper" data-aos="zoom-in" data-aos-duration="1000">
 
 
         <?php $images = get_field('galerie_projet');
@@ -257,7 +257,7 @@ endforeach;
     </div>
 
 
-    
+
     <div class="projetWrapper">
 
 
@@ -308,18 +308,30 @@ endforeach;
             <?php endif; ?>
             </div>
             <div class="boutonWrapperProjet">
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> 
-                &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></p>
-        
-                 <?php if (get_field('document_a_telecharger')) : ?>
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
-                    
-                        <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
-                </p>
-            <?php endif; ?>
-            <?php if (get_field('lien_externe')) : ?>
-            <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
-            <?php endif; ?>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                    &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></p>
+
+                <?php if (get_field('document_a_telecharger')) : ?>
+                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
+                        <?php
+                        $file = get_field('document_a_telecharger');
+                        if ($file) : ?>
+                            <a class="docDownload" href="<?php echo $file['url']; ?>">Document à télécharger</a>
+                        <?php endif; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if (get_field('lien_externe')) : ?>
+                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">&nbsp;
+                        <?php
+                        $link = get_field('lien_externe');
+                        if ($link) :
+                            $link = get_field('lien_externe');
+                            $link_url = $link['url'];
+                            $link_title = $link['title']; ?>
+                            <a href="<?php echo $link_url; ?>"><?php echo $link_title; ?></a>
+                        <?php endif; ?>
+                    </p>
+                <?php endif; ?>
             </div>
 
 
@@ -329,24 +341,24 @@ endforeach;
 
         <div class="rightColumn">
 
-            <h2 ><?php the_field('chapeau'); ?></h2>
-            <h3 > Description </h3>
+            <h2><?php the_field('chapeau'); ?></h2>
+            <h3> Description </h3>
             <p><?php the_field('description_projet'); ?></p>
 
-            
+
 
         </div>
 
         <div class="boutonWrapperProjetMobile">
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
-                <?php if (get_field('document_a_telecharger')) : ?>
+            <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
+            <?php if (get_field('document_a_telecharger')) : ?>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
-                 <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
+                    <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
                 </p>
             <?php endif; ?>
             <?php if (get_field('lien_externe')) : ?>
-            <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">
-                 &nbsp; <?php the_field('lien_externe'); ?></p>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">
+                    &nbsp; <?php the_field('lien_externe'); ?></p>
             <?php endif; ?>
         </div>
 

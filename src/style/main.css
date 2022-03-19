@@ -3822,7 +3822,7 @@ footer {
   font-size: 17px;
   line-height: 24px;
   color: #828787;
-  width: 60%;
+  width: 50%;
   margin-right: 45px;
 }
 @media (min-width: 1025px) {
@@ -3911,6 +3911,30 @@ footer {
 }
 @media (min-width: 1025px) {
   .wrapperExplo .boutonWrapperExploration button {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+.wrapperExplo .boutonWrapperExploration span {
+  font-family: "Fira Medium";
+  font-size: 12px;
+  line-height: 12px;
+  color: #b5b8b8;
+}
+@media (min-width: 1025px) {
+  .wrapperExplo .boutonWrapperExploration span {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+.wrapperExplo .boutonWrapperExploration a {
+  font-family: "Fira Medium";
+  font-size: 12px;
+  line-height: 12px;
+  color: #b5b8b8;
+}
+@media (min-width: 1025px) {
+  .wrapperExplo .boutonWrapperExploration a {
     font-size: 12px;
     line-height: 12px;
   }
@@ -4681,12 +4705,17 @@ footer {
           align-items: center;
   padding-right: 45px;
   padding-top: 10px;
-  margin-left: 50%;
-  width: 50%;
+  margin-left: 55%;
+  width: 45%;
   font-family: "Fira Light";
   font-size: 10px;
   line-height: 12px;
   color: #828787;
+}
+@media (max-width: 1025px) {
+  .contentAgenceLegende {
+    padding-bottom: 18px !important;
+  }
 }
 @media (min-width: 1025px) {
   .contentAgenceLegende {
@@ -8449,6 +8478,7 @@ form#searchform div button{
             align-items: center;
     padding-right: 45px;
     padding-top: 10px;
+    padding-bottom: 18px !important;
     margin-left: 50%;
     width: 50%;
     font-family: "Fira Light";

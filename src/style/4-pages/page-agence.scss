@@ -139,12 +139,17 @@
 
 .contentAgenceLegende {
 
+    @include mobile-tab {
+        padding-bottom: 18px !important;
+    }
+
     display: flex;
     align-items: center;
     padding-right: $dCol;
     padding-top: 10px;
-    margin-left: 50%;
-    width: 50%;
+
+    margin-left: 55%;
+    width: 45%;
 
 
     @include footer-legend;

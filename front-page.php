@@ -210,7 +210,7 @@ get_header();
 
 
 
-                                    echo '<p class="content">' . $result . '</p>'; ?>
+                                    echo '<p class="content">' . $result . '...' . '</p>'; ?>
                                     <div class="logo-wrapper">
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>
@@ -253,7 +253,7 @@ get_header();
 
 
 
-                                    echo '<p class="content">' . $result . '</p>'; ?>
+                                    echo '<p class="content">' . $result .'...' . '</p>'; ?>
                                     <div class="logo-wrapper">
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>

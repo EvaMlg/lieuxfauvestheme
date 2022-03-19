@@ -139,17 +139,31 @@ get_header();
 
                             <div class="boutonWrapperExploration">
                                 <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                                    &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></button>
+                                <?php if (get_field('document_a_telecharger')) : ?>
+                                    <?php
+                                    $file = get_field('document_a_telecharger'); ?>
+                                    <?php
+                                        if ($file) : ?>
+ <span><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"><a class="docDownload" href="<?php echo $file['url']; ?>">Document à télécharger</a>
+                                        <?php endif; ?>
+                                    </span>
+                                <?php endif; ?>
 
-                                
-                                            &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></button>
 
-
-                        <?php if (get_field('document_a_telecharger')) : ?>
-                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
+                                <?php if (get_field('lien_externe')) : ?>
+                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">&nbsp; 
+                        <?php
+                        $link = get_field('lien_externe');
+                        if ($link) :
+                            $link = get_field('lien_externe');
+                            $link_url = $link['url'];
+                            $link_title = $link['title']; ?>
+                            <a href="<?php echo $link_url; ?>"><?php echo $link_title; ?></a>
                         <?php endif; ?>
-                        <?php if (get_field('lien_externe')) : ?>
-                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></button>
-                        <?php endif; ?>
+                        </span>
+                <?php endif; ?>
+
                             </div>
                         </div>
                     </div>

@@ -288,6 +288,7 @@ responsiveCatLogo.addEventListener('click', function () {
 }, false);
 
 pictoValider.addEventListener('click', function () {
+    if ( catHeader.classList.contains("catHeaderOn")){
     catHeader.classList.remove("catHeaderOn");
     catHeader.classList.add("catHeaderOff");
     titleProjResponsive.style.display = "none";
@@ -296,4 +297,17 @@ pictoValider.addEventListener('click', function () {
     loupeMobile.style.display = "none";
     responsiveCat.style.backgroundColor = "#00534e";
     pictofiltres.src = "/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg";
+
+    }
+    else {
+        catHeader.classList.remove("catHeaderOff");
+        catHeader.classList.add("catHeaderOn");
+        titleProjResponsive.style.display = "none";
+        titleProjLaptop.style.display = "block";
+        pictoValider.style.display = "none";
+        loupeMobile.style.display = "none";
+        responsiveCat.style.backgroundColor = "#00534e";
+        pictofiltres.src = "/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg";
+
+    }
 }, false);

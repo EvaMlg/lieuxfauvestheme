@@ -61,10 +61,16 @@ window.addEventListener('scroll', function () {
 
 
 window.addEventListener('scroll', function () { 
-    if (window.scrollY >  5600) {
+    if (window.scrollY >  5000) {
         listChapterAgence.style.display="none";
-        document.querySelector('.page-template-template-agence .logoFrontpage').style.display="none";
+        document.querySelector('.page-template-template-agence .logoFrontpage').classList.remove("scroll");
+        document.querySelector('.page-template-template-agence .logoFrontpage').classList.add("scroll-off");
        
+    }
+    else {
+        document.querySelector('.page-template-template-agence .logoFrontpage').classList.remove("scroll-off");
+        document.querySelector('.page-template-template-agence .logoFrontpage').classList.add("scroll");
+
     }
 });
 

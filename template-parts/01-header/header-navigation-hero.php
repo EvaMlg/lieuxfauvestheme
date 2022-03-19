@@ -94,7 +94,7 @@
                 <div class="logoWrapperSearch">
                     <div class="logoDeviseSearch">
                         <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
-                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_menu_devise-vert.svg">
+                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_devise_vert.svg">
                     </div>
 
                 </div>

@@ -107,11 +107,31 @@ endforeach;
             <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
             &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></span>
             <?php if (get_field('document_a_telecharger')) : ?>
-            <span class="shareLinks"data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> <?php the_field('document_a_telecharger'); ?></span>
-            <?php endif; ?>
+                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
+                        <?php
+                        $file = get_field('document_a_telecharger');
+                        if ($file) : ?>
+                            <a class="docDownload" href="<?php echo $file['url']; ?>">Document à télécharger</a>
+                        <?php endif; ?>
+                    </p>
+                <?php endif; ?>
+
             <?php if (get_field('lien_externe')) : ?>
-            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> <?php the_field('lien_externe'); ?></span>
-            <?php endif; ?>
+                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">&nbsp; 
+                        <?php
+                        $link = get_field('lien_externe');
+                        if ($link) :
+                            $link = get_field('lien_externe');
+                            $link_url = $link['url'];
+                            $link_title = $link['title']; ?>
+                            <a href="<?php echo $link_url; ?>"><?php echo $link_title; ?></a>
+                        <?php endif; ?>
+                        </span>
+                <?php endif; ?>
+
+
+
+
 
 
         </div>
