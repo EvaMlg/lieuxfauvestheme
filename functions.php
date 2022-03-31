@@ -569,27 +569,33 @@ add_action('wp_ajax_nopriv_ajax_archive_list', 'archive_list');
 
 function archive_list()
 {
+
+	$posts_per_page = $_GET['posts_per_page'] ?? 20;
 	$post_type =  $_GET["type"] ?? 'explorations';
+	$paged =  $_GET["paged"] ?? 1;
 	$args = array(
 		'post_type' => $post_type,
 		'post_status' => 'publish',
-		'posts_per_page' => -1
+		'posts_per_page' => $posts_per_page,
+		'paged' => $paged,
 	);
 
-	$tax_query = array(
-		'relation' => 'AND'
-	);
-	if (isset($_GET['taxonomy'])) {
-		foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
-			array_push($tax_query, array(
-				'taxonomy' => $taxonomyName,
-				'field' => "slug",
-				'operator' => "AND",
-				'terms' => $taxonomyTerms
-			));
+	if($post_type!=="post"){
+		$tax_query = array(
+			'relation' => 'AND'
+		);
+		if (isset($_GET['taxonomy'])) {
+			foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
+				array_push($tax_query, array(
+					'taxonomy' => $taxonomyName,
+					'field' => "slug",
+					'operator' => "AND",
+					'terms' => $taxonomyTerms
+				));
+			}
 		}
+		$args['tax_query'] = $tax_query;
 	}
-	$args['tax_query'] = $tax_query;
 
 	$my_query = new WP_Query($args);
 	if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
@@ -623,7 +629,7 @@ function archive_list()
 						<div class="wrapperExplo">
 							<div class="contentWrapperExploration">
 								<div class="titleExplo"> <?php the_title(); ?></div>
-								<div class="excerptExplo"><?php the_excerpt(); ?>
+								<div class="excerptExplo"><?php echo post_excerpt(60, '...'); ?>
 									<a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
 								</div>
 							</div>
@@ -635,13 +641,35 @@ function archive_list()
 						</div>
 					</div>
 				</div>
-			<?php else : ?>
+			<?php elseif($post_type === "projets") : ?>
 				<div class="cardProjet">
 					<div class="thumbnailProjet"> <a href="<?= the_permalink(); ?>"><?php the_post_thumbnail(); ?></div>
 					<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 					<p class="projectLoopLieu"><?php the_field('lieu', get_the_ID()); ?></p>
 				</div>
-			<?php endif; ?>
+			<?php else: ?>
+				<div class="archive-actu-container" data-aos="fade-up">
+					<div class="archive-actu-wrapper">
+						<div class="archive-article-thumbnail"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+							<div class="archive-article-content-wrapper">
+								<div class="archive-article-date"><?php the_date('j—n—Y'); ?></div>
+								<div class="archive-article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+								<div class="archive-article-excerpt"><a href="<?php the_permalink(); ?>"><?php echo post_excerpt(60, ' ... '); ?></a></div>
+								<a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
+							</div>
+							<div class="wrapperLinkArticle">
+							<span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
+							<span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> Télécharger document divers</span>
+							<span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> Liens externes</span>
+						</div>
+					</div>
+					<div class="boutonWrapperArchiveActu">
+						<button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</button>
+						<button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; Lien Interne / externe / site Web<?php the_field('document_a_telecharger'); ?></button>
+						<button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; Partager <?php the_field('lien_externe'); ?></button>
+					</div>
+				</div>
+			<?php endif;?>
 		<?php
 		endwhile;
 	endif;
@@ -825,4 +853,24 @@ add_filter( 'the_content', 'my_sharing_buttons');
 function wpdocs_custom_excerpt_length( $length ) {
     return 5;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+add_filter('show_admin_bar' , 'wpc_show_admin_bar');
+
+
+
+function post_excerpt($length=60, $after=" ... ") {
+	$actualLength = 0;
+	$the_post = get_post(); //Gets post ID
+	$the_excerpt = (has_excerpt() ? get_the_excerpt() : $the_post->post_content ); // Gets post_content to be used as a basis for the excerpt
+	$the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); // Strips tags and images
+	$words = explode(' ', $the_excerpt, $length + 1);
+	$newExcerpt = array();
+
+	foreach($words as $word){
+		if($actualLength < $length){
+			$actualLength += strlen($word);
+			array_push($newExcerpt, $word);
+		}
+	}
+	$the_excerpt = implode(' ', $newExcerpt);
+	return $the_excerpt.($actualLength > $length ? $after : "");
+}

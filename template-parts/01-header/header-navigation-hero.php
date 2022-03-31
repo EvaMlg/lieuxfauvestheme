@@ -6,7 +6,7 @@
     <div id="fullMenu" class="full-menu menu fullMenu fullMenuOff">
 
         <div class="rightColumnMenu">
-        
+
             <div class="headerFullMenuWrapper">
                 <div class="logoWrapper">
                     <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg">
@@ -68,7 +68,7 @@
 
                 <div class="menuItemFP">
                     <h1> <a href="/projets">Projets</a> </h1>
-                    <div class="subMenuFP"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull">|</span></span></span></span><a href="/projets">Lieux</a><span class="barMenuFull">|</span><a href="/projets">Architectures</a><span class="barMenuFull">|</span><a href="/projets">Urbanisme</a><span class="barMenuFull">|</span><a href="/projets">Vivant</a><span class="barMenuFull">|</span><a href="/projets">Éthique</a><span class="barMenuFull">|</span><a href="/projets">Soutenable</a><span class="barMenuFull">|</span></div>
+                    <div class="subMenuFP"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull">|</span></span></span></span><a href="/projets">Lieux</a><span class="barMenuFull">|</span><a href="/projets">Architecture</a><span class="barMenuFull">|</span><a href="/projets">Urbanisme</a><span class="barMenuFull">|</span><a href="/projets">Vivant</a><span class="barMenuFull">|</span><a href="/projets">Éthique</a><span class="barMenuFull">|</span><a href="/projets">Soutenable</a><span class="barMenuFull">|</span></div>
                 </div>
 
                 <div class="menuItemFP">
@@ -101,11 +101,12 @@
                 <div id="search_result_ajax"></div>
 
                 <div class="all_resultsCloned">
-                <div id="all_results">
-                    <div>actualites [<span>0</span>] </div>
-                    <div>explorations [<span>0</span>] </div>
-                    <div>projets [<span>0</span>] </div>
-                    Tout [0]</div>
+                    <div id="all_results">
+                        <div>actualites [<span>0</span>] </div>
+                        <div>explorations [<span>0</span>] </div>
+                        <div>projets [<span>0</span>] </div>
+                        Tout [0]
+                    </div>
 
                     <div id="total_result">Résultats <span>[</span><span class="jungleNumber">0</span><span>]</span></div>
 
@@ -138,7 +139,7 @@
 
                         <div class="socialsButtonsWrapperLoupe">
                             <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_logo-blanc.svg">
-                    <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
+                            <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
                             <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
 
                         </div>
@@ -160,7 +161,7 @@
                                 69008 Lyon
                             </div>
                             <div class="mayotteAdressWrapper adressWrapper">
-                            <span class="loupeBold"> MAYOTTE</span><br>
+                                <span class="loupeBold"> MAYOTTE</span><br>
                                 18 Chemin de la Convalescence<br>
                                 97600 Mamoudzou
                             </div>
@@ -199,13 +200,13 @@
                 <div class="menuButtonWrapper">
                     <div class="burgerButton">
                         <a href="#" class="menuIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg"></a>
-                        <a href="#" class="closeIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></a>
+                        <a href="#" class="closeIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></a>
                     </div>
 
                     <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
                     <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
                     <a class="pictoLogo" href="<?php echo home_url(); ?>" ?><img class="pictoNav" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
-                    <a class="pictoCloseSingle" href="/actualites"> <img class="pictoNav pictoCloseActu" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></a>
+                    <a class="pictoCloseSingle" href="/actualites"> <img class="pictoNav pictoCloseActu" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></a>
 
 
                     <?php
@@ -227,6 +228,29 @@
 
     </div>
     </navigation>
+
+
+
+    <!----------   COOKIES  ---------->
+   <!--  <div class="cookies-bar">
+
+
+        <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies, afin de récolter des données statistiques et d'améliorer votre expérience utilisateur.</p>
+
+       
+        <a> <img class="logoCookie " src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-fermer.svg">
+            <span>Accepter</span></a>
+        <a> <img class="logoCookie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-fermer.svg">
+            <span>Refuser</span></a>
+          
+
+
+
+
+    </div> -->
+
+
+
 
 
 </header>

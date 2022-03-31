@@ -26,6 +26,7 @@
 
         .exploPageName {
             @include title_h1;
+            font-size: 20px !important;
             color: $jungle-col;
         }
     }
@@ -260,4 +261,19 @@
     background-color: $jungle-col;
     display: block;
     padding-bottom: 100%;
+}
+
+#load-more-explorations{
+    cursor: pointer;
+    width: 90px;
+    margin: 25px auto;
+    &.inactive{
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .5;
+    }
+    &.no-more{
+        opacity: 0;
+        pointer-events: none;
+    }
 }

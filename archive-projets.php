@@ -103,8 +103,8 @@ get_header();
 	$args = array(
 		'post_type' => 'projets',
 		'post_status' => 'publish',
-		'posts_per_page' => -1,
-		
+		'posts_per_page' => 20,
+		'paged' => 1,
 	);
 
 
@@ -138,7 +138,7 @@ get_header();
 		</div>
 	<?php endif;
 	wp_reset_postdata(); ?>
-
+	<div id="load-more-projets" data-paged="1" style="><?= file_get_contents(get_template_directory_uri().'/src/assets/img/LF_picto_load.svg');?></div>
 </div>
 
 </div>

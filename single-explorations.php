@@ -173,7 +173,7 @@ endforeach;
         <?php foreach ($images as $image) : ?>
             <div class="single-slide-image">
                 <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
+                <span class="zoom-image"><img class="logoZoom" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
             </div>
 
         <?php endforeach; ?>

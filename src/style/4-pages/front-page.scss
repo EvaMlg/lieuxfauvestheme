@@ -18,10 +18,6 @@
 }
 
 
-.haiku-map {
-    background-image: url("/wp-content/themes/lieuxfauves/src/assets/img/mapmonde.svg");
-    background-size: cover;
-}
 
 
 
@@ -32,7 +28,7 @@
 
 .link-bloc {
 
-    background-color: $grey-new-col-50;
+    background-color: #f4f4f4;
     height: 235px - $dCol;
     padding-top: $dCol;
 }
@@ -51,7 +47,7 @@
         display: block
     }
     position : fixed;
-    height: 100px;
+    height: 130px;
     margin-left: $margin;
     margin-top : $dCol;
 }
@@ -209,11 +205,22 @@
 
     .titleListLink {
         letter-spacing: 0.5px;
+        font-size: 20px;
+        padding-left :6px;
+        padding-right: 6px;
     }
+
+    .titleListLink:hover {
+        @include fauveUnderlineHover;
+        padding-left :6px;
+        padding-right: 6px;
+    }
+
 
     img {
         margin-right: 20px;
         height: 11px;
+        
 
     }
 
@@ -336,7 +343,7 @@
             }
 
             .article-title {
-                @include p-intro-bold;
+                @include p-intro;
                 color: $grey-col;
                 padding-right: 1 * $dCol;
             }
@@ -550,7 +557,7 @@
             }
 
             .titleExplo {
-                @include p-intro-bold;
+                @include p-intro;
                 line-height: 24px;
                 color: $grey-col;
                 padding-right: 2 * $dCol;

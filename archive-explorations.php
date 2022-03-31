@@ -83,7 +83,7 @@ get_header();
     $args = array(
         'post_type' => 'explorations',
         'post_status' => 'publish',
-        'posts_per_page' => -1,
+        'posts_per_page' => 20,
     );
 
     $tax_query = array(
@@ -132,7 +132,7 @@ get_header();
                         <div class="wrapperExplo">
                             <div class="contentWrapperExploration">
                                 <div class="titleExplo"> <?php the_title(); ?></div>
-                                <div class="excerptExplo"><?php the_excerpt(); ?>
+                                <div class="excerptExplo"><?php echo post_excerpt(60, '...');  ?>
                                     <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                 </div>
                             </div>
@@ -172,8 +172,8 @@ get_header();
         </div>
     <?php endif;
     wp_reset_postdata();
-
     ?>
+    <div id="load-more-explorations" data-paged="1"><?= file_get_contents(get_template_directory_uri().'/src/assets/img/LF_picto_load.svg');?></div>
 
 </div>
 

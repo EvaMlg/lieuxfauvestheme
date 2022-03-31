@@ -1,0 +1,52 @@
+.cookies-bar {
+    display : none;
+    position: fixed;
+    height: 8vh;
+    width: 100vw;
+    opacity: 0.8;
+    z-index: 100000;
+
+    background-color: $jungle-col;
+    bottom: 0;
+
+    display: flex;
+
+    p {
+        @include p-very-small;
+        color : white;
+        padding-right: 3*$dCol;
+        padding-left: 3*$margin;
+    }
+
+
+    span {
+        @include footer-p;
+        font-size: 11px;
+        color : white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+    }
+
+    a {
+        align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: $dCol;
+    }
+
+    
+    
+    padding-top: 20px;
+
+    .logoCookie {
+        height: 20px;
+        width: 20px;
+    }
+
+    .validation-cookies {
+        border : 1px solid red;
+    }
+
+}

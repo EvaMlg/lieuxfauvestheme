@@ -214,3 +214,17 @@
     }
 
 }
+#load-more-post{
+    cursor: pointer;
+    width: 90px;
+    margin: 25px auto;
+    &.inactive{
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .5;
+    }
+    &.no-more{
+        opacity: 0;
+        pointer-events: none;
+    }
+}

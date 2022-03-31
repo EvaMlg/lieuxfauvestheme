@@ -25,7 +25,7 @@ get_header();
 
         <div class="split-left" id="splitLeft">
 
-            <div class="logoHeader">
+            <div class="logoHeader" id="logoHeader">
 
                 <a class="logoFrontPageA" href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
@@ -38,7 +38,7 @@ get_header();
 
 
             <div class="list-chapter">
-                <span class="lieuxSpan">Lieux</span><br>
+                <a href="#"><span class="lieuxSpan catSpan">Lieux</span><br></a>
                 <a href="#sec-faire"><span>pour</span><span class="catSpan faireSpan"> Faire</span><br></a>
                 <a href="#sec-archiurba"><span>une</span><span class="catSpan archiSpan"> Architecture</span><br></a>
                 <a href="#sec-archiurba"><span>et un</span><span class="catSpan urbaSpan"> Urbanisme</span><br></a>
@@ -75,7 +75,7 @@ get_header();
                             <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
 
-                            <span class="titleListLink">AGENCE</span>
+                            <a href="/agence"><span class="titleListLink">AGENCE</span></a>
 
                             <a href="agence/#sec-agence" class="fauveUnderline">Valeurs</a>
                             <a href="agence/#sec-expertises" class="fauveUnderline">Expertises</a>
@@ -141,11 +141,11 @@ get_header();
                     <div class="list-link" data-aos="fade-up">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
-                        <span class="titleListLink">ACTUALITÉS</span>
+                        <a href="/actualites"><span class="titleListLink">ACTUALITÉS</span></a>
 
 
 
-                        <?php
+                      <!--   <?php
 
                         $args = array(
                             'post_type' => 'annonces',
@@ -161,7 +161,7 @@ get_header();
                         endif;
                         wp_reset_postdata();
 
-                        ?>
+                        ?> -->
 
 
                     </div>
@@ -275,7 +275,7 @@ get_header();
                     <div class="list-link" data-aos="fade-up">
 
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                        <span class="titleListLink">PROJETS</span>
+                        <a href="/projets"><span class="titleListLink">PROJETS</span></a>
                         <a href="projets?cat=architecture" class="fauveUnderline">Architecture</a>
                         <a href="projets?cat=urbanisme" class="fauveUnderline">Urbanisme</a>
                         <a href="projets?cat=paysage" class="fauveUnderline">Paysage</a>
@@ -366,10 +366,10 @@ get_header();
                 <div class="link-bloc">
                     <div class="list-link" data-aos="fade-up">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                        <span class="titleListLink">EXPLORATIONS</span>
-                        <a href="explorations" class="fauveUnderline">Vivant</a>
+                        <a href="/explorations"><span class="titleListLink">EXPLORATIONS</span></a>
+                        <!-- <a href="explorations" class="fauveUnderline">Vivant</a>
                         <a href="explorations" class="fauveUnderline">Éthique</a>
-                        <a href="explorations" class="fauveUnderline">Soutenable</a>
+                        <a href="explorations" class="fauveUnderline">Soutenable</a> -->
                     </div>
                 </div>
 

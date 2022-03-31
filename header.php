@@ -29,13 +29,13 @@
 
 
 </head>
-<body <?php body_class(''); if ( is_page(89) ) { ?> style="overflow:hidden;" <?php } ?> >
+<body <?php body_class('');?> >
 
 
 
 <?php wp_body_open(); ?>   
 
-<?php if ( is_page(89) ) { ?>
+<?php if ( is_front_page() ) { ?>
 
 
 
@@ -72,7 +72,7 @@
 </div>
 
 
-<div id="loaderMobile">
+<!-- <div id="loaderMobile">
     <img class ="introImgMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_INTRO_image03.jpg" alt="Loader Lieux Fauves" style="
     width: auto;
     position: fixed;
@@ -89,7 +89,7 @@
 
 
     
-</div>
+</div> -->
 
 
 

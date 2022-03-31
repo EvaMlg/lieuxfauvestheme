@@ -860,12 +860,18 @@ html {
 #loaderMobile {
   display: block;
 }
+#loaderMobile:not(.see) {
+  display: none !important;
+}
 @media (min-width: 1025px) {
   #loaderMobile {
     display: none;
   }
 }
 
+#loader:not(.see) {
+  display: none !important;
+}
 @media (max-width: 1025px) {
   #loader {
     display: none;
@@ -1500,6 +1506,78 @@ form#searchform div button {
             flex-direction: column;
   }
 }
+.cookies-bar {
+  display: none;
+  position: fixed;
+  height: 8vh;
+  width: 100vw;
+  opacity: 0.8;
+  z-index: 100000;
+  background-color: #00534e;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+.cookies-bar p {
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  padding-right: 135px;
+  padding-left: 231px;
+}
+@media (min-width: 1025px) {
+  .cookies-bar p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.cookies-bar span {
+  font-family: "Fira Regular";
+  font-size: 13px;
+  line-height: 16px;
+  font-size: 11px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 1025px) {
+  .cookies-bar span {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.cookies-bar a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 45px;
+}
+.cookies-bar .logoCookie {
+  height: 20px;
+  width: 20px;
+}
+.cookies-bar .validation-cookies {
+  border: 1px solid red;
+}
+
 .list-link-loop {
   height: 100%;
   font-family: "Fira Bold";
@@ -2158,17 +2236,12 @@ footer {
   transition: font-family 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.haiku-map {
-  background-image: url("/wp-content/themes/lieuxfauves/src/assets/img/mapmonde.svg");
-  background-size: cover;
-}
-
 .front-image {
   display: none;
 }
 
 .link-bloc {
-  background-color: #ecececec;
+  background-color: #f4f4f4;
   height: 190px;
   padding-top: 45px;
 }
@@ -2182,7 +2255,7 @@ footer {
 .logoFrontpage {
   display: none;
   position: fixed;
-  height: 100px;
+  height: 130px;
   margin-left: 77px;
   margin-top: 45px;
 }
@@ -2356,6 +2429,23 @@ footer {
 }
 .list-link .titleListLink {
   letter-spacing: 0.5px;
+  font-size: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.list-link .titleListLink:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
+          box-shadow: inset 0 -60px 0 #f1dcad;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .list-link img {
   margin-right: 20px;
@@ -2505,16 +2595,16 @@ footer {
   }
 }
 .sec-faire .actu-bloc .actu-wrapper .article-title {
-  font-family: "Fira Bold";
+  font-family: "Fira Regular";
   font-size: 17px;
-  line-height: 24px;
+  line-height: 27px;
   color: #828787;
   padding-right: 45px;
 }
 @media (min-width: 1025px) {
   .sec-faire .actu-bloc .actu-wrapper .article-title {
     font-size: 17px;
-    line-height: 24px;
+    line-height: 27px;
   }
 }
 
@@ -2747,9 +2837,9 @@ footer {
   text-decoration: none;
 }
 .sec-ves .bloc-exploration .explorationWrapper .titleExplo {
-  font-family: "Fira Bold";
+  font-family: "Fira Regular";
   font-size: 17px;
-  line-height: 24px;
+  line-height: 27px;
   line-height: 24px;
   color: #828787;
   padding-right: 90px;
@@ -2757,7 +2847,7 @@ footer {
 @media (min-width: 1025px) {
   .sec-ves .bloc-exploration .explorationWrapper .titleExplo {
     font-size: 17px;
-    line-height: 24px;
+    line-height: 27px;
   }
 }
 @media (max-width: 1025px) {
@@ -3353,6 +3443,7 @@ footer {
 .navNextPrev .close-icon {
   height: 20px;
   width: 20px;
+  margin-bottom: 8px;
 }
 .navNextPrev span {
   margin-bottom: 3px;
@@ -3640,6 +3731,7 @@ footer {
   font-family: "Fira Black";
   font-size: 30px;
   line-height: 50px;
+  font-size: 20px !important;
   color: #00534e;
 }
 @media (min-width: 1025px) {
@@ -3992,6 +4084,21 @@ footer {
   padding-bottom: 100%;
 }
 
+#load-more-explorations {
+  cursor: pointer;
+  width: 90px;
+  margin: 25px auto;
+}
+#load-more-explorations.inactive {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#load-more-explorations.no-more {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .projPageNameResponsive {
   display: none;
 }
@@ -4100,6 +4207,7 @@ footer {
   font-family: "Fira Black";
   font-size: 30px;
   line-height: 50px;
+  font-size: 20px !important;
   color: #00534e;
 }
 @media (min-width: 1025px) {
@@ -4291,6 +4399,25 @@ footer {
 .categoryHeader .subCatName > .unclickable {
   opacity: 0.5;
   pointer-events: none;
+  background: #f1dcad;
+}
+
+#load-more-projets {
+  cursor: pointer;
+  width: 60px;
+  margin: 25px auto;
+}
+#load-more-projets.inactive {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#load-more-projets.no-more {
+  opacity: 0;
+  pointer-events: none;
+}
+#load-more-projets img {
+  width: 25px;
 }
 
 .projetsContainer {
@@ -4547,6 +4674,21 @@ footer {
   }
 }
 
+#load-more-post {
+  cursor: pointer;
+  width: 90px;
+  margin: 25px auto;
+}
+#load-more-post.inactive {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#load-more-post.no-more {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .galleryWrapperAgence {
   margin-bottom: 15px;
 }
@@ -4558,6 +4700,7 @@ footer {
 }
 
 .logoDistinctions {
+  cursor: pointer;
   height: 20px;
   width: 20px;
 }
@@ -5467,7 +5610,7 @@ form#searchform div input::placeholder {
 .slick-prev {
   position: absolute;
   height: 100%;
-  width: 400px;
+  width: 40px;
   z-index: 9;
   background: none;
 }
@@ -5479,14 +5622,33 @@ form#searchform div input::placeholder {
 
 .slick-prev:before {
   content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-02_gauche.svg");
+  margin-top: 10px;
+  margin-left: 9px;
   position: absolute;
   left: 18px;
   width: 25px;
   height: 25px;
   color: #fff;
+  z-index: 2;
 }
 @media (max-width: 1025px) {
   .slick-prev:before {
+    display: none;
+  }
+}
+
+.slick-prev::after {
+  background-color: #00534e;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 18px;
+  width: 45px;
+  height: 45px;
+  color: #fff;
+}
+@media (max-width: 1025px) {
+  .slick-prev::after {
     display: none;
   }
 }
@@ -5495,7 +5657,7 @@ form#searchform div input::placeholder {
   top: 0;
   position: absolute;
   height: 100%;
-  width: 400px;
+  width: 1px;
   right: 0;
   z-index: 9;
   background: none;
@@ -5513,9 +5675,28 @@ form#searchform div input::placeholder {
   width: 25px;
   height: 25px;
   color: #fff;
+  z-index: 2;
+  margin-top: 10px;
+  margin-right: 9px;
 }
 @media (max-width: 1025px) {
   .slick-next:before {
+    display: none;
+  }
+}
+
+.slick-next::after {
+  background-color: #00534e;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  width: 45px;
+  height: 45px;
+  color: #fff;
+}
+@media (max-width: 1025px) {
+  .slick-next::after {
     display: none;
   }
 }
@@ -5648,9 +5829,12 @@ form#searchform div button{
 .galleryWrapper .single-slide-image .zoom-image {
   position: absolute;
   z-index: inherit;
-  right: 22px;
+  right: 19px;
   top: 60%;
   cursor: pointer;
+  background-color: #00534e;
+  height: 45px;
+  width: 45px;
 }
 @media (max-width: 1025px) {
   .galleryWrapper .single-slide-image .zoom-image {
@@ -5658,6 +5842,35 @@ form#searchform div button{
   }
 }
 
+.logoZoom {
+  height: 22px !important;
+  width: auto !important;
+  cursor: pointer;
+  z-index: 1;
+  margin: 10px;
+}
+
+/* 
+  .zoom-image::after {
+    @include mobile-tab {
+      display: none;
+    }
+    background-color: #00534e;
+    content: "";
+
+
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    color: #fff;
+
+
+
+
+  }
+   */
 .galleryWrapper .single-slide-image .zoom-image i {
   color: #fff;
 }
@@ -6766,7 +6979,7 @@ form#searchform div button{
 }
 @media (max-width: 1025px) {
   .navNextPrev {
-    position: fixed;
+    position: absolute;
     z-index: 50;
     display: -webkit-box;
     display: -ms-flexbox;

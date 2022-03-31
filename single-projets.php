@@ -58,8 +58,8 @@ endforeach;
     </div>
 
     <div class="navNextPrev">
-        <a href="/projets"><img class="close-icon laptopPicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
-        <a href="/projets"><img class="close-icon mobilePicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></span></a>
+        <a href="/projets"><img class="close-icon laptopPicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer_blanc.svg"></span></a>
+        <a href="/projets"><img class="close-icon mobilePicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></span></a>
 
 
 
@@ -241,7 +241,7 @@ endforeach;
             <?php foreach ($images as $image) : ?>
                 <div class="single-slide-image">
                     <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
+                    <span class="zoom-image"><img class="logoZoom" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
                 </div>
 
             <?php endforeach; ?>
@@ -341,7 +341,7 @@ endforeach;
 
         <div class="rightColumn">
 
-            <h2><?php the_field('chapeau'); ?></h2>
+          
             <h3> Description </h3>
             <p><?php the_field('description_projet'); ?></p>
 
@@ -450,8 +450,8 @@ endforeach;
             <div class="projectCard">
                 <a href="<?= $post['permalink']; ?>">
                     <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
-                    <div class="projectTitle" data-aos="fade-up"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
-                    <p class="projectLoopLieu" data-aos="fade-up"><?= $post['lieu']; ?></p>
+                    <div class="projectTitle"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
+                    <p class="projectLoopLieu"><?= $post['lieu']; ?></p>
                 </a>
             </div>
 

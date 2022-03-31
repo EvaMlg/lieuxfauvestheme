@@ -90,6 +90,7 @@
 
             .projPageName {
                 @include title_h1;
+                font-size: 20px !important;
                 color: $jungle-col;
             }
         }
@@ -234,5 +235,29 @@
         opacity: 0.5;
         //text-decoration: line-through;
         pointer-events: none;
+        background: #f1dcad;
     }
 }
+
+
+#load-more-projets{
+  
+    cursor: pointer;
+    width: 60px;
+    margin: 25px auto;
+    &.inactive{
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .5;
+    }
+    &.no-more{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    img {
+        width: 25px;
+    }
+}
+
+

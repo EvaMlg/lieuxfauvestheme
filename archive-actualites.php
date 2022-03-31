@@ -26,16 +26,14 @@ get_header();
     <div class="contentActualites">
 
 
-        <div class="archive-actu-bloc">
+        <div class="archive-actu-bloc" id="post-list">
 
 
             <?php
             $args = array(
                 'post_type' => 'post',
                 'orderby' => 'date',
-                'posts_per_page' => -1,
-
-
+                'posts_per_page' => 20,
             );
 
             $my_query = new WP_Query($args);
@@ -49,7 +47,7 @@ get_header();
 
                                 <div class="archive-article-date"><?php the_date('j—n—Y'); ?></div>
                                 <div class="archive-article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                                <div class="archive-article-excerpt"><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></div>
+                                <div class="archive-article-excerpt"><a href="<?php the_permalink(); ?>"><?php echo post_excerpt(60, ' ... '); ?></a></div>
                                 <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                             </div>
 
@@ -84,9 +82,6 @@ get_header();
 
 
             <?php
-
-
-
                 endwhile;
             endif;
 
@@ -97,8 +92,7 @@ get_header();
 
 
         </div>
-
-
+        <div id="load-more-post" data-paged="1"><?= file_get_contents(get_template_directory_uri().'/src/assets/img/LF_picto_load.svg');?></div>
     </div>
 
 

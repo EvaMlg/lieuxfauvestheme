@@ -1,6 +1,9 @@
+var paged = 1;
+var itemByPagination = 20;
 jQuery(document).ready(function(){
     initAjaxList("explorations");
     initAjaxList("projets");
+    initAjaxList("post");
 })
 
 
@@ -29,14 +32,38 @@ function initAjaxList(type="explorations"){
                     currentTaxonomy.find('.subCatName > span').removeClass('active');
                     currentTaxonomy.find('.subCatName > span:first-child').addClass('active');
                 }
-                updatePublicationList(type);
+                updatePublicationList(type, true);
             })
         })
     })
+    let loadMore = jQuery("#load-more-"+type);
+    loadMore.click(function(){
+        paged += 1;
+        updatePublicationList(
+            type,
+            false,
+            function(){
+                loadMore.addClass('inactive')
+            },
+            function(){
+                loadMore.removeClass('inactive')
+            }
+        );
+        loadMore.attr('data-paged', paged);
+    })
+    if(
+        jQuery(".cardProjet").length === itemByPagination*paged ||
+        jQuery(".preExplorationWrapper").length === itemByPagination*paged ||
+        jQuery(".archive-actu-container").length === itemByPagination*paged ) jQuery("#load-more-"+type).removeClass('no-more');
+    else jQuery("#load-more-"+type).addClass('no-more');
 }
 
-function updatePublicationList(type="explorations"){
+function updatePublicationList(type="explorations",reset=true, beforeSend=()=>{}, success=()=>{}){
 
+    if(reset){
+        jQuery("#"+type+"-list").html('');
+        paged = 1;
+    }
     let taxonomy = {};
 
     jQuery("."+type+"Container .categoryHeader .catWrapper").each(function(){
@@ -56,10 +83,21 @@ function updatePublicationList(type="explorations"){
         data: {
             'action': 'ajax_archive_list',
             'taxonomy': taxonomy,
-            'type': type
+            'type': type,
+            'paged': paged,
+            'posts_per_page': itemByPagination
         },
+        beforeSend: function(){
+            beforeSend();
+        }, 
         success: function (data) {
-            jQuery("#"+type+"-list").html(data);
+            jQuery("#"+type+"-list").append(data);
+            if(
+                jQuery(".cardProjet").length === itemByPagination*paged ||
+                jQuery(".preExplorationWrapper").length === itemByPagination*paged ||
+                jQuery(".archive-actu-container").length === itemByPagination*paged ) jQuery("#load-more-"+type).removeClass('no-more');
+            else jQuery("#load-more-"+type).addClass('no-more');
+            success();
         },
         error: function (data) {
             jQuery("#"+type+"-list").html("");
