@@ -750,6 +750,7 @@ function get_search_ajax()
 
 	$data = "";
 
+
 	$posts_type = ["Actualité" => "post", "Actualité" => "actualites", "Explorations" => "explorations", "Projets" => "projets",];
 	$post = 0;
 	$actualites = 0;
