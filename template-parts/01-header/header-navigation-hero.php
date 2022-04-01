@@ -68,7 +68,7 @@
 
                 <div class="menuItemFP">
                     <h1> <a href="/projets">Projets</a> </h1>
-                    <div class="subMenuFP"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull">|</span></span></span></span><a href="/projets">Lieux</a><span class="barMenuFull">|</span><a href="/projets">Architecture</a><span class="barMenuFull">|</span><a href="/projets">Urbanisme</a><span class="barMenuFull">|</span><a href="/projets">Vivant</a><span class="barMenuFull">|</span><a href="/projets">Éthique</a><span class="barMenuFull">|</span><a href="/projets">Soutenable</a><span class="barMenuFull">|</span></div>
+                    <div class="subMenuFP"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull">|</span></span></span></span><a href="/projets?tax=lieux">Lieux</a><span class="barMenuFull">|</span><a href="/projets?tax=architecture">Architecture</a><span class="barMenuFull">|</span><a href="/projets?tax=urbanisme">Urbanisme</a><span class="barMenuFull">|</span><a href="/projets?tax=vivant">Vivant</a><span class="barMenuFull">|</span><a href="/projets?tax=ethique">Éthique</a><span class="barMenuFull">|</span><a href="/projets?tax=soutenable">Soutenable</a><span class="barMenuFull">|</span></div>
                 </div>
 
                 <div class="menuItemFP">

@@ -4,6 +4,8 @@
 // ------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------
 
+@use "sass:math";
+
 // screen break points
 $phone-max: 767;
 $tablet-max: 1024;
@@ -13,15 +15,15 @@ $phoneMax: 767px;
 $tabletMax: 1024px;
 $laptopMax: 1340px;
 
-$d-col-count:30;
-$l-col-count:23;
-$t-col-count:17;
-$m-col-count:11;
+$d-col-count: 30;
+$l-col-count: 23;
+$t-col-count: 17;
+$m-col-count: 11;
 
-$d-col:47px;
-$l-col:40;
+$d-col: 47px;
+$l-col: 40;
 $t-col: 56;
-$t-col: 3617/45;
+$t-col: math.div(3617, 45);
 $t-col: 36 ;
 $m-col: 6.875;
 
@@ -30,8 +32,8 @@ $lCol:18px;
 $tCol: 36px ;
 $mCol: 6.875vw;
 
-$colD:51px;
-$colL:40px; 
+$colD: 51px;
+$colL: 40px; 
 $colT: 36px ;
 $colM: 6.875vw;
 

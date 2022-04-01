@@ -47,6 +47,7 @@ get_header();
                         );
                     }
                     foreach (array_reverse($parents_terms) as $parent_term) :
+                        $order_menu = get_field('order_menu', 'term_'.$parent_term->term_id);
                         $childs_terms = ($taxonomy !== "lieux") ?
                             get_terms($taxonomy, array('hide_empty' => false, 'parent' => $parent_term->term_id))
                             :
@@ -54,7 +55,7 @@ get_header();
 
                         $actual_term = isset($_GET[$taxonomy]) ? get_term_by('slug', $_GET[$taxonomy], $taxonomy) : false;
             ?>
-                        <div class="catArchi catWrapper">
+                        <div class="catArchi catWrapper" style="order:<?= $order_menu;?>">
                             <span class="catName"><?= $parent_term->name ?></span>
                             <div class="div-to-toggle">
                                 <div <?= $parent_term->slug ? 'data-cat="' . $parent_term->slug . '"' : ""; ?> data-id="<?= $taxonomy; ?>" class="subCatName">

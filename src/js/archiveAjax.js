@@ -11,11 +11,17 @@ function initAjaxList(type="explorations"){
     jQuery('.'+type+'Container .categoryHeader .catWrapper').each(function(){
         let currentTaxonomy = jQuery(this);
         currentTaxonomy.find('.catName').click(function(){
+            jQuery(this).toggleClass('active');
             currentTaxonomy.find('.div-to-toggle').toggle('slow');
             currentTaxonomy.find('.subCatName > span:first-child').addClass('active');
             currentTaxonomy.find('.subCatName > span:not(:first-child)').removeClass('active');
+            currentTaxonomy.toggleClass('opened');
             updatePublicationList(type);
         });
+        if(currentTaxonomy.hasClass("opened")){
+            currentTaxonomy.find('.div-to-toggle').toggle('slow');
+            updatePublicationList(type);
+        }
         currentTaxonomy.find('.subCatName > span').each(function(index){
             let currentChildTaxonomy = jQuery(this);
             currentChildTaxonomy.click(function(){
@@ -70,10 +76,18 @@ function updatePublicationList(type="explorations",reset=true, beforeSend=()=>{}
         let currentTaxonomy = jQuery(this);
         let subTaxonomyContainer = currentTaxonomy.find('>div>div');
         if(taxonomyName = subTaxonomyContainer.data('id')){
-            if(!taxonomy[taxonomyName]) taxonomy[taxonomyName] = [];
-            subTaxonomyContainer.find('>span.active').each(function(){
-                if(jQuery(this).data('id')!=='tous') taxonomy[taxonomyName].push(jQuery(this).data('id'));
-            })
+            if(currentTaxonomy.hasClass('opened') && subTaxonomyContainer.find('>span:first-child').hasClass('active')){
+                //L'accordéon est ouvert et "toutes" les options sont cochées.
+                if(!taxonomy[taxonomyName+'==OR']) taxonomy[taxonomyName+'==OR'] = [];
+                subTaxonomyContainer.find('>span:not(:first-child):not(.unclickable)').each(function(){
+                    taxonomy[taxonomyName+'==OR'].push(jQuery(this).data('id'));
+                })
+            }else{
+                if(!taxonomy[taxonomyName]) taxonomy[taxonomyName] = [];
+                subTaxonomyContainer.find('>span.active').each(function(){
+                    if(jQuery(this).data('id')!=='tous') taxonomy[taxonomyName].push(jQuery(this).data('id'));
+                })
+            }
         }
     })
 
