@@ -178,6 +178,11 @@
             @include p-very-small;
             color: $grey-col;
 
+            a {
+            @include p-bold;
+            color: $grey-col;
+            }
+
         }
 
 
