@@ -230,6 +230,7 @@
     }
     .catName.active {
         @include fauveUnderlineSmallHover;
+        color : $jungle-col;
     }
     .subCatName > .unclickable {
         opacity: 0.5;
