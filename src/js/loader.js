@@ -110,7 +110,7 @@ logoClose.addEventListener('click', function () {
 
 
 jQuery(document).ready(function(){
-    if(!getCookie('loaderViewed')){
+    if(jQuery(window).width()>1024 && !getCookie('loaderViewed')){
         jQuery('body').css('overflow', 'hidden');
         jQuery('#loader').addClass('see');
         jQuery("#loaderMobile").addClass('see');

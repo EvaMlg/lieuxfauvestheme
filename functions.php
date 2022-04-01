@@ -586,12 +586,21 @@ function archive_list()
 		);
 		if (isset($_GET['taxonomy'])) {
 			foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
-				array_push($tax_query, array(
-					'taxonomy' => $taxonomyName,
-					'field' => "slug",
-					'operator' => "AND",
-					'terms' => $taxonomyTerms
-				));
+				if(strpos($taxonomyName, "==OR")===strlen($taxonomyName)-4){
+					array_push($tax_query, array(
+						'taxonomy' => substr($taxonomyName, 0, strlen($taxonomyName)-4),
+						'field' => "slug",
+						'operator' => "IN",
+						'terms' => $taxonomyTerms
+					));
+				}else{
+					array_push($tax_query, array(
+						'taxonomy' => $taxonomyName,
+						'field' => "slug",
+						'operator' => "AND",
+						'terms' => $taxonomyTerms
+					));
+				}
 			}
 		}
 		$args['tax_query'] = $tax_query;
@@ -694,11 +703,20 @@ function term_list(){
 	);
 	if (isset($_GET['taxonomy'])) {
 		foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
-			array_push($tax_query, array(
-				'taxonomy' => $taxonomyName,
-				'field' => "slug",
-				'terms' => $taxonomyTerms
-			));
+			if(strpos($taxonomyName, "==OR")===strlen($taxonomyName)-4){
+				array_push($tax_query, array(
+					'taxonomy' => substr($taxonomyName, 0, strlen($taxonomyName)-4),
+					'field' => "slug",
+					'terms' => $taxonomyTerms,
+					'operator' => "IN",
+				));
+			}else{
+				array_push($tax_query, array(
+					'taxonomy' => $taxonomyName,
+					'field' => "slug",
+					'terms' => $taxonomyTerms
+				));
+			}
 		}
 	}
 	$argsActiveTerms['tax_query'] = $tax_query;

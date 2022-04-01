@@ -1,0 +1,11 @@
+{
+	"name": "compilation-wordpress-theme",
+	"private": true,
+	"author": "Pierre Lejeune (pierrelejeune.fr)",
+	"scripts": {
+		"start": "sass --watch --update --style=compressed src/style/main.scss:src/style/main.css"
+	},
+	"dependencies": {
+		"sass": "^1.49.10"
+	}
+}
