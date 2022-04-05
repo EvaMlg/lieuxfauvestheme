@@ -4,16 +4,16 @@
 
 
 
-  <img class="devise"src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
+  <img class="devise"src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_devise.svg">
 
 
 
   <div class="left-container" id="footer">
     <div class="logoWrapper">
-      <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
+      <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_logo.svg">
       <div class="socialsButtonsWrapper">
-        <img class="logo-ig" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_rrss_ig.svg">
-        <img class="logo-in" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_rrss_in.svg">
+        <img class="logo-ig" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_rrss_ig.svg">
+        <img class="logo-in" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_rrss_in.svg">
       </div>
     </div>
     <div class="credits">
@@ -52,7 +52,7 @@
       </p>
 
       <div class="footerArrowWrapper">
-      <a href="#header"> <img class="footerArrow" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
+      <a href="#header"> <img class="footerArrow" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_fleche-haut.svg"></a>
       </div>
 
     </div>

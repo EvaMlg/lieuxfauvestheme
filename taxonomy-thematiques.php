@@ -16,7 +16,7 @@ get_header();
 
 		<div class="logoHeader">
 
-			<a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
+			<a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_fiches.svg"></a>
 
 			<h1 class="projPageName">PROJETS</h1>
 

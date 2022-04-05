@@ -44,7 +44,7 @@
 
 
 <div id="loader">
-    <!-- <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image02.jpg" alt="Loader Lieux Fauves" style="
+    <!-- <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image02.jpg" alt="Loader Lieux Fauves" style="
     /* width: 100%;
     position: absolute;
     height: 99.5vh;
@@ -73,14 +73,14 @@
 
 
 <!-- <div id="loaderMobile">
-    <img class ="introImgMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_INTRO_image03.jpg" alt="Loader Lieux Fauves" style="
+    <img class ="introImgMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile_INTRO_image03.jpg" alt="Loader Lieux Fauves" style="
     width: auto;
     position: fixed;
     height: 100%;
     z-index: 2000;
     object-fit: cover;}">
 
-    <img src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_logo-intro.svg" alt="" class="svgMobile" style="position: absolute;
+    <img src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile_logo-intro.svg" alt="" class="svgMobile" style="position: absolute;
     z-index: 2000;
     width: 60%;
     top: 45%;

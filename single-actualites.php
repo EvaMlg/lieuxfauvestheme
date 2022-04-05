@@ -15,7 +15,7 @@ get_header();
 
 <div class="headerArticle">
 
-<a href="<?php echo get_option('home'); ?>/" ><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+<a href="<?php echo get_option('home'); ?>/" ><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"></a>
 
 </div>
 
@@ -34,13 +34,13 @@ get_header();
 
         <div class="wrapperLinkArticle">
             
-            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">                
+            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">                
              &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></span>
-            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> Télécharger document divers</span>
-            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">
+            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> Télécharger document divers</span>
+            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg">
 
             <?php if (get_field('lien_externe')) : ?>
-            <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">
+            <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg">
                 <?php
                 $link = get_field('lien_externe');
                 $link_url = $link['url'];

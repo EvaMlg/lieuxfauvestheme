@@ -1,6 +1,6 @@
 document.querySelector('#loader .progressionBarInner').style.animation = "progressionBar 6s ease";
 // window.onload = function () {
-//     let imgs = ["/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image01.jpg","/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image04.jpg"],
+//     let imgs = ["/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image01.jpg","/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image04.jpg"],
 //         image = document.querySelector('#loader img'),
 //         index = 0;
 //     function hop () {

@@ -15,7 +15,7 @@ get_header();
 
         <div class="logoHeader" data-aos="zoom-in" data-aos-duration="1000">
 
-            <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
+            <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_fiches.svg"></a>
 
             <h1 class="projPageName">ACTUALITÉS</h1>
 
@@ -48,11 +48,11 @@ get_header();
                                 <div class="archive-article-date"><?php the_date('j—n—Y'); ?></div>
                                 <div class="archive-article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                                 <div class="archive-article-excerpt"><a href="<?php the_permalink(); ?>"><?php echo post_excerpt(60, ' ... '); ?></a></div>
-                                <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
+                                <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
                             </div>
 
                             <div class="wrapperLinkArticle">
-                                <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                                <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
                                     &nbsp; Partager <?php echo my_sharing_buttons($content) ?></span>
                                 <?php if (get_field('document_a_telecharger')) : ?>
 
@@ -62,13 +62,13 @@ get_header();
                         </div>
 
                         <div class="boutonWrapperArchiveActu">
-                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
                                 &nbsp; Partager <?php echo my_sharing_buttons($content) ?></button>
                             <?php if (get_field('document_a_telecharger')) : ?>
-                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
+                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
                             <?php endif; ?>
                             <?php if (get_field('lien_externe')) : ?>
-                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp;<?php the_field('lien_externe'); ?></button>
+                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg"> &nbsp;<?php the_field('lien_externe'); ?></button>
                             <?php endif; ?>
                         </div>
 
@@ -92,7 +92,7 @@ get_header();
 
 
         </div>
-        <div id="load-more-post" data-paged="1"><?= file_get_contents(get_template_directory_uri().'/src/assets/img/LF_picto_load.svg');?></div>
+        <div id="load-more-post" data-paged="1"><?= file_get_contents(get_template_directory_uri().'/src/assets/img/lf_picto_load.svg');?></div>
     </div>
 
 

@@ -10,14 +10,14 @@ get_header();
 <div class="explorationsContainer">
     <div class="headerExploration">
         <div class="logoHeader">
-            <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
+            <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_fiches.svg"></a>
             <h1 class="exploPageName">EXPLORATIONS</h1>
 
             <div class="reponsiveCat">
-                <a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg" /></a>
+                <a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile_picto-filtres.svg" /></a>
             </div>
 
-            <a><img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile-picto_valider.svg" /></a>
+            <a><img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile-picto_valider.svg" /></a>
         </div>
         <div class="categoryHeader catHeaderOff">
             <?php
@@ -134,26 +134,26 @@ get_header();
                             <div class="contentWrapperExploration">
                                 <div class="titleExplo"> <?php the_title(); ?></div>
                                 <div class="excerptExplo"><?php echo post_excerpt(60, '...');  ?>
-                                    <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
+                                    <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
                                 </div>
                             </div>
 
                             <div class="boutonWrapperExploration">
-                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
                                     &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></button>
                                 <?php if (get_field('document_a_telecharger')) : ?>
                                     <?php
                                     $file = get_field('document_a_telecharger'); ?>
                                     <?php
                                         if ($file) : ?>
- <span><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"><a class="docDownload" href="<?php echo $file['url']; ?>">Document à télécharger</a>
+ <span><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"><a class="docDownload" href="<?php echo $file['url']; ?>">Document à télécharger</a>
                                         <?php endif; ?>
                                     </span>
                                 <?php endif; ?>
 
 
                                 <?php if (get_field('lien_externe')) : ?>
-                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">&nbsp; 
+                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg">&nbsp; 
                         <?php
                         $link = get_field('lien_externe');
                         if ($link) :
@@ -174,7 +174,7 @@ get_header();
     <?php endif;
     wp_reset_postdata();
     ?>
-    <div id="load-more-explorations" data-paged="1"><?= file_get_contents(get_template_directory_uri().'/src/assets/img/LF_picto_load.svg');?></div>
+    <div id="load-more-explorations" data-paged="1"><?= file_get_contents(get_template_directory_uri().'/src/assets/img/lf_picto_load.svg');?></div>
 
 </div>
 

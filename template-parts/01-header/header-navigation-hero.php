@@ -9,18 +9,18 @@
 
             <div class="headerFullMenuWrapper">
                 <div class="logoWrapper">
-                    <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg">
+                    <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_logo.svg">
                 </div>
 
                 <div class="taglineWrapper">
-                    <img class="tagline-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_intro_devise.svg">
+                    <img class="tagline-white" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_intro_devise.svg">
 
                 </div>
             </div>
             <div class="contentFullMenuWrapper">
                 <div class="socialsButtonsWrapper">
-                    <img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
-                    <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
+                    <img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_ig.svg">
+                    <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_in.svg">
 
                 </div>
                 <div class="contactWrapper">
@@ -93,8 +93,8 @@
             <div class="headerFullMenuWrapperSearch">
                 <div class="logoWrapperSearch">
                     <div class="logoDeviseSearch">
-                        <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
-                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_devise_vert.svg">
+                        <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_logo.svg">
+                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_devise_vert.svg">
                     </div>
 
                 </div>
@@ -138,9 +138,9 @@
                     <div class="loupeFooterWrapper">
 
                         <div class="socialsButtonsWrapperLoupe">
-                            <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_logo-blanc.svg">
-                            <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
-                            <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
+                            <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile_logo-blanc.svg">
+                            <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_ig.svg">
+                            <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_in.svg">
 
                         </div>
 
@@ -179,10 +179,10 @@
     <!----------   RESPONSIVE BAR ---------->
     <div class="responsive-menu">
 
-        <a href="<?php echo home_url(); ?>" ?><img class="pictoResponsive logoResponsive" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
-        <a class="responsiveBurger" href="#" class><img class="pictoResponsive responsiveBurgerImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg"></a>
-        <a> <img class="pictoNav loupeMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
-        <a class="pictoCloseSingleMobile" href="/actualites"> <img class="pictoNav pictoCloseActuMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></a>
+        <a href="<?php echo home_url(); ?>" ?><img class="pictoResponsive logoResponsive" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_logo.svg"></a>
+        <a class="responsiveBurger" href="#" class><img class="pictoResponsive responsiveBurgerImg" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_menu-burguer.svg"></a>
+        <a> <img class="pictoNav loupeMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_loupe.svg"></a>
+        <a class="pictoCloseSingleMobile" href="/actualites"> <img class="pictoNav pictoCloseActuMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_fermer.svg"></a>
 
 
 
@@ -199,14 +199,14 @@
 
                 <div class="menuButtonWrapper">
                     <div class="burgerButton">
-                        <a href="#" class="menuIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg"></a>
-                        <a href="#" class="closeIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></a>
+                        <a href="#" class="menuIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_menu-burguer.svg"></a>
+                        <a href="#" class="closeIcon burgerButton"><img class="pictoNav pictoBurguer" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_trait_fermer_gris.svg"></a>
                     </div>
 
-                    <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
-                    <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
-                    <a class="pictoLogo" href="<?php echo home_url(); ?>" ?><img class="pictoNav" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
-                    <a class="pictoCloseSingle" href="/actualites"> <img class="pictoNav pictoCloseActu" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></a>
+                    <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_loupe.svg"></a>
+                    <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_fleche-haut.svg"></a>
+                    <a class="pictoLogo" href="<?php echo home_url(); ?>" ?><img class="pictoNav" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_nav_logo.svg"></a>
+                    <a class="pictoCloseSingle" href="/actualites"> <img class="pictoNav pictoCloseActu" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_fermer.svg"></a>
 
 
                     <?php
@@ -238,9 +238,9 @@
         <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies, afin de récolter des données statistiques et d'améliorer votre expérience utilisateur.</p>
 
        
-        <a> <img class="logoCookie " src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-fermer.svg">
+        <a> <img class="logoCookie " src="/wp-content/themes/lieuxfauves/src/assets/img/lf_projet_picto-fermer.svg">
             <span>Accepter</span></a>
-        <a> <img class="logoCookie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-fermer.svg">
+        <a> <img class="logoCookie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_projet_picto-fermer.svg">
             <span>Refuser</span></a>
           
 

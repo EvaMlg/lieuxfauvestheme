@@ -32,7 +32,7 @@ endforeach;
 
 <div class="headerExplo" >
 
-    <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"><a>
+    <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"><a>
 
 </div>
 
@@ -104,10 +104,10 @@ endforeach;
 
         <div class="boutonWrapperExploration">
 
-            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg">
+            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
             &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></span>
             <?php if (get_field('document_a_telecharger')) : ?>
-                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
+                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;
                         <?php
                         $file = get_field('document_a_telecharger');
                         if ($file) : ?>
@@ -117,7 +117,7 @@ endforeach;
                 <?php endif; ?>
 
             <?php if (get_field('lien_externe')) : ?>
-                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">&nbsp; 
+                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg">&nbsp; 
                         <?php
                         $link = get_field('lien_externe');
                         if ($link) :
@@ -173,7 +173,7 @@ endforeach;
         <?php foreach ($images as $image) : ?>
             <div class="single-slide-image">
                 <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <span class="zoom-image"><img class="logoZoom" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
+                <span class="zoom-image"><img class="logoZoom" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_slide_picto-full.svg"></span>
             </div>
 
         <?php endforeach; ?>
@@ -192,7 +192,7 @@ endforeach;
 
 
     <div class="list-link-loop">
-        <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
+        <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_categories.svg">
         <span class="titleListLink">PROJETS</span>
         <?php
         $displayTerms = array();
@@ -289,7 +289,7 @@ endforeach;
 
 
         <div class="list-link-loop">
-            <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
+            <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_categories.svg">
             <span class="titleListLink">ACTUALITÉS</span>
             <?php
             $displayTerms = array();

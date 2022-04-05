@@ -13,16 +13,16 @@ get_header();
 	<div class="headerProjets">
 
 		<div class="logoHeader" data-aos="zoom-in" data-aos-duration="1000">
-			<a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
+			<a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_fiches.svg"></a>
 			<h1 class="projPageName">PROJETS</h1>
 			<h1 class="projPageNameResponsive">PROJETS</h1>
 		</div>
 
 		<div class="reponsiveCat">
-			<a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg" /></a>
+			<a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile_picto-filtres.svg" /></a>
 		</div>
 
-		<a><img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile-picto_valider.svg" /></a>
+		<a><img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile-picto_valider.svg" /></a>
 		<div class="categoryHeader catHeaderOff">
 			<?php
 			$current_post_type = get_post_type();
@@ -139,7 +139,7 @@ get_header();
 		</div>
 	<?php endif;
 	wp_reset_postdata(); ?>
-	<div id="load-more-projets" data-paged="1" style="><?= file_get_contents(get_template_directory_uri().'/src/assets/img/LF_picto_load.svg');?></div>
+	<div id="load-more-projets" data-paged="1" style="><?= file_get_contents(get_template_directory_uri().'/src/assets/img/lf_picto_load.svg');?></div>
 </div>
 
 </div>

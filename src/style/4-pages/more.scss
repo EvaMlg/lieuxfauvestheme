@@ -86,7 +86,7 @@ form#searchform div input::placeholder {
     @include mobile-tab {
       display: none;
     }
-    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-02_gauche.svg");
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/lf_slide_picto-next-02_gauche.svg");
     margin-top: 10px;
     margin-left: 9px;
     position: absolute;
@@ -140,7 +140,7 @@ form#searchform div input::placeholder {
     @include mobile-tab {
       display: none;
     }
-    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-01_droite.svg");
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/lf_slide_picto-next-01_droite.svg");
     position: absolute;
     right: 18px;
     width: 25px;
@@ -177,7 +177,7 @@ form#searchform div input::placeholder {
 
 
   .page-template-template-agence .slick-next:before {
-    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg");
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg");
     position: absolute;
     top : 628px;
     z-index: 2;
@@ -242,7 +242,7 @@ form#searchform div input #text {
 }
 
 form#searchform div button{
-	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+	background: url(/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_loupe.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 25px;

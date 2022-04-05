@@ -14,11 +14,11 @@ get_header();
 
     <div class="logoHeader">
 
-        <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+        <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"></a>
 
     </div>
 
-    <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+    <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"></a>
 
 
 
@@ -125,7 +125,7 @@ get_header();
                     <?php $urbanisme = get_group_field('section_expertises', 'distinctions_urbanisme') ?>
                     <div class="distinctionsTitleWrapper">
                         <h3 class="subtitleAgence distinctionsTitle" data-aos="fade-up">Urbanisme</h3>
-                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
+                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_ouvrir_gris.svg">
                     </div>
                     <div class="distinctionsToggleWrapper">
                         <p data-aos="fade-up"><?php echo $urbanisme; ?></p>
@@ -134,7 +134,7 @@ get_header();
                     <?php $architecture = get_group_field('section_expertises', 'distinctions_archi') ?>
                     <div class="distinctionsTitleWrapper">
                         <h3 class="subtitleAgence distinctionsTitle" data-aos="fade-up">Architecture</h3>
-                        <img class="logo-categorie logoDistinctions logoDistinctionsClone" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
+                        <img class="logo-categorie logoDistinctions logoDistinctionsClone" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_ouvrir_gris.svg">
 
                     </div>
                     <div class="distinctionsToggleWrapperClone distinctionsToggleWrapper">
@@ -221,7 +221,7 @@ get_header();
 
                             <div class="titleAnnonce"><?php the_title(); ?></div>
                             <?php the_excerpt(); ?>
-                            <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
+                            <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
 
 
 
