@@ -178,44 +178,62 @@ endforeach;
     <div class="ficheTechnique ficheTechniqueM">
         <div class="FTright columnFT">
             <div class="wrapperItems">
+            <?php
+                        $ficheTechnique = get_field('fiche_technique');
+                        if ($ficheTechnique) : ?>
+                            <?php if ($ficheTechnique['programme']) : ?>
 
-                <?php
-                $ficheTechnique = get_field('fiche_technique');
-                if ($ficheTechnique) : ?>
+                                <h3>Programme</h3>
+                                <p><?php echo $ficheTechnique['programme']; ?></p>
 
-                    <h3>Programme</h3>
-                    <p><?php echo $ficheTechnique['programme']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Maîtrise d’ouvrage</h3>
-                <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Maîtrise d’oeuvre</h3>
-                <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
-            </div>
-        </div>
-        <div class="FTleft columnFT">
-            <div class="wrapperItems">
-                <h3>Surface</h3>
-                <p><?php echo $ficheTechnique['surface']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Coûts</h3>
-                <p><?php echo $ficheTechnique['couts']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Dates / Livraison</h3>
-                <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Performances environnementales</h3>
-                <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
-            </div>
-        </div>
+                            <?php endif ?>
+                    </div>
+                    <div class="wrapperItems">
+                        <?php if ($ficheTechnique['maitrise_d’ouvrage']) : ?>
+                            <h3>Maîtrise d’ouvrage</h3>
+                            <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="wrapperItems">
+                        <?php if ($ficheTechnique['surface']) : ?>
+                            <h3>Maîtrise d’oeuvre</h3>
+                            <p><?php echo $ficheTechnique['surface']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="FTleft columnFT">
+                    <div class="wrapperItems">
+                        <?php if ($ficheTechnique['surface']) : ?>
+                            <h3>Surface</h3>
+                            <p><?php echo $ficheTechnique['surface']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="wrapperItems">
+                        <?php if ($ficheTechnique['couts']) : ?>
+                            <h3>Coûts</h3>
+                            <p><?php echo $ficheTechnique['couts']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="wrapperItems">
+                        <?php if ($ficheTechnique['dates__livraison']) : ?>
+                            <h3>Dates / Livraison</h3>
+                            <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
+                        <?php endif; ?>
+
+                    </div>
+                    <div class="wrapperItems">
+                    <?php if ($ficheTechnique['performances_environnementales_titre']) : ?>
+                            <h3><?php echo $ficheTechnique['performances_environnementales_titre']; ?></h3>
+                        <?php endif; ?>
+                                   <?php if ($ficheTechnique['performances_environnementales']) : ?>
+                            <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
 
 
-    <?php endif; ?>
+   
     </div>
 </div>
 
@@ -274,35 +292,51 @@ endforeach;
                         <?php
                         $ficheTechnique = get_field('fiche_technique');
                         if ($ficheTechnique) : ?>
+                            <?php if ($ficheTechnique['programme']) : ?>
 
-                            <h3>Programme</h3>
-                            <p><?php echo $ficheTechnique['programme']; ?></p>
+                                <h3>Programme</h3>
+                                <p><?php echo $ficheTechnique['programme']; ?></p>
+
+                            <?php endif ?>
                     </div>
                     <div class="wrapperItems">
-                        <h3>Maîtrise d’ouvrage</h3>
-                        <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
+                        <?php if ($ficheTechnique['maitrise_d’ouvrage']) : ?>
+                            <h3>Maîtrise d’ouvrage</h3>
+                            <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
+                        <?php endif; ?>
                     </div>
                     <div class="wrapperItems">
-                        <h3>Maîtrise d’oeuvre</h3>
-                        <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
+                        <?php if ($ficheTechnique['surface']) : ?>
+                            <h3>Maîtrise d’oeuvre</h3>
+                            <p><?php echo $ficheTechnique['surface']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="FTleft columnFT">
                     <div class="wrapperItems">
-                        <h3>Surface</h3>
-                        <p><?php echo $ficheTechnique['surface']; ?></p>
+                        <?php if ($ficheTechnique['surface']) : ?>
+                            <h3>Surface</h3>
+                            <p><?php echo $ficheTechnique['surface']; ?></p>
+                        <?php endif; ?>
                     </div>
                     <div class="wrapperItems">
-                        <h3>Coûts</h3>
-                        <p><?php echo $ficheTechnique['couts']; ?></p>
+                        <?php if ($ficheTechnique['couts']) : ?>
+                            <h3>Coûts</h3>
+                            <p><?php echo $ficheTechnique['couts']; ?></p>
+                        <?php endif; ?>
                     </div>
                     <div class="wrapperItems">
-                        <h3>Dates / Livraison</h3>
-                        <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
+                        <?php if ($ficheTechnique['dates__livraison']) : ?>
+                            <h3>Dates / Livraison</h3>
+                            <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
+                        <?php endif; ?>
+
                     </div>
                     <div class="wrapperItems">
-                        <h3>Performances environnementales</h3>
-                        <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
+                        <?php if ($ficheTechnique['performances_environnementales']) : ?>
+                            <h3>Performances environnementales</h3>
+                            <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -341,7 +375,7 @@ endforeach;
 
         <div class="rightColumn">
 
-          
+
             <h3> Description </h3>
             <p><?php the_field('description_projet'); ?></p>
 

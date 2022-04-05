@@ -16,6 +16,10 @@
 
     .slick-track {
         height: 600px;
+        @include mobile-tab {
+            height: fit-content;
+            
+        }
     }
 
 

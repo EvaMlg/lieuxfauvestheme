@@ -276,9 +276,9 @@ get_header();
 
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
                         <a href="/projets"><span class="titleListLink">PROJETS</span></a>
-                        <a href="projets?cat=architecture" class="fauveUnderline">Architecture</a>
-                        <a href="projets?cat=urbanisme" class="fauveUnderline">Urbanisme</a>
-                        <a href="projets?cat=paysage" class="fauveUnderline">Paysage</a>
+                        <a href="projets?tax=architecture" class="fauveUnderline">Architecture</a>
+                        <a href="projets?tax=urbanisme" class="fauveUnderline">Urbanisme</a>
+                        <a href="projets?tax=paysage" class="fauveUnderline">Paysage</a>
 
                     </div>
                 </div>

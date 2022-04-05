@@ -170,9 +170,12 @@ get_header();
             </div>
 
             <div class="contentAgenceLegende">
-                <p>L’album de l’agence :<br>
-                    Légende photo, noms, situation, histoire, anecdote....<br>
-                    sur trois lignes.</p>
+    
+           <p> <?php the_field('legende_agence'); ?></p>
+              
+ 
+
+                    
             </div>
 
 
