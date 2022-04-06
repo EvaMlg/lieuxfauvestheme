@@ -157,13 +157,18 @@ endforeach;
             $nomenclature = get_field('nomenclature');
             if ($nomenclature) : ?>
                 <div class="nomenclature-wrapper">
+                <?php if( $nomenclature['date'] ): ?>
                     <span>Date&nbsp;:&nbsp;<?php echo $nomenclature['date']; ?></span><br>
+                    <?php endif; ?>
+                    <?php if( $nomenclature['prix'] ): ?>
                     <span>Prix&nbsp;:&nbsp;<?php echo $nomenclature['prix']; ?></span><br>
+                    <?php endif; ?>
+                    <?php if( $nomenclature['maitrise_douvrage'] ): ?>
                     <span>Maitrîse&nbsp;d'ouvrage&nbsp;:&nbsp;<?php echo $nomenclature['maitrise_douvrage']; ?></span>
+                    <?php endif; ?>
                 </div>
                 </p>
         </div>
-
 
     <?php endif; ?>
     </div>
