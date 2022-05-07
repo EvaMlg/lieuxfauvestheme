@@ -1,0 +1,44 @@
+#cookie-container{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include laptopS{
+        width: calc(100% - 77px);
+    }
+    background-color: white;
+    z-index: 100;
+    padding: 30px 77px;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include tablet{
+        grid-template-columns: 6fr 1fr;
+        grid-column-gap: 60px;
+    }
+    align-items: center;
+    p{ 
+        grid-column: 1;
+        &:first-child{
+            font-family: "Fira Bold", Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 30px;
+            color: $jungle-col;
+        }
+        &:not(:first-child){
+            font-family: "Fira Regular", Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+    button{
+        margin: 15px auto;
+        @include tablet{
+            grid-column: 2; 
+        }
+        background-color: $jungle-col;
+        padding: 8px 12px;
+        color: white;
+        font-family: "Fira Bold", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

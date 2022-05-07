@@ -27,15 +27,17 @@ function initAjaxList(type="explorations"){
             currentChildTaxonomy.click(function(){
                 if(index !== 0 ){
                     currentChildTaxonomy.toggleClass("active");
+                    currentTaxonomy.find('.subCatDescription.active').removeClass('active');
+                    currentChildTaxonomy.next().toggleClass('active');
                     currentTaxonomy.find('.subCatName > span:first-child').removeClass('active');
                 }else{
                     currentChildTaxonomy.addClass("active");
-                    currentTaxonomy.find('.subCatName > span:not(:first-child)').removeClass('active');
+                    currentTaxonomy.find('.subCatName > span:not(:first-child), .subCatName .subCatDescription.active').removeClass('active');
                 }
                 let allIsChecked = currentTaxonomy.find('.subCatName > span:not(.unclickable).active').length===currentTaxonomy.find('.subCatName > span:not(.unclickable)').length-1;
                 let nothingIsChecked = currentTaxonomy.find('.subCatName > span:not(.unclickable).active').length===0
                 if(/*(allIsChecked && currentTaxonomy.find('.subCatName > span:not(.unclickable)').length>2) ||*/ nothingIsChecked ){
-                    currentTaxonomy.find('.subCatName > span').removeClass('active');
+                    currentTaxonomy.find('.subCatName > span, .subCatName .subCatDescription').removeClass('active');
                     currentTaxonomy.find('.subCatName > span:first-child').addClass('active');
                 }
                 updatePublicationList(type, true);
@@ -121,7 +123,7 @@ function updatePublicationList(type="explorations",reset=true, beforeSend=()=>{}
         }
     });
 
-    jQuery.ajax({
+    /*jQuery.ajax({
         url: ajaxurl,
         type: 'GET',
         data: {
@@ -145,5 +147,5 @@ function updatePublicationList(type="explorations",reset=true, beforeSend=()=>{}
                 jQuery("<p/>").text("Une erreur est survenue")
             );
         }
-    });
+    });*/
 }

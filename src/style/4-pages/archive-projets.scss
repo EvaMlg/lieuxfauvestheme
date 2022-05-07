@@ -171,12 +171,42 @@
     font-family: "Fira Bold";
 }
 
-.categoryHeader .div-to-toggle .subCatName span.active {
-    @include cat-bold;
-    line-height: 14px !important;
-    @include fauveUnderlineSmall;
-    width: fit-content;
-    margin: 0 auto;
+.categoryHeader .div-to-toggle .subCatName span{
+    &:not(.active){
+        +.subCatDescription{
+            display: none;   
+        }
+    }
+    &.active {
+        @include cat-bold;
+        line-height: 14px !important;
+        @include fauveUnderlineSmall;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.subCatDescription{
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    padding: 30px 77px;
+    right: -77px;
+    background-color: white;
+    z-index: 2;
+    text-align: left;
+    >p:first-child{
+        font-family: "Fira Bold", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        color: $jungle-col;
+        b{
+            text-transform: uppercase;
+        }
+    }
+    &:not(.active){
+        display: none;
+    }
 }
 
 .categoryHeader .div-to-toggle .subCatName span.active:hover {

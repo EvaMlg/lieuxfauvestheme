@@ -16,6 +16,13 @@ function lct_register_assets()
 	// Déclarer jQuery
 	wp_enqueue_script('jquery');
 	wp_enqueue_script(
+		'cookie',
+		get_template_directory_uri() . '/src/js/cookie.js',
+		array('jquery'),
+		'1.0',
+		true
+	);
+	wp_enqueue_script(
 		'menu',
 		get_template_directory_uri() . '/src/js/menu.js',
 		array('jquery'),
@@ -582,7 +589,7 @@ function archive_list()
 
 	if($post_type!=="post"){
 		$tax_query = array(
-			'relation' => 'AND'
+			'relation' => 'OR'
 		);
 		if (isset($_GET['taxonomy'])) {
 			foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
@@ -597,7 +604,7 @@ function archive_list()
 					array_push($tax_query, array(
 						'taxonomy' => $taxonomyName,
 						'field' => "slug",
-						'operator' => "AND",
+						'operator' => "IN",
 						'terms' => $taxonomyTerms
 					));
 				}

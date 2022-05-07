@@ -85,6 +85,10 @@ get_header();
 										echo '">';
 										echo $child_term->name;
 										echo '</span>';
+										echo '<div class="subCatDescription">';
+										echo '<p><b>'.$child_term->name.'</b></p>';
+										echo '<p>'.$child_term->description.'</p>';
+										echo '</div>';
 									endforeach;
 								endif;
 								?>
