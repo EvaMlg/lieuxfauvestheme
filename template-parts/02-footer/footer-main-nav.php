@@ -27,7 +27,7 @@
 
     <div class="contact-container">
       <p class="contact">
-        04 72 74 80 80 <br>
+        04 72 78 80 80 <br>
         CONTACT[AT]LIEUXFAUVES.COM
       </p>
 

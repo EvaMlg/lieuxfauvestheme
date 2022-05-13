@@ -1,8 +1,50 @@
+.subheaderCat {
+    
+    @include mobile-tab {
+        display: none;
+    }
+
+    @include p-bold;
+    color: $jungle-col;
+    justify-content: space-between;
+
+    div {
+       border-bottom: 2px solid $jungle-col;
+    }
+
+    .parprogrammes {
+        width: 315px;
+        position: absolute;
+        top : 20px;
+        right: 750px;
+        display: flex;
+        flex-direction: row;
+
+
+    }
+
+    .parthematiques {
+        width: 315px;
+        position: absolute;
+    top : 20px;
+    right: 150px;
+    display: flex;
+    flex-direction: row;
+    }
+
+    
+}
+
+
 
 
 .headerExploration {
     display: flex;
     justify-content: space-between;
+
+    .categoryHeader {
+        display: none;
+    }
 
     .catArchi:first-child {
         display: none;
@@ -32,8 +74,9 @@
     }
 
     .categoryHeader {
+        display: none !important;
         @include laptopS {
-            display: flex;
+            display: none;
         }
 
         @include p-bold;

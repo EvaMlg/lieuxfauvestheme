@@ -1376,17 +1376,19 @@ $m-margin-big : 20px;
         }
 
         .categoryHeader {
+            display: none;
 
 
 
 
             @include laptopS {
-                display: flex;
+                display: none;
             }
 
             //@include p-bold;
 
             .catName {
+                display: none;
                 @include p-bold;
                 font-size: 18px !important;
                 color: $jungle-col

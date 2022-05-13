@@ -23,7 +23,18 @@ get_header();
 		</div>
 
 		<a><img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile-picto_valider.svg" /></a>
+
+		
+		<div class="subheaderCat">
+			<div class="parprogrammes"> Par programmes </div>
+			<div class="parthematiques"> Par Thématiques </div>
+		</div>
+	
+
 		<div class="categoryHeader catHeaderOff">
+
+	
+
 			<?php
 			$current_post_type = get_post_type();
 			$taxonomies = get_object_taxonomies($current_post_type);
@@ -66,15 +77,15 @@ get_header();
 					);
 				}
 				foreach (array_reverse($parents_terms) as $parent_term) :
-					$order_menu = get_field('order_menu', 'term_'.$parent_term->term_id);
+					$order_menu = get_field('order_menu', 'term_' . $parent_term->term_id);
 					$childs_terms = ($taxonomy !== "lieux") ?
 						get_terms($taxonomy, array('hide_empty' => false, 'parent' => $parent_term->term_id))
 						:
 						get_terms($taxonomy, array('hide_empty' => false));
 
 			?>
-					<div class="catArchi catWrapper <?= ($_GET['tax']===strtolower($parent_term->name)) ? 'opened' : ""?>" style="order:<?=$order_menu ?: "0"?>">
-						<span class="catName <?= ($_GET['tax']===strtolower($parent_term->name)) ? 'active' : ""?>"><?= $parent_term->name ?></span>
+					<div class="catArchi catWrapper <?= ($_GET['tax'] === strtolower($parent_term->name)) ? 'opened' : "" ?>" style="order:<?= $order_menu ?: "0" ?>">
+						<span class="catName <?= ($_GET['tax'] === strtolower($parent_term->name)) ? 'active' : "" ?>"><?= $parent_term->name ?></span>
 						<div class="div-to-toggle">
 							<div <?= $parent_term->slug ? 'data-cat="' . $parent_term->slug . '"' : ""; ?> data-id="<?= $taxonomy; ?>" class="subCatName">
 								<span data-id="tous" <?= isset($_GET[$taxonomy]) ? "" : 'class="active"'; ?>>Tous</span>
@@ -86,8 +97,8 @@ get_header();
 										echo $child_term->name;
 										echo '</span>';
 										echo '<div class="subCatDescription">';
-										echo '<p><b>'.$child_term->name.'</b></p>';
-										echo '<p>'.$child_term->description.'</p>';
+										echo '<p><b>' . $child_term->name . '</b></p>';
+										echo '<p>' . $child_term->description . '</p>';
 										echo '</div>';
 									endforeach;
 								endif;
@@ -138,12 +149,12 @@ get_header();
 					<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 					<p class="projectLoopLieu"><?php the_field('lieu', get_the_ID()); ?></p>
 				</div>
-				
+
 			<?php endwhile; ?>
 		</div>
 	<?php endif;
 	wp_reset_postdata(); ?>
-	<div id="load-more-projets" data-paged="1" style="><?= file_get_contents(get_template_directory_uri().'/src/assets/img/lf_picto_load.svg');?></div>
+	<div id="load-more-projets" data-paged="1" style="><?= file_get_contents(get_template_directory_uri() . '/src/assets/img/lf_picto_load.svg'); ?></div>
 </div>
 
 </div>
