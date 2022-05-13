@@ -48,7 +48,7 @@
 		
 		$('.galleryWrapper .single-slide-image .zoom-image').click(function(){
 			$('.zoom-image-slider').css('display', 'block');
-			$('.zoom-image-slider img').attr('src', $(this).parent('.single-slide-image').find('img').attr('src'));
+			$('.zoom-image-slider .imgsource').attr('src', $(this).parent('.single-slide-image').find('img').attr('src'));
 		});
 		
 		$('.zoom-image-slider .div-zoom span.close').click(function(){

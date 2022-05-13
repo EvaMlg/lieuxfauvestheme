@@ -273,11 +273,12 @@ endforeach;
     </div>
     <div class="zoom-image-slider">
         <div class="div-zoom">
-            <img src="" />
-            <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_burguer-fermer.svg"></i></span>
+            <img class="imgsource" src="" />
+            <span class="close"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_fermer_blanc.svg"></span>
         </div>
 
     </div>
+
 
 
 

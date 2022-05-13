@@ -1,3 +1,44 @@
+.subheaderCat {
+  
+    
+    @include mobile-tab {
+        display: none;
+    }
+
+    @include p-bold;
+    color: $jungle-col;
+    justify-content: space-between;
+
+    div {
+       border-bottom: 2px solid $jungle-col;
+    }
+
+    .parprogrammes {
+        margin-top: 30px;
+        width: 315px;
+        position: absolute;
+        top : 20px;
+        right: 750px;
+        display: flex;
+        flex-direction: row;
+
+
+    }
+
+    .parthematiques {
+        margin-top: 30px;
+        width: 315px;
+        position: absolute;
+    top : 20px;
+    right: 150px;
+    display: flex;
+    flex-direction: row;
+    }
+
+    
+}
+
+
 .projPageNameResponsive {
     display: none;
 }
@@ -52,15 +93,8 @@
     right: $m-margin-small;
 }
 
-// .reponsiveCatOn {
-//     display: none;
 
-// }
 
-// .reponsiveCatOff {
-//   display : block;
-
-// }
 
 .projetsContainer {
     background-color: white;
@@ -228,6 +262,7 @@
 }
 
 .categoryHeader{
+    margin-top: 45px;
     width: 100vw;
     flex-wrap: wrap;
     display: -webkit-box;
@@ -240,7 +275,7 @@
     right: 77px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.9);
-    padding-bottom: 45px;
+    padding-bottom: 15px;
     gap: 20px;
     .catName {
         font-size: 14px;
