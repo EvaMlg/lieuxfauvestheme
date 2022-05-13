@@ -67,10 +67,12 @@ get_header();
                                             echo '">';
                                             echo $child_term->name;
                                             echo '</span>';
-                                            echo '<div class="subCatDescription">';
-                                            echo '<p><b>'.$child_term->name.'</b>'.(function_exists('get_field') && get_field('title_complete', $child_term) ? ",".get_field('title_complete', $child_term) : "").'</p>';
-                                            echo '<p>'.$child_term->description.'</p>';
-                                            echo '</div>';
+                                            if($child_term->description):
+                                                echo '<div class="subCatDescription">';
+                                                echo '<p><b>'.$child_term->name.'</b>'.(function_exists('get_field') && get_field('title_complete', $child_term) ? ",".get_field('title_complete', $child_term) : "").'</p>';
+                                                echo '<p>'.$child_term->description.'</p>';
+                                                echo '</div>';
+                                            endif;
                                         endforeach;
                                     endif;
                                     ?>

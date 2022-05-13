@@ -11,7 +11,7 @@ function initAjaxList(type="explorations"){
     jQuery('.'+type+'Container .categoryHeader .catWrapper').each(function(){
         let currentTaxonomy = jQuery(this);
         currentTaxonomy.find('.catName').click(function(){
-            jQuery(this).toggleClass('active');
+            currentTaxonomy.find('.catName').toggleClass('active');
             currentTaxonomy.find('.div-to-toggle').toggle('slow');
             currentTaxonomy.find('.subCatName > span:first-child').addClass('active');
             currentTaxonomy.find('.subCatName > span:not(:first-child)').removeClass('active');
@@ -25,10 +25,11 @@ function initAjaxList(type="explorations"){
         currentTaxonomy.find('.subCatName > span').each(function(index){
             let currentChildTaxonomy = jQuery(this);
             currentChildTaxonomy.click(function(){
-                if(index !== 0 ){
+                currentTaxonomy.find('.subCatName > span.active').removeClass('active');
+                currentChildTaxonomy.addClass("active")
+                if(currentChildTaxonomy.next().hasClass('subCatDescription')) currentChildTaxonomy.next().toggleClass('active');
+                /*if(index !== 0 ){
                     currentChildTaxonomy.toggleClass("active");
-                    currentTaxonomy.find('.subCatDescription.active').removeClass('active');
-                    currentChildTaxonomy.next().toggleClass('active');
                     currentTaxonomy.find('.subCatName > span:first-child').removeClass('active');
                 }else{
                     currentChildTaxonomy.addClass("active");
@@ -36,10 +37,10 @@ function initAjaxList(type="explorations"){
                 }
                 let allIsChecked = currentTaxonomy.find('.subCatName > span:not(.unclickable).active').length===currentTaxonomy.find('.subCatName > span:not(.unclickable)').length-1;
                 let nothingIsChecked = currentTaxonomy.find('.subCatName > span:not(.unclickable).active').length===0
-                if(/*(allIsChecked && currentTaxonomy.find('.subCatName > span:not(.unclickable)').length>2) ||*/ nothingIsChecked ){
+                if(/*(allIsChecked && currentTaxonomy.find('.subCatName > span:not(.unclickable)').length>2) || nothingIsChecked ){
                     currentTaxonomy.find('.subCatName > span, .subCatName .subCatDescription').removeClass('active');
                     currentTaxonomy.find('.subCatName > span:first-child').addClass('active');
-                }
+                }*/
                 updatePublicationList(type, true);
             })
         })
