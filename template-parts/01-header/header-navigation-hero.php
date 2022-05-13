@@ -19,8 +19,8 @@
             </div>
             <div class="contentFullMenuWrapper">
                 <div class="socialsButtonsWrapper">
-                    <img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_ig.svg">
-                    <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_in.svg">
+                    <a href="https://www.instagram.com/lieux.fauves/"><img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_ig.svg"></a>
+                    <a href="https://www.linkedin.com/company/lieux-fauves/"><img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_in.svg"></a>
 
                 </div>
                 <div class="contactWrapper">
@@ -139,8 +139,9 @@
 
                         <div class="socialsButtonsWrapperLoupe">
                             <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_mobile_logo-blanc.svg">
-                            <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_ig.svg">
-                            <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_in.svg">
+                            <a href="https://www.instagram.com/lieux.fauves/"><img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_ig.svg"></a>
+                    <a href="https://www.linkedin.com/company/lieux-fauves/"><img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_menu_rrss_in.svg"></a>
+
 
                         </div>
 
@@ -231,23 +232,7 @@
 
 
 
-    <!----------   COOKIES  ---------->
-   <!--  <div class="cookies-bar">
 
-
-        <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies, afin de récolter des données statistiques et d'améliorer votre expérience utilisateur.</p>
-
-       
-        <a> <img class="logoCookie " src="/wp-content/themes/lieuxfauves/src/assets/img/lf_projet_picto-fermer.svg">
-            <span>Accepter</span></a>
-        <a> <img class="logoCookie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_projet_picto-fermer.svg">
-            <span>Refuser</span></a>
-          
-
-
-
-
-    </div> -->
 
 
 

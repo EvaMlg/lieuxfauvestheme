@@ -12,8 +12,8 @@
     <div class="logoWrapper">
       <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_logo.svg">
       <div class="socialsButtonsWrapper">
-        <img class="logo-ig" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_rrss_ig.svg">
-        <img class="logo-in" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_rrss_in.svg">
+        <a href="https://www.instagram.com/lieux.fauves/"><img class="logo-ig" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_rrss_ig.svg"></a>
+        <a href="https://www.linkedin.com/company/lieux-fauves/"><img class="logo-in" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_footer_rrss_in.svg"></a>
       </div>
     </div>
     <div class="credits">
