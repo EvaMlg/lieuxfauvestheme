@@ -62,7 +62,7 @@ get_header();
                     <div class="image-wrapper">
                         <img class="img-accueil" src="<?php echo esc_url($section_lieux['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" />
                         <div class="image-legend">
-                        <?php the_field('legende_image'); ?>
+                        <?php echo $section_lieux['legende_image']; ?> 
                         </div>
                         
                     </div>
