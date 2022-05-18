@@ -585,6 +585,17 @@ function archive_list()
 		'post_status' => 'publish',
 		'posts_per_page' => $posts_per_page,
 		'paged' => $paged,
+		'meta_query'	=> array(
+			'relation'		=> 'OR',
+            array(
+                'key'	 	=> 'show_in_ajax_result',
+				'compare'	=> 'NOT EXISTS'
+            ),
+			array(
+                'key'	 	=> 'show_in_ajax_result',
+				'value'		=> '1'
+            ),
+        ),
 	);
 
 	if($post_type!=="post"){

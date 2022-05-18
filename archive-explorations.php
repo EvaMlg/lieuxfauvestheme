@@ -91,6 +91,17 @@ get_header();
         'post_type' => 'explorations',
         'post_status' => 'publish',
         'posts_per_page' => 20,
+        'meta_query'	=> array(
+			'relation'		=> 'OR',
+            array(
+                'key'	 	=> 'show_in_non_ajax_result',
+				'compare'	=> 'NOT EXISTS'
+            ),
+			array(
+                'key'	 	=> 'show_in_non_ajax_result',
+				'value'		=> '1'
+            ),
+        ),
     );
 
     $tax_query = array(
