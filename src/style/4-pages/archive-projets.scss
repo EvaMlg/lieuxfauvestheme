@@ -18,7 +18,7 @@
         width: 315px;
         position: absolute;
         top : 20px;
-        right: 750px;
+        right: 620px;
         display: flex;
         flex-direction: row;
 
@@ -142,6 +142,7 @@
         flex-wrap: wrap;
         gap: $dCol;
         margin-right: -45px;
+        margin-top : 130px;
 
         .cardProjet {
             width: calc(25% - 45px);

@@ -219,8 +219,8 @@ get_header();
                 if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
                 ?> <div class="annonceWrapper"> <?php ?>
 
-                            <div class="titleAnnonce"><?php the_title(); ?></div>
-                            <?php the_excerpt(); ?>
+                            <div class="titleAnnonce"><?php the_field('titre'); ?></div>
+                            <p><?php the_field('description'); ?></p>
                             <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
 
 
