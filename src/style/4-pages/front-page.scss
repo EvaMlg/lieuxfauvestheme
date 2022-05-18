@@ -1,3 +1,36 @@
+.image-wrapper {
+    position: relative;
+}
+
+.image-legend {
+    background-color: transparent;
+    color : white;
+    @include footer-p;
+    font-style: italic;
+    position: absolute;
+    bottom : 0;
+    right: 0;
+
+    @include laptopS {
+    padding-left:  6 * $dCol;
+}
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 15px;
+
+
+    b {
+        @include footer-p-bold;
+        font-style: normal;
+
+    }
+  
+}
+
+
+
+
+
 .logoFrontpageCloned {
     display: none;
 }

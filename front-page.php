@@ -60,9 +60,16 @@ get_header();
                 if ($section_lieux) : ?>
 
                     <div class="image-wrapper">
-
-                        <img src="<?php echo esc_url($section_lieux['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" />
+                        <img class="img-accueil" src="<?php echo esc_url($section_lieux['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" />
+                        <div class="image-legend">
+                        <?php the_field('legende_image'); ?>
+                        </div>
+                        
                     </div>
+
+
+
+
 
                     <div class="link-bloc-2">
 
@@ -145,21 +152,21 @@ get_header();
 
 
 
-                      <!--   <?php
+                        <!--   <?php
 
-                        $args = array(
-                            'post_type' => 'annonces',
-                            'posts_per_page' => 1,
+                                $args = array(
+                                    'post_type' => 'annonces',
+                                    'posts_per_page' => 1,
 
-                        );
-                        $my_query = new WP_Query($args);
-                        if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                                );
+                                $my_query = new WP_Query($args);
+                                if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
                                 <a href="<?php the_permalink(); ?>" class="fauveUnderline">Rejoindre Lieux F.AU.VES</a>
 
                         <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
 
                         ?> -->
 
@@ -253,7 +260,7 @@ get_header();
 
 
 
-                                    echo '<p class="content">' . $result .'...' . '</p>'; ?>
+                                    echo '<p class="content">' . $result . '...' . '</p>'; ?>
                                     <div class="logo-wrapper">
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_fermer.svg"></button>
