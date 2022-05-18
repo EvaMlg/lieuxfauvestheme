@@ -62,9 +62,9 @@ get_header();
                     <div class="image-wrapper">
                         <img class="img-accueil" src="<?php echo esc_url($section_lieux['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" />
                         <div class="image-legend">
-                        <?php echo $section_lieux['legende_image']; ?> 
+                            <?php echo $section_lieux['legende_image']; ?>
                         </div>
-                        
+
                     </div>
 
 
@@ -395,11 +395,17 @@ get_header();
                 </div>
 
                 <div class="bloc-image">
-
                     <?php
                     $section_footer = get_field('section_footer');
                     if ($section_footer) : ?>
-                        <img class="reveal" src="<?php echo esc_url($section_footer['image']['url']); ?>" alt="<?php echo esc_attr($section_footer['image']['alt']); ?>" />
+                        <div class="image-wrapper">
+                            <img class="reveal" src="<?php echo esc_url($section_footer['image']['url']); ?>" alt="<?php echo esc_attr($section_footer['image']['alt']); ?>" />
+
+
+                            <div class="image-legend">
+                                <?php echo $section_footer['legende_image']; ?>
+                            </div>
+                        </div>
                     <?php endif; ?>
 
                 </div>

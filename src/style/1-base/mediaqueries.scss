@@ -27,7 +27,7 @@
 
 @mixin sideBarResponsive {
 
-@media (max-height: 730px) {
+@media (max-height: 680px) {
     @content; }
 }
 
