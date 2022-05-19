@@ -167,8 +167,7 @@ get_header();
 		</div>
 	<?php endif;
 	wp_reset_postdata(); ?>
-	<div id="load-more-projets" data-paged="1"><?= file_get_contents(get_template_directory_uri() . '/src/assets/img/lf_picto_load.svg'); ?></div>
-</div>
+	<div id="load-more-projets" data-paged="1"><img style="width:60px" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_load.svg'"></div>
 
 </div>
 
