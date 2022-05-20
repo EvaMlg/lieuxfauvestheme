@@ -32,7 +32,7 @@ endforeach;
 
 <div class="headerExplo" >
 
-    <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"><a>
+    <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo.svg"><a>
 
 </div>
 
@@ -104,10 +104,10 @@ endforeach;
 
         <div class="boutonWrapperExploration">
 
-            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
+            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-partager.svg">
             &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></span>
             <?php if (get_field('document_a_telecharger')) : ?>
-                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;
+                    <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;
                         <?php
                         $file = get_field('document_a_telecharger');
                         if ($file) : ?>
@@ -117,7 +117,7 @@ endforeach;
                 <?php endif; ?>
 
             <?php if (get_field('lien_externe')) : ?>
-                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg">&nbsp; 
+                    <span class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-lien.svg">&nbsp; 
                         <?php
                         $link = get_field('lien_externe');
                         if ($link) :

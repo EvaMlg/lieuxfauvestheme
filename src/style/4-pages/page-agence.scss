@@ -1,19 +1,12 @@
-.galleryWrapperAgence {
 
 
-
-
-    button::after {
+ .galleryWrapperAgence {
+     img {
+    height: fit-content;
+     }
         display: none;
-    }
-
-
-
-
-
+    
     margin-bottom: 15px;
-
-
     .slick-track {
         height: 600px;
         @include mobile-tab {
@@ -22,11 +15,16 @@
         }
     }
 
+    .slick-next::before {
+        content :""
+
+    }
 
     .single-slide-image {
         height: 100%;
     }
 }
+
 
 .logoDistinctions {
     cursor: pointer;

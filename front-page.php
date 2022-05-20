@@ -27,13 +27,13 @@ get_header();
 
             <div class="logoHeader" id="logoHeader">
 
-                <a class="logoFrontPageA" href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"></a>
+                <a class="logoFrontPageA" href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo.svg"></a>
 
 
 
             </div>
 
-            <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo.svg"></a>
+            <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpageCloned" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo.svg"></a>
 
 
 
@@ -79,7 +79,7 @@ get_header();
 
                         <div class="list-link" data-aos="fade-up">
 
-                            <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_categories.svg">
+                            <img class="logo-categorie" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo_categories.svg">
 
 
                             <a href="/agence"><span class="titleListLink">AGENCE</span></a>
@@ -126,7 +126,7 @@ get_header();
                                     <div class="article-thumbnail"><?php the_post_thumbnail(); ?></div>
                                     <div class="article-date"><?php the_date('j—n—Y'); ?></div>
                                     <div class="article-title"><?php the_title(); ?></div>
-                                    <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
+                                    <a href="<?php the_permalink(); ?>"><img class="logo-load" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_load.svg"></a>
                             </div>
 
                     <?php
@@ -134,7 +134,6 @@ get_header();
                         endwhile;
                     endif;
 
-                    // 4. On réinitialise à la requête principale (important)
                     wp_reset_postdata();
 
                     ?>
@@ -146,7 +145,7 @@ get_header();
 
                 <div class="link-bloc">
                     <div class="list-link" data-aos="fade-up">
-                        <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_categories.svg">
+                        <img class="logo-categorie" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo_categories.svg">
 
                         <a href="/actualites"><span class="titleListLink">ACTUALITÉS</span></a>
 
@@ -201,7 +200,7 @@ get_header();
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
                             <div class="projet-popup-wrapper">
-                                <img class="logo-open" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_ouvrir.svg">
+                                <img class="logo-open" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_plus_ouvrir.svg">
                                 <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
                                 <div class="projet-popup transition contentPopup" id="contentPopup">
                                     <a href="<?php the_permalink(); ?>">
@@ -219,8 +218,8 @@ get_header();
 
                                     echo '<p class="content">' . $result . '...' . '</p>'; ?>
                                     <div class="logo-wrapper">
-                                        <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
-                                        <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_fermer.svg"></button>
+                                        <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_load.svg"></a>
+                                        <button id="logoClose" class="logoClose"><img class="logo-close" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_plus_fermer.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +243,7 @@ get_header();
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
                             <div class="projet-popup-wrapper">
-                                <img class="logo-open logo-open-urba" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_ouvrir.svg">
+                                <img class="logo-open logo-open-urba" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_plus_ouvrir.svg">
                                 <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
                                 <div class="projet-popup projet-popup-urba transition contentPopup" id="contentPopup">
                                     <a href="<?php the_permalink(); ?>">
@@ -262,8 +261,8 @@ get_header();
 
                                     echo '<p class="content">' . $result . '...' . '</p>'; ?>
                                     <div class="logo-wrapper">
-                                        <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
-                                        <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_plus_fermer.svg"></button>
+                                        <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_load.svg"></a>
+                                        <button id="logoClose" class="logoClose"><img class="logo-close" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_plus_fermer.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +280,7 @@ get_header();
                 <div class="link-bloc">
                     <div class="list-link" data-aos="fade-up">
 
-                        <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_categories.svg">
+                        <img class="logo-categorie" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo_categories.svg">
                         <a href="/projets"><span class="titleListLink">PROJETS</span></a>
                         <a href="projets?tax=architecture" class="fauveUnderline">Architecture</a>
                         <a href="projets?tax=urbanisme" class="fauveUnderline">Urbanisme</a>
@@ -338,19 +337,19 @@ get_header();
                                             <div class="titleExplo"><?php the_title(); ?></div>
                                             <div>
                                                 <div class="excerptExplo"><?php the_excerpt(); ?></div>
-                                                <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_load.svg"></a>
+                                                <a href="<?php the_permalink(); ?>"><img class="logo-load" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_load.svg"></a>
                                             </div>
 
                                         </div>
 
                                         <div class="boutonWrapperExploration">
-                                            <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
+                                            <button><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-partager.svg">
                                                 &nbsp; Partager <?php echo my_sharing_buttons($content) ?></button>
                                             <?php if (get_field('document_a_telecharger')) : ?>
-                                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
+                                                <button><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
                                             <?php endif; ?>
                                             <?php if (get_field('lien_externe')) : ?>
-                                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></button>
+                                                <button><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></button>
                                             <?php endif; ?>
                                         </div>
 
@@ -372,7 +371,7 @@ get_header();
 
                 <div class="link-bloc">
                     <div class="list-link" data-aos="fade-up">
-                        <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_logo_categories.svg">
+                        <img class="logo-categorie" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo_categories.svg">
                         <a href="/explorations"><span class="titleListLink">EXPLORATIONS</span></a>
                         <!-- <a href="explorations" class="fauveUnderline">Vivant</a>
                         <a href="explorations" class="fauveUnderline">Éthique</a>

@@ -42,6 +42,7 @@
 		$('.contentWrapperProjet .galleryWrapper').slick();
 		$('.single-explorations .galleryWrapper').slick();
         $('.sec-equipe .galleryWrapper').slick();
+        $('.sec-equipe .galleryWrapperAgence').slick();
 		
 		$(".slick-next").text("");
 		$(".slick-prev").html("");

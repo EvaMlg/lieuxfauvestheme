@@ -176,21 +176,37 @@ form#searchform div input::placeholder {
 
 
 
-  .page-template-template-agence .slick-next:before {
+   .page-template-template-agence .slick-next:before {
     content: url("/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg");
     position: absolute;
-    top : 628px;
     z-index: 2;
-   
+    top : 550px;
     right: 18px;
     width: 25px;
     height: 25px;
     
   }
 
+  .page-template-template-agence .slick-slide {
+    
+  }
 
-  .page-template-template-agence  .slick-prev:before {
-    content:"" ;
+  .page-template-template-agence .slick-prev:after {
+    display: none;
+  }
+
+  .page-template-template-agence .slick-next:after {
+    display: none;
+  }
+
+  .page-template-template-agence .slick-prev:before {
+    display: none;
+  }
+
+
+  .page-template-template-agence  .slick-prev:after {
+    display: none;
+    content:url("/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg") ;
     position: absolute;
     right: 18px;
     width: 25px;
