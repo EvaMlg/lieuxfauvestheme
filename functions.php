@@ -874,8 +874,7 @@ function my_sharing_buttons($content) {
         $content .= '<a class="msb-link msb-linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
         }
         
-        // si ce n'est pas un article ou une page, ne pas inclure les boutons de partages
-        return $content; // correction du 9 février 2017
+        return $content; 
 };
 
 add_filter( 'the_content', 'my_sharing_buttons');

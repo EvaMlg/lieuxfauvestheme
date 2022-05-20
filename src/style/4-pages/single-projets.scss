@@ -258,6 +258,11 @@
 
         .rightColumn {
 
+            b {
+                @include p-bold;
+
+            }
+
             strong {
                 @include p-bold;
 

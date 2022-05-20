@@ -339,8 +339,12 @@ endforeach;
 
                     </div>
                     <div class="wrapperItems">
-                        <?php if ($ficheTechnique['performances_environnementales']) : ?>
-                            <h3>Performances environnementales</h3>
+                    <?php if ($ficheTechnique['performances_environnementales_titre']) : ?>
+                        
+                      
+                            <h3><?php echo $ficheTechnique['performances_environnementales_titre']; ?></h3>
+                            <?php endif; ?>
+                            <?php if ($ficheTechnique['performances_environnementales']) : ?>
                             <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
                         <?php endif; ?>
                     </div>
@@ -349,7 +353,7 @@ endforeach;
             </div>
             <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-partager.svg">
-                    &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></p>
+                    &nbsp; Partager | <?php echo my_sharing_buttons($content) ?> </p>
 
                 <?php if (get_field('document_a_telecharger')) : ?>
                     <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;

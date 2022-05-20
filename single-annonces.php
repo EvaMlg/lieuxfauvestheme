@@ -71,7 +71,7 @@ get_header();
             <h2 class=titleArticle><?php the_title(); ?></h2>
         </div>
         <div class="contentArticle">
-            <p><?php the_field('contenu'); ?></p>
+            <p><?php the_field('description'); ?></p>
             <div>
 
                 <div class="imagesArticle">
