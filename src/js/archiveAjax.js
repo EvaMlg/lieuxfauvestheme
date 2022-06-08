@@ -15,6 +15,16 @@ function initAjaxList(type="explorations"){
             currentTaxonomy.find('.div-to-toggle').toggle('slow');
             currentTaxonomy.find('.subCatName > span:first-child').addClass('active');
             currentTaxonomy.find('.subCatName > span:not(:first-child)').removeClass('active');
+            jQuery('.'+type+'Container .categoryHeader .catWrapper.opened').each(function(){
+                let currentWrapper = jQuery(this);
+                if(!currentWrapper.is(currentTaxonomy)){
+                    currentWrapper.find('.catName').toggleClass('active');
+                    currentWrapper.find('.subCatName > span.active').removeClass("active");
+                    currentWrapper.find('.subCatName > span:first-child').addClass("active");
+                    currentWrapper.removeClass('opened');
+                    currentWrapper.find('.div-to-toggle').toggle('slow');
+                }
+            })
             currentTaxonomy.toggleClass('opened');
             updatePublicationList(type);
         });
