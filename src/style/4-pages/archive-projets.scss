@@ -230,11 +230,16 @@
     background-color: white;
     z-index: 2;
     text-align: left;
+
+    p {
+        width: 60%;
+    }
     >p:first-child{
         font-family: "Fira Bold", Arial, Helvetica, sans-serif;
         font-size: 20px;
         line-height: 30px;
         color: $jungle-col;
+        
         b{
             text-transform: uppercase;
         }

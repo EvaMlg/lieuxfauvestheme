@@ -124,7 +124,9 @@ get_header();
 
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="article-thumbnail"><?php the_post_thumbnail(); ?></div>
-                                    <div class="article-date"><?php the_date('j—n—Y'); ?></div>
+                                    <div class="article-date"><?php the_time('j—n—Y'); ?>
+                                
+                                </div>
                                     <div class="article-title"><?php the_title(); ?></div>
                                     <a href="<?php the_permalink(); ?>"><img class="logo-load" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_load.svg"></a>
                             </div>
@@ -269,8 +271,6 @@ get_header();
                     <?php
                         endwhile;
                     endif;
-
-                    // 4. On réinitialise à la requête principale (important)
                     wp_reset_postdata();
 
                     ?>

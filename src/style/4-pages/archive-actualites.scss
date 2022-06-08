@@ -75,16 +75,15 @@
 
 .contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper {
     padding: $m-margin-small;
-
     background: #f4f4f4;
 
+
     @include laptopS {
-        padding: $dCol;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        display: grid;
+        grid-template-columns: 280px 2fr
     }
 }
+
 
 .contentActualites .archive-actu-bloc .archive-actu-container .archive-actu-wrapper .archive-article-thumbnail {
     position: relative;

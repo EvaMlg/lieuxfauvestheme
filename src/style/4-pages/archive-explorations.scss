@@ -257,15 +257,15 @@
         justify-content: center;
         align-items: center;
         object-fit: cover;
-        opacity: 0.5;
+       // opacity: 0.5;
     }
 }
 
 .archive-article-thumbnail::after {
-    content: "";
-    background-color: $jungle-col;
-    display: block;
-    padding-bottom: 100%;
+    // content: "";
+    // background-color: $jungle-col;
+    // display: block;
+    // padding-bottom: 100%;
 }
 
 #load-more-explorations{

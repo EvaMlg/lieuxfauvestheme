@@ -64,12 +64,7 @@ get_header();
                         <div class="boutonWrapperArchiveActu">
                             <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg">
                                 &nbsp; Partager <?php echo my_sharing_buttons($content) ?></button>
-                            <?php if (get_field('document_a_telecharger')) : ?>
-                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
-                            <?php endif; ?>
-                            <?php if (get_field('lien_externe')) : ?>
-                                <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-lien.svg"> &nbsp;<?php the_field('lien_externe'); ?></button>
-                            <?php endif; ?>
+                            
                         </div>
 
 
@@ -85,7 +80,6 @@ get_header();
                 endwhile;
             endif;
 
-            // 4. On réinitialise à la requête principale (important)
             wp_reset_postdata();
 
             ?>
