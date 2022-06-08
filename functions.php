@@ -119,6 +119,7 @@ function lct_register_assets()
 	wp_enqueue_script('ajax', get_template_directory_uri() . '/src/js/script.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('archive', get_template_directory_uri() . '/src/js/archiveAjax.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('loadmore', get_template_directory_uri() . '/src/js/loadMoreAjax.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('copy-link', get_template_directory_uri() . '/src/js/copyLink.js', array('jquery'), '1.0', true);
 
 
 	// Envoyer une variable de PHP à JS proprement

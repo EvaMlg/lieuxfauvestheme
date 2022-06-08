@@ -1,0 +1,60 @@
+.share-publication {
+    border: 1px solid #828787;
+    padding-left: 45px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-bottom: 2%;
+    a{
+        font-family: "Fira Bold", Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: 24px;
+        color: #828787;
+    }
+    img{
+        margin-right: 5px;
+        height: 10px;
+        width: auto;
+    }
+}
+body.single-projets{
+    .share-publication{
+        border: none;
+        background-color: #f4f4f4;
+    }
+}
+
+.copy-success{
+    position: fixed;
+    width: max-content;
+    padding: 8px 12px;
+    background-color: white;
+    bottom: 25px;
+    left: 25px;
+    z-index: 10;
+    font-family: "Fira Bold", Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 24px;
+    color: #828787;
+    &:not(.inactive){
+        animation: copyLinkAppear .5s linear;
+    }
+    &.inactive{
+        animation: copyLinkDissappear .5s linear;
+    }
+}
+@keyframes copyLinkAppear{
+    from{
+        transform: translateY(50vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes copyLinkDissappear{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50vh);
+    }
+}

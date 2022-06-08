@@ -34,9 +34,7 @@ get_header();
 
         <div class="wrapperLinkArticle">
             
-            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-partager.svg"> 
-            &nbsp; Partager | <?php echo my_sharing_buttons($content) ?></span>
-
+            <?php get_template_part('template-parts/share-publication');?>
             <?php if (get_field('document_a_telecharger')) : ?>
                 <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;
                         <?php

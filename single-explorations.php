@@ -104,8 +104,8 @@ endforeach;
 
         <div class="boutonWrapperExploration">
 
-            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-partager.svg">
-            &nbsp; Partager |</span>
+            
+            <?php get_template_part('template-parts/share-publication');?>
             <?php if (get_field('document_a_telecharger')) : ?>
                     <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;
                         <?php
@@ -157,10 +157,11 @@ endforeach;
             </div>
 
             <div class="texteWrapperExploration"data-aos="fade-up">
-                <p><?php the_field('contenu'); ?></p>
+                <p><?php the_field('contenu');?></p>
             </div>
-
         </div>
+
+        
     </div>
 
 </div>

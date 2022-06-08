@@ -352,8 +352,7 @@ endforeach;
             <?php endif; ?>
             </div>
             <div class="boutonWrapperProjet">
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-partager.svg">
-                    &nbsp; Partager | <?php echo my_sharing_buttons($content) ?> </p>
+                <?php get_template_part('template-parts/share-publication');?>
 
                 <?php if (get_field('document_a_telecharger')) : ?>
                     <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_fleche-telecharger.svg"> &nbsp;
