@@ -312,9 +312,9 @@ endforeach;
                         <?php endif; ?>
                     </div>
                     <div class="wrapperItems">
-                        <?php if ($ficheTechnique['surface']) : ?>
+                        <?php if ($ficheTechnique['maitrise_d’oeuvre']) : ?>
                             <h3>Maîtrise d’oeuvre</h3>
-                            <p><?php echo $ficheTechnique['surface']; ?></p>
+                            <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
                         <?php endif; ?>
                     </div>
                 </div>

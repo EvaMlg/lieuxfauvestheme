@@ -70,6 +70,15 @@ get_header();
         <div class="legendArticle"><p><?php the_field('legende'); ?></p><div>
 
 
+        <div class="videoArticle">
+        
+
+<?php the_field('video'); ?>
+
+            
+    
+
+
     </div>
 
 
