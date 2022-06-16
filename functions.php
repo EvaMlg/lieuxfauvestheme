@@ -588,23 +588,16 @@ function archive_list()
 		'paged' => $paged,
 		'meta_query'	=> array(
 			'relation'		=> 'OR',
-            array(
-                'key'	 	=> 'show_in_ajax_result',
-				'compare'	=> 'NOT EXISTS'
-            ),
-			array(
-                'key'	 	=> 'show_in_ajax_result',
-				'value'		=> ($_GET['taxonomy'] && is_array($_GET['taxonomy'])) ? 1 : 0
-            ),
         ),
 	);
-
+	$prefiltered = false;
 	if($post_type!=="post"){
 		$tax_query = array(
 			'relation' => 'OR'
 		);
 		if (isset($_GET['taxonomy'])) {
 			foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
+				$prefiltered = true;
 				if(strpos($taxonomyName, "==OR")===strlen($taxonomyName)-4){
 					array_push($tax_query, array(
 						'taxonomy' => substr($taxonomyName, 0, strlen($taxonomyName)-4),
@@ -624,7 +617,25 @@ function archive_list()
 		}
 		$args['tax_query'] = $tax_query;
 	}
-
+	if($prefiltered){
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_ajax_result',
+			'value'		=> 1
+		);
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_ajax_result',
+			'compare'	=> 'NOT EXISTS'
+		);
+	}else{
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_non_ajax_result',
+			'value'		=> 1
+		);
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_non_ajax_result',
+			'compare'	=> 'NOT EXISTS'
+		);
+	}
 	$my_query = new WP_Query($args);
 	if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 			//var_dump(get_field('show_in_ajax_result'));

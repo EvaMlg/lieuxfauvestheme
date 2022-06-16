@@ -91,24 +91,15 @@ get_header();
         'post_type' => 'explorations',
         'post_status' => 'publish',
         'posts_per_page' => 20,
-        'meta_query'	=> array(
-			'relation'		=> 'OR',
-            array(
-                'key'	 	=> 'show_in_non_ajax_result',
-				'compare'	=> 'NOT EXISTS'
-            ),
-			array(
-                'key'	 	=> 'show_in_non_ajax_result',
-				'value'		=> '1'
-            ),
-        ),
     );
 
     $tax_query = array(
         'relation' => 'AND'
     );
+    $prefiltered = false;
     foreach ($taxonomies as $taxonomy) {;
         if (isset($_GET[$taxonomy])) {
+            $prefiltered = true;
             array_push($tax_query, array(
                 'taxonomy' => $taxonomy,
                 'field' => "slug",
@@ -117,6 +108,29 @@ get_header();
         }
     }
     $args['tax_query'] = $tax_query;
+    $args['meta_query'] = array(
+		'relation'		=> 'OR',	
+	);
+    if($prefiltered){
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_ajax_result',
+			'value'		=> 1
+		);
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_ajax_result',
+			'compare'	=> 'NOT EXISTS'
+		);
+	}else{
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_non_ajax_result',
+			'value'		=> 1
+		);
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_non_ajax_result',
+			'compare'	=> 'NOT EXISTS'
+		);
+	}
+
 
     $my_query = new WP_Query($args);
     if ($my_query->have_posts()) : ?>

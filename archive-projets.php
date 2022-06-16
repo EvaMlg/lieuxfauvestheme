@@ -38,6 +38,7 @@ get_header();
 			<?php
 			$current_post_type = get_post_type();
 			$taxonomies = get_object_taxonomies($current_post_type);
+			$getFilterTerm = false;
 			$childs_active_terms = array();
 			$argsActiveTerms = array(
 				'post_type' => $current_post_type,
@@ -49,6 +50,7 @@ get_header();
 			);
 			foreach ($taxonomies as $taxonomy) {
 				if (isset($_GET[$taxonomy])) {
+					$getFilterTerm = $_GET[$taxonomy];
 					array_push($tax_query, array(
 						'taxonomy' => $taxonomy,
 						'field' => "slug",
@@ -82,17 +84,19 @@ get_header();
 						get_terms($taxonomy, array('hide_empty' => false, 'parent' => $parent_term->term_id))
 						:
 						get_terms($taxonomy, array('hide_empty' => false));
+					$activeTax = false;
+					foreach ($childs_terms as $child_term) if($child_term->slug==$getFilterTerm) $activeTax = true;
 
 			?>
-					<div class="catArchi catWrapper <?= ($_GET['tax'] === strtolower($parent_term->name)) ? 'opened' : "" ?>" style="order:<?= $order_menu ?: "0" ?>">
-						<span class="catName <?= ($_GET['tax'] === strtolower($parent_term->name)) ? 'active' : "" ?>"><?= $parent_term->name ?></span>
+					<div class="catArchi catWrapper <?= ($activeTax) ? 'opened' : "" ?>" style="order:<?= $order_menu ?: "0" ?>">
+						<span class="catName <?= ($activeTax) ? 'active' : "" ?>"><?= $parent_term->name ?></span>
 						<div class="div-to-toggle">
 							<div <?= $parent_term->slug ? 'data-cat="' . $parent_term->slug . '"' : ""; ?> data-id="<?= $taxonomy; ?>" class="subCatName">
 								<span data-id="tous" <?= isset($_GET[$taxonomy]) ? "" : 'class="active"'; ?>>Tous</span>
 								<?php if ($childs_terms && is_array($childs_terms) && sizeof($childs_terms)) :
 									foreach ($childs_terms as $child_term) :
 										echo '<span data-id="' . $child_term->slug . '" class="';
-										echo (array_search($child_term, $childs_active_terms) === false ? "unclickable" : "") . ($_GET[$taxonomy] === $child_term->slug ? "active" : "");
+										echo (array_search($child_term, $childs_active_terms) === false ? "unclickable" : "") . ($getFilterTerm === $child_term->slug ? "active" : "");
 										echo '">';
 										echo $child_term->name;
 										echo '</span>';
@@ -123,25 +127,16 @@ get_header();
 		'post_status' => 'publish',
 		'posts_per_page' => 20,
 		'paged' => 1,
-		'meta_query'	=> array(
-			'relation'		=> 'OR',
-            array(
-                'key'	 	=> 'show_in_non_ajax_result',
-				'compare'	=> 'NOT EXISTS'
-            ),
-			array(
-                'key'	 	=> 'show_in_non_ajax_result',
-				'value'		=> '1'
-            ),
-        ),
 	);
 
 
 	$tax_query = array(
 		'relation' => 'AND'
 	);
+	$prefiltered = false;
 	foreach ($taxonomies as $taxonomy) {;
 		if (isset($_GET[$taxonomy])) {
+			$prefiltered = true;
 			array_push($tax_query, array(
 				'taxonomy' => $taxonomy,
 				'field' => "slug",
@@ -150,8 +145,28 @@ get_header();
 		}
 	}
 	$args['tax_query'] = $tax_query;
-
-
+	$args['meta_query'] = array(
+		'relation'		=> 'OR',	
+	);
+	if($prefiltered){
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_ajax_result',
+			'value'		=> 1
+		);
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_ajax_result',
+			'compare'	=> 'NOT EXISTS'
+		);
+	}else{
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_non_ajax_result',
+			'value'		=> 1
+		);
+		$args['meta_query'][] = array(
+			'key'	 	=> 'show_in_non_ajax_result',
+			'compare'	=> 'NOT EXISTS'
+		);
+	}
 
 	$my_query = new WP_Query($args);
 	if ($my_query->have_posts()) : ?>
