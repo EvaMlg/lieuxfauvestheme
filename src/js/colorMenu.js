@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 const barMenu = document.querySelector('.sideNavWrapper');
 console.log(barMenu);
 
@@ -13,4 +15,4 @@ window.addEventListener('scroll', function () {
 
 
 
-        
+});

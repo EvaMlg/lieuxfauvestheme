@@ -181,11 +181,12 @@ endforeach;
     <?php endif; ?>
 </div>
 <div class="zoom-image-slider">
-    <div class="div-zoom">
-        <img src="" />
-        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="div-zoom">
+            <img class="imgsource" src="" />
+            <span class="close"><img class="logo-categorie pictoSlider" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_picto_plus_fermer_blanc.svg"></span>
+        </div>
+
     </div>
-</div>
 </div>
 
 

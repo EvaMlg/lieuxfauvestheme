@@ -1,3 +1,4 @@
+jQuery(document).ready(function(){
 logoOpen = document.querySelector('.logo-open');
 
 logoOpen.addEventListener('mouseenter', function() { 
@@ -81,3 +82,4 @@ logoOpenUrba.addEventListener('mouseenter', function() {
  */
 
 
+});

@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 document.querySelector('#loader .progressionBarInner').style.animation = "progressionBar 6s ease";
 // window.onload = function () {
 //     let imgs = ["/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image01.jpg","/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/lf_INTRO_image04.jpg"],
@@ -139,3 +141,5 @@ function getCookie(cname) {
     }
     return "";
 }
+
+});

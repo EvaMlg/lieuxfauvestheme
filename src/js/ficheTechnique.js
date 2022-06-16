@@ -1,6 +1,6 @@
+jQuery(document).ready(function(){
 
 element = document.querySelector('.logoOuvrirL');
-console.log (element);
 cross = document.querySelector('.logoOuvrirL img');
 element.addEventListener('click', function() { 
     if ( document.querySelector('.ficheTechniqueL').style.display === "none") {
@@ -21,7 +21,6 @@ element.addEventListener('click', function() {
 
 
 element = document.querySelector('.logoOuvrirM');
-console.log (element);
 crossM = document.querySelector('.logoOuvrirM img');
 element.addEventListener('click', function() { 
     if ( document.querySelector('.ficheTechniqueM').style.display === "none") {
@@ -38,3 +37,4 @@ element.addEventListener('click', function() {
  }, false);
 
 
+});

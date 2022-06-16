@@ -1,4 +1,5 @@
-logoOpen = document.querySelector('.logo-open');
+jQuery(document).ready(function(){ 
+    logoOpen = document.querySelector('.logo-open');
 
 logoOpen.addEventListener('mouseenter', function() { 
     if ( document.querySelector('.projet-popup').style.display === "none") {
@@ -77,6 +78,8 @@ logoOpenUrba.addEventListener('mouseenter', function() {
 
 
 //  }, false);
+
+});
 
 
 

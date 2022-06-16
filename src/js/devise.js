@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 z = document.querySelector('.logoDistinctions');
 
 z.addEventListener('click', function() { 
@@ -38,4 +40,4 @@ z.addEventListener('click', function() {
  
   }, false);
  
- 
+});

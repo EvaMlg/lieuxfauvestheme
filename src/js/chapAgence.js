@@ -1,3 +1,4 @@
+jQuery(document).ready(function(){
 const secAgence = document.querySelector(".sec-agence");
 const secValeurs = document.querySelector(".sec-valeurs");
 const secExpertises = document.querySelector(".sec-expertises");
@@ -21,7 +22,7 @@ let section1 = heightSecAgence;
 let section2 = heightSecAgence + heightSecValeurs;
 let section3 = heightSecAgence + heightSecValeurs + heightSecExpertises;
 let section4 = heightSecAgence + heightSecValeurs + heightSecExpertises + heightSecEquipe;
-console.log(section3);
+
 
 window.addEventListener('scroll', function () {
     if (window.scrollY < section1) {
@@ -61,13 +62,14 @@ window.addEventListener('scroll', function () {
 
 
 window.addEventListener('scroll', function () { 
-    if (window.scrollY >  5000) {
+    if (window.scrollY >  section4) {
         listChapterAgence.style.display="none";
         document.querySelector('.page-template-template-agence .logoFrontpage').classList.remove("scroll");
         document.querySelector('.page-template-template-agence .logoFrontpage').classList.add("scroll-off");
        
     }
     else {
+        listChapterAgence.style.display="block";
         document.querySelector('.page-template-template-agence .logoFrontpage').classList.remove("scroll-off");
         document.querySelector('.page-template-template-agence .logoFrontpage').classList.add("scroll");
 
@@ -86,3 +88,5 @@ window.addEventListener('scroll', function () {
 
 //     }
 // }, false);
+
+});

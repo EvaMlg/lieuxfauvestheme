@@ -1,3 +1,13 @@
+.boutonWrapperExploration .share-publication {
+    border : none;
+    color: #b5b8b8;
+    background-color: #fff;
+    padding-left: 45px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-bottom: 15px;}
+
+
 .titleWrapperExplorationResponsive {
     display: none;
 
@@ -124,12 +134,13 @@
                 padding-left: $dCol;
                 padding-top: 4%;
                 padding-bottom :4%;
+               
     
 
 
                 margin-bottom: 15px;
                 a {
-                    color : $grey-col-50;
+                    color : #828787;
                 }
             }
         }

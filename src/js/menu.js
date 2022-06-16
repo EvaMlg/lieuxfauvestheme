@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 const fullMenu = document.querySelector('.fullMenu');
 const burgerButton = document.querySelector('.burgerButton');
 const buttonOn = document.querySelector('.menuIcon');
@@ -8,9 +10,6 @@ const flecheBas = document.querySelector('.flecheBas');
 const picto = document.querySelector('.pictoLogo');
 
 const searchMenu = document.querySelector('#searchMenu');
-console.log(searchMenu);
-
-
 const pictoBurguer = document.querySelector('.closeIcon');
 
 // const allResults = document.getElementById('all_results');
@@ -311,3 +310,5 @@ pictoValider.addEventListener('click', function () {
 
     }
 }, false);
+
+});

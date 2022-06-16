@@ -844,6 +844,8 @@ $m-margin-big : 20px;
                     border-top: 1px $black-col-5 solid;
                     margin-top: $dCol;
                     padding-top: $dCol;
+                    padding-bottom: 20px;
+                   
 
                     button {
                         text-align: left;
@@ -1555,7 +1557,7 @@ $m-margin-big : 20px;
             text-align: left;
 
             display: flex;
-            //   align-items : baseline;
+    
             flex-direction: column;
 
             justify-content: space-between;
@@ -1563,6 +1565,7 @@ $m-margin-big : 20px;
             border-top: 0px $black-col-5 solid;
             margin-top: 25px;
             padding-top: 0;
+            padding-bottom: 20px;
 
             button {
                 text-align: left;
@@ -2295,6 +2298,7 @@ $m-margin-big : 20px;
                     border-top: 0px $black-col-5 solid;
                     margin-top: $dCol;
                     padding-top: 0;
+                    padding-bottom: 20px;
 
                     button {
                         text-align: left;

@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 document.addEventListener('DOMContentLoaded', function () {
 
     //met a jour le background color du menu et les elements de la navbar
@@ -49,3 +51,5 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 })
+
+});

@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 const devise = document.querySelector('.devise');
 
 const lieuxSpan = document.querySelector('.lieuxSpan');
@@ -19,10 +21,6 @@ const secFooter = document.querySelector('.sec-footer');
 const listChapter = document.querySelector('.list-chapter');
 
 const logoFrontpage = document.querySelector('.logoFrontpage');
-
-console.log(logoFrontpage);
-
-
 
 let heightSecLieux = secLieux.clientHeight;
 let heightSecFaire = secFaire.clientHeight;
@@ -138,3 +136,4 @@ window.addEventListener('scroll', function () {
 
 }, false);
 
+});
