@@ -594,7 +594,7 @@ function archive_list()
             ),
 			array(
                 'key'	 	=> 'show_in_ajax_result',
-				'value'		=> '1'
+				'value'		=> ($_GET['taxonomy'] && is_array($_GET['taxonomy'])) ? 1 : 0
             ),
         ),
 	);
@@ -627,6 +627,7 @@ function archive_list()
 
 	$my_query = new WP_Query($args);
 	if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+			//var_dump(get_field('show_in_ajax_result'));
 			if ($post_type === "explorations") : ?>
 				<div class="preExplorationWrapper">
 					<div class="explorationWrapper">
