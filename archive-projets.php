@@ -86,6 +86,7 @@ get_header();
 						get_terms($taxonomy, array('hide_empty' => false));
 					$activeTax = false;
 					foreach ($childs_terms as $child_term) if($child_term->slug==$getFilterTerm) $activeTax = true;
+					if(isset($_GET['tax']) && $_GET['tax']===$parent_term->slug) $activeTax=true;
 
 			?>
 					<div class="catArchi catWrapper <?= ($activeTax) ? 'opened' : "" ?>" style="order:<?= $order_menu ?: "0" ?>">
