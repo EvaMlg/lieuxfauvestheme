@@ -3,10 +3,6 @@ $m-margin-big : 20px;
 
 
 
-
-
-
-
 // RESPONSIVE MENU 
 
 
@@ -325,12 +321,10 @@ $m-margin-big : 20px;
 
 
     .categoryHeader {
-
         overflow-y: scroll;
-        max-height: 100%;
         width: 100vw;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 1fr;
 
         height: 100vh;
         position: fixed;
@@ -2086,7 +2080,7 @@ $m-margin-big : 20px;
                         justify-content: center;
                         align-items: center;
                         object-fit: cover;
-                        opacity: 1;
+                        opacity: 0.5;
 
 
                     }
