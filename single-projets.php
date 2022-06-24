@@ -388,6 +388,7 @@ endforeach;
             <h3> Description </h3>
             <p><?php the_field('description_projet'); ?></p>
 
+            <?php get_template_part('template-parts/oembed');?>
 
 
         </div>
@@ -506,6 +507,19 @@ endforeach;
 
 
 </div>
+
+<script> console.log("hello");
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    if (document.querySelector('.single-projets')) {
+        document.querySelector('.responsive-menu').style.display = "none"; }
+    else {
+        document.querySelector('.responsive-menu').style.display = "flex"; }
+
+    }
+)
+</script>
 
 
 

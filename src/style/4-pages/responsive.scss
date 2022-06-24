@@ -326,7 +326,6 @@ $m-margin-big : 20px;
 
     .categoryHeader {
 
-
         overflow-y: scroll;
         max-height: 100%;
         height: fit-content;
@@ -2099,7 +2098,7 @@ $m-margin-big : 20px;
 
                 .article-thumbnail::after {
                     content: '';
-                    background-color: $jungle-col;
+                  
                     display: block;
                     padding-bottom: 100%;
 
@@ -2368,7 +2367,7 @@ $m-margin-big : 20px;
         .sec-expertises {
             z-index: 500;
             position: relative;
-            margin-bottom: 420px;
+           
         }
 
         .sec-equipe {

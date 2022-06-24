@@ -1,5 +1,7 @@
 jQuery(document).ready(function(){
 
+
+
 const devise = document.querySelector('.devise');
 
 const lieuxSpan = document.querySelector('.lieuxSpan');
@@ -27,22 +29,15 @@ let heightSecFaire = secFaire.clientHeight;
 let heightSecArchiUrba = secArchiUrba.clientHeight;
 let heightSecVes = secVes.clientHeight;
 
-let sectionUn = heightSecLieux;
-let sectionDeux = heightSecLieux + heightSecFaire;
-let sectionTrois = heightSecLieux + heightSecFaire + heightSecArchiUrba;
-let sectionQuatre = heightSecLieux + heightSecFaire + heightSecArchiUrba + heightSecVes;
-let sectionCinq = heightSecLieux + heightSecFaire + heightSecArchiUrba + heightSecVes;
+let sectionUn = (heightSecLieux - 10) ;
+let sectionDeux = (heightSecLieux + heightSecFaire -10);
+let sectionTrois = (heightSecLieux + heightSecFaire + heightSecArchiUrba -10);
+let sectionQuatre = (heightSecLieux + heightSecFaire + heightSecArchiUrba + heightSecVes -10);
+let sectionCinq = (heightSecLieux + heightSecFaire + heightSecArchiUrba + heightSecVes -10);
 
 
 const splitRight = document.querySelector('.split-right');
 let sectionSplit = splitRight.clientHeight;
-
-console.log(sectionUn);
-console.log(sectionDeux);
-console.log(sectionTrois);
-console.log(sectionQuatre);
-console.log(sectionCinq);
-console.log(sectionSplit);
 
 
 // Flèche qui s'affiche à la moitié du main
