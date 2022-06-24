@@ -37,7 +37,7 @@
 
 @mixin p-very-small {
   font-family: "Fira Light";
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 
   @include laptopS {
@@ -71,7 +71,7 @@
 
 @mixin p-bold {
   font-family: "Fira Bold";
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
 
   @include laptopS {

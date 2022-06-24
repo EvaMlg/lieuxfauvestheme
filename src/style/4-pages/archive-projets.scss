@@ -268,7 +268,10 @@
 }
 
 .categoryHeader{
-    margin-top: 45px;
+    @include laptopS {
+    margin-top: 45px;}
+    margin-top : 0px;
+
     width: 100vw;
     flex-wrap: wrap;
     display: -webkit-box;

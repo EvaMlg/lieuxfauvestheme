@@ -2,7 +2,8 @@
 
  .galleryWrapperAgence {
      img {
-    height: fit-content;
+    height: 100%;
+    width: 100%;
      }
         display: none;
     
@@ -307,6 +308,12 @@
     color: $grey-col;
 
     b {
+        @include p-bold;
+        color: $grey-col;
+
+    }
+
+    strong {
         @include p-bold;
         color: $grey-col;
 

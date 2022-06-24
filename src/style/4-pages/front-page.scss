@@ -400,7 +400,8 @@
         height: 400px;
 
         @include laptopS {
-        display: flex;}
+        display: flex;
+    gap : 6px}
 
         @include mobile-tab {
             display: grid;
