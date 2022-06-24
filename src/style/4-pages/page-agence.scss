@@ -1,10 +1,16 @@
 
 
  .galleryWrapperAgence {
+    @include mobile-tab {
      img {
     height: 100%;
     width: 100%;
      }
+    }
+
+    img {
+        height: fit-content;
+         }
         display: none;
     
     margin-bottom: 15px;
