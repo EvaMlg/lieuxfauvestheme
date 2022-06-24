@@ -325,12 +325,10 @@ $m-margin-big : 20px;
 
 
     .categoryHeader {
-
         overflow-y: scroll;
-        max-height: 100%;
         width: 100vw;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 1fr;
 
         height: 100vh;
         position: fixed;
