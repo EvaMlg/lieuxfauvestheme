@@ -328,9 +328,9 @@ $m-margin-big : 20px;
 
         overflow-y: scroll;
         max-height: 100%;
-        height: fit-content;
         width: 100vw;
-        display: block;
+        flex-direction: column;
+        flex-wrap: nowrap;
 
         height: 100vh;
         position: fixed;
@@ -349,6 +349,7 @@ $m-margin-big : 20px;
         .catWrapper {
             margin: 0;
             margin-bottom: 20px;
+            flex: 1 1 auto;
 
         }
 
