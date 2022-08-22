@@ -227,6 +227,17 @@
   }
 }
 
+@mixin footer-legend-2 {
+  font-family: "Fira Light";
+  font-size: 12px;
+  line-height: 12px;
+
+  @include laptopS {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
 @mixin small-button {
   font-family: "Fira Medium";
   font-size: 12px;

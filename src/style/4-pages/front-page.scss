@@ -25,8 +25,15 @@
         font-style: normal;
 
     }
+
   
 }
+
+.legendend {
+    @include mobile-tab {
+    transform: translateY(-140px);
+}}
+
 
 
 
@@ -273,7 +280,7 @@
 
 
 .bloc-haiku {
-    height: 235px;
+    height: 220px;
     @include haiku;
     color: #658d8c;
     background-color: $jungle-col;

@@ -884,7 +884,7 @@ function my_sharing_buttons($content) {
         
         $linkedInURL = esc_url( 'https://www.linkedin.com/shareArticle?mini=true&url='.$myCurrentURL.'&amp;title='.$myCurrentTitle );
    
-        $content .= '<a class="msb-link msb-linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
+        $content .= '<a></a>';
         }
         
         return $content; 

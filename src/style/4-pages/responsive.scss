@@ -43,6 +43,10 @@ $m-margin-big : 20px;
 
 @include mobile-tab {
 
+    .subCatDescription {
+        display: none;
+    }
+
 
 
     .responsive-menu {
@@ -1615,7 +1619,7 @@ $m-margin-big : 20px;
             justify-content: center;
             align-items: center;
             object-fit: cover;
-            opacity: 0.5;
+            opacity: 1;
 
 
         }
@@ -2445,7 +2449,7 @@ $m-margin-big : 20px;
             width: 50%;
 
 
-            @include footer-legend;
+            @include footer-legend-2;
             color: $grey-col;
 
 

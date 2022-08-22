@@ -80,8 +80,6 @@ get_header();
                         <div class="list-link" data-aos="fade-up">
 
                             <img class="logo-categorie" src="<?php echo get_template_directory_uri();?>/src/assets/img/lf_logo_categories.svg">
-
-
                             <a href="/agence"><span class="titleListLink">AGENCE</span></a>
 
                             <a href="agence/#sec-agence" class="fauveUnderline">Valeurs</a>
@@ -401,7 +399,7 @@ get_header();
                             <img class="reveal" src="<?php echo esc_url($section_footer['image']['url']); ?>" alt="<?php echo esc_attr($section_footer['image']['alt']); ?>" />
 
 
-                            <div class="image-legend">
+                            <div class="image-legend legendend">
                                 <?php echo $section_footer['legende_image']; ?>
                             </div>
                         </div>
